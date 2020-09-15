@@ -12,7 +12,6 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { AboutComponent } from './components/about/about.component';
-import { AnimationsComponent } from './components/animations/animations.component';
 import { CareersComponent } from './components/careers/careers.component';
 
 @NgModule({
@@ -27,7 +26,6 @@ import { CareersComponent } from './components/careers/careers.component';
     CartComponent,
     FavoritesComponent,
     AboutComponent,
-    AnimationsComponent,
     CareersComponent
   ],
   imports: [
