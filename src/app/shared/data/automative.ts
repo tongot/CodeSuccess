@@ -14,7 +14,7 @@ export const automative: Product[] = [
   {
     id: "1",
     name: "Mini Bluetooth OBD2 ELM 327 Vehicle Diagnostic Scanner",
-    image: ["/assets/images/automotive/53028183-1-zoom.jpg","53028183-2-zoom.jpg"],
+    image: ["/assets/images/automotive/53028183-1-zoom.jpg","/assets/images/automotive/53028183-2-zoom.jpg"],
     department: "automotive",
     promotion: false,
     description: [
