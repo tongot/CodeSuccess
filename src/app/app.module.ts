@@ -6,16 +6,16 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HeaderComponent } from "./components/header/header.component";
-import { FooterComponent } from "./components/footer/footer.component";
-import { IndexComponent } from "./components/index/index.component";
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { CheckoutComponent } from './components/checkout/checkout.component';
-import { CartComponent } from './components/cart/cart.component';
-import { FavoritesComponent } from './components/favorites/favorites.component';
-import { AboutComponent } from './components/about/about.component';
-import { CareersComponent } from './components/careers/careers.component';
+import { HeaderComponent } from "./components";
+import { FooterComponent } from "./components";
+import { IndexComponent } from "./components";
+import { LoginComponent } from './components';
+import { SignupComponent } from './components';
+import { CheckoutComponent } from './components';
+import { CartComponent } from './components';
+import { FavoritesComponent } from './components';
+import { AboutComponent } from './components';
+import { CareersComponent } from './components';
 
 
 @NgModule({
