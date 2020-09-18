@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AllMaterialModules } from './material.module';
+
 import { HeaderComponent } from "./components";
 import { FooterComponent } from "./components";
 import { IndexComponent } from "./components";
@@ -16,6 +18,7 @@ import { CartComponent } from './components';
 import { FavoritesComponent } from './components';
 import { AboutComponent } from './components';
 import { CareersComponent } from './components';
+
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { CareersComponent } from './components';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AllMaterialModules
   ],
   providers: [],
   bootstrap: [AppComponent]
