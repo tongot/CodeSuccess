@@ -1,1 +1,40 @@
-<p>footer works!</p>
+<div class="site-container">
+    <div class="footer">
+        <div *ngFor="let item of footerItems">
+            <h3>{{item.heading}}</h3>
+            <li *ngFor="let listing of item.listings">
+                <a [href]="listing.link"> {{listing.name}}</a>
+            </li>
+        </div>
+        <div>
+            <h3>Download Our Apps</h3>
+            <a href="#">
+                <img width="125" height="40" class="ImageButton" src="../../../assets/Images/AppStoreBtn.png" alt="">
+            </a>
+            <a href="#">
+                <img width="135" height="40" class="ImageButton" src="../../../assets/Images/googlePlayBtn.png" alt="">
+            </a>
+            <h3>Follow us</h3>
+            <a href="#">
+                <mat-icon color="primary">
+                    facebook
+                </mat-icon>
+            </a>
+            <a href="#">
+                <i class="material-icons right"></i>
+            </a>
+            <h3>Takelot.group</h3>
+            <a href="#">Superbalist.com</a><br>
+            <a href="#">Mr D Food</a>
+        </div>
+    </div>
+    <hr>
+    <ul class="breadcrumb">
+        <li *ngFor="let category of categories"><a href="#">{{category}}</a></li>
+    </ul>
+</div>
+<div class="bottom-footer">
+    <div class="site-container">
+
+    </div>
+</div>
