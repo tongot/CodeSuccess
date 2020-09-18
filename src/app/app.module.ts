@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AllMaterialModules } from './material.module';
 
+
 import { HeaderComponent } from "./components";
 import { FooterComponent } from "./components";
 import { IndexComponent } from "./components";
@@ -18,6 +19,7 @@ import { CartComponent } from './components';
 import { FavoritesComponent } from './components';
 import { AboutComponent } from './components';
 import { CareersComponent } from './components';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -39,7 +41,8 @@ import { CareersComponent } from './components';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AllMaterialModules
+    AllMaterialModules,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
