@@ -97,13 +97,20 @@
   border-right: solid 1px #cccccc;
   padding-left: 20px;
 }
-@media (min-width: 1020px) {
+.site-container {
+  margin: 0;
+}
+@media (min-width: 1200px) {
   .sell {
     padding-left: 20px;
     display: block;
   }
   .order {
     display: block;
+  }
+  .site-container {
+    margin-right: 10%;
+    margin-left: 10%;
   }
 }
 @media (min-width: 810px) {
