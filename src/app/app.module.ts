@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HeaderComponent } from './components/header/header.component';
@@ -19,6 +22,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { AboutComponent } from './components/about/about.component';
 import { CareersComponent } from './components/careers/careers.component';
 import { MatCardModule } from '@angular/material/card';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,9 @@ import { MatCardModule } from '@angular/material/card';
     FlexLayoutModule,
     MatCardModule,
     MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
