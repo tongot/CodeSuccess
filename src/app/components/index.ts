@@ -7,4 +7,6 @@ export * from './footer/footer.component';
 export * from './header/header.component';
 export * from './index/index.component';
 export * from './login/login.component';
+export * from './search/search.component';
 export * from './signup/signup.component';
+export * from './theme/theme.component';

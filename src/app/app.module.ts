@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MaterialModule } from './material.module';
+import { AllMaterialModules } from "./material.module";
 
 import { HeaderComponent } from './components';
 import { FooterComponent } from './components';
@@ -19,10 +21,9 @@ import { CartComponent } from './components';
 import { FavoritesComponent } from './components';
 import { AboutComponent } from './components';
 import { CareersComponent } from './components';
+import { SearchComponent } from './components';
+import { ThemeComponent } from './components';
 
-import { AllMaterialModules } from "./material.module";
-
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,15 @@ import { AllMaterialModules } from "./material.module";
     FavoritesComponent,
     AboutComponent,
     CareersComponent,
+    SearchComponent,
+    ThemeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AllMaterialModules,
-    // FontAwesomeModule
+    FontAwesomeModule,
     MaterialModule,
     FlexLayoutModule
   ],
