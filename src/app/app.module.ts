@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -25,6 +26,10 @@ import { SearchComponent } from './components';
 import { ThemeComponent } from './components';
 
 
+// pipes
+import {ShortenTextPipe } from './shorten-text.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +43,12 @@ import { ThemeComponent } from './components';
     FavoritesComponent,
     AboutComponent,
     CareersComponent,
+<<<<<<< Updated upstream
     SearchComponent,
     ThemeComponent,
+=======
+    ShortenTextPipe
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
@@ -48,7 +57,12 @@ import { ThemeComponent } from './components';
     AllMaterialModules,
     FontAwesomeModule,
     MaterialModule,
+<<<<<<< Updated upstream
     FlexLayoutModule
+=======
+    FlexLayoutModule,
+    HttpClientModule
+>>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent],
