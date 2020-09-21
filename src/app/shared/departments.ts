@@ -132,6 +132,8 @@ export const ShopByDepartments = [
   }
 ]
 
+// export const Departments: <array>;
+
 export const Departments = [
   "Automotive & DIY", "Baby & Toddler", "Beauty","Books & Courses", "Camping & Outdoor", "Cellphones & Wearables", "Computers & Electronics", "Fashion & Luggage", "Gaming", "Garden, Pool & Patio", "Groceries & Household", "Health & Hygiene", "Home Appliances", "Liquor", "Office Stationery", "Pets", "Sport & Training", "Toys", "TV, Audio and media",
 ]
