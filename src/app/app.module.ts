@@ -10,7 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MaterialModule } from './material.module';
-import { AllMaterialModules } from "./material.module";
+import { AllMaterialModules } from './material.module';
 
 import { HeaderComponent } from './components';
 import { FooterComponent } from './components';
@@ -43,12 +43,9 @@ import {ShortenTextPipe } from './shorten-text.pipe';
     FavoritesComponent,
     AboutComponent,
     CareersComponent,
-<<<<<<< Updated upstream
     SearchComponent,
     ThemeComponent,
-=======
     ShortenTextPipe
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
@@ -57,12 +54,9 @@ import {ShortenTextPipe } from './shorten-text.pipe';
     AllMaterialModules,
     FontAwesomeModule,
     MaterialModule,
-<<<<<<< Updated upstream
-    FlexLayoutModule
-=======
     FlexLayoutModule,
     HttpClientModule
->>>>>>> Stashed changes
+
   ],
   providers: [],
   bootstrap: [AppComponent],
