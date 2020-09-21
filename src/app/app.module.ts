@@ -9,7 +9,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MaterialModule } from './material.module';
-import { AllMaterialModules } from "./material.module";
+import { AllMaterialModules } from "./material.module"
+
+import { FormsModule } from "@angular/forms";
 
 import { HeaderComponent } from './components';
 import { FooterComponent } from './components';
@@ -48,7 +50,8 @@ import { ThemeComponent } from './components';
     AllMaterialModules,
     FontAwesomeModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

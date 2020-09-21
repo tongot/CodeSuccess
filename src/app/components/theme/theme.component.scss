@@ -1,3 +1,5 @@
+/*
+
 ::ng-deep mat-form-field.mat-form-field-appearance-outline .mat-form-field-wrapper {
   // margin: 20px;
   align-content: center;
@@ -10,11 +12,25 @@
   margin-right: 20%;
   margin-left: 20%;
 }
+*/
 
-/*
+
 :host {
-  border: 2px solid dimgray;
-  display: block;
-  padding: 20px;
+  // border: 2px solid dimgray;
+  // display: block;
+  display: inline-block;
+  // padding: 20px;
+  width: 800px;
+  height: 400px;
+  justify-content: center;
+  padding-left: 30%;
 }
- */
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  color: #ffc107;
+}
