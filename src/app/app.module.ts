@@ -19,7 +19,7 @@ import { CartComponent } from './components';
 import { FavoritesComponent } from './components';
 import { AboutComponent } from './components';
 import { CareersComponent } from './components';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -42,7 +42,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     BrowserAnimationsModule,
     AllMaterialModules,
-    FontAwesomeModule
+    // FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
