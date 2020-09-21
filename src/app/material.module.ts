@@ -50,6 +50,11 @@ import {MatDialogModule}      from '@angular/material/dialog';
 import {MatSnackBarModule}    from '@angular/material/snack-bar';
 import {MatTooltipModule}     from '@angular/material/tooltip';
 
+
+import { MatCarouselSlideComponent } from "@ngmodule/material-carousel";
+import { MatCarouselModule } from "@ngmodule/material-carousel";
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+
 // *************** DATA TABLE ***************
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule}      from '@angular/material/sort';
@@ -92,6 +97,8 @@ export const AllMaterialModules = [
   MatPaginatorModule,
   MatSortModule,
   MatTableModule,
+  MatCarouselModule.forRoot(),
+  IvyCarouselModule
 ];
 
 @NgModule({
