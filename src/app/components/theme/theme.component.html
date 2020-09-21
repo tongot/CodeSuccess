@@ -5,7 +5,7 @@
     interval="5000"
     color="accent"
     maxWidth="80%"
-    proportion="80"
+    proportion="70"
     slides="5"
     [loop]="true"
     [hideArrows]="false"
@@ -43,14 +43,21 @@
     orientation="ltr">
     <mat-carousel-slide
       #matCarouselSlide
-      *ngFor="let product of brands; let first = first; let last = last; let i = index; "
-      [ngClass]="{ first: 0, last: last }"
-      [(ngModel)] ='next'
+      *ngFor="let product of brands;  index as i; first as isFirst; last as isLast; even as isEven;"
       overlayColor="#00000040"
       [hideOverlay]="true">
-      <img src="{{brands[next].src}}" alt="Image">
-      <img src="{{product.src}}" alt="Image">
-      <img src="{{brands[1].src}}" alt="Image">
+      <img *ngIf="product == brands[0]"  src="{{brands[4].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[1]"  src="{{brands[0].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[2]"  src="{{brands[1].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[3]"  src="{{brands[2].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[4]"  src="{{brands[3].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[5]"  src="{{brands[4].src}}" alt="Image" width="120" height="80">
+      <img src="{{product.src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[0]" src="{{brands[1].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[1]" src="{{brands[2].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[2]" src="{{brands[3].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[3]" src="{{brands[4].src}}" alt="Image" width="120" height="80">
+      <img *ngIf="product == brands[4]" src="{{brands[5].src}}" alt="Image" width="120" height="80">
     </mat-carousel-slide>
 
   </mat-carousel>

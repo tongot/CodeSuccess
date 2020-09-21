@@ -1,5 +1,5 @@
-import { Component, OnInit, NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-theme',
@@ -33,6 +33,5 @@ export class ThemeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // this.next += 1;
 
 }
