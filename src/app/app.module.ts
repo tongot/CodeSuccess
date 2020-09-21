@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { AllMaterialModules } from './material.module';
+import { MaterialModule } from './material.module';
 
-
-import { HeaderComponent } from "./components";
-import { FooterComponent } from "./components";
-import { IndexComponent } from "./components";
+import { HeaderComponent } from './components';
+import { FooterComponent } from './components';
+import { IndexComponent } from './components';
 import { LoginComponent } from './components';
 import { SignupComponent } from './components';
 import { CheckoutComponent } from './components';
@@ -19,9 +19,10 @@ import { CartComponent } from './components';
 import { FavoritesComponent } from './components';
 import { AboutComponent } from './components';
 import { CareersComponent } from './components';
+
+import { AllMaterialModules } from "./material.module";
+
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { CareersComponent } from './components';
     CartComponent,
     FavoritesComponent,
     AboutComponent,
-    CareersComponent
+    CareersComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,8 +44,10 @@ import { CareersComponent } from './components';
     BrowserAnimationsModule,
     AllMaterialModules,
     // FontAwesomeModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

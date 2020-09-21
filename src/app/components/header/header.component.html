@@ -1,1 +1,54 @@
-<p>header works!</p>
+<div class="site-container">
+
+    <nav class="nav">
+        <ul class="left-menu">
+            <li><img src="../../../assets/Images/takealot-logo.png" alt=""></li>
+            <li class="border-menu-item"><a href="#">Help</a></li>
+            <li class="sell"><a href="#">Sell at takealot</a></li>
+        </ul>
+        <ul class="right-menu">
+            <li class="border-menu-item user"><a href="#">Log in</a></li>
+            <li class="border-menu-item user"><a href="#">Register</a></li>
+            <li class="border-menu-item sell"><a href="#">Order</a></li>
+            <li id="drop-menu" (mouseover)="openMenu(upArrow,downArrow)" (mouseleave)="closeMenu(upArrow,downArrow)">
+                <a href="#"> My account
+                    <span #upArrow style="font-size: 20px; margin-top:70px">&#9662;</span>
+                    <span #downArrow style="font-size: 20px; margin-top:70px; display: none;">&#9652;</span>
+                </a>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Log return</a></li>
+                    <li><a href="#">Invoice</a></li>
+                    <li><a href="#">Personal Details</a></li>
+                    <li><a href="#">Digital Library </a></li>
+                    <li><a href="#">Help </a></li>
+                </ul>
+            </li>
+            <li>
+                <button mat-mini-fab>
+                    <mat-icon>favorite</mat-icon>
+                </button>
+            </li>
+
+            <li class="cart-chip">
+                <mat-chip-list>
+                    <mat-chip>
+                        <mat-icon left>
+                            shopping_cart
+                        </mat-icon>
+                        {{CartItems.length}}
+                    </mat-chip>
+                </mat-chip-list>
+                <div #cart class="menu-cart">
+                    <div class="total-header">
+                        <h3><strong>Total: R 10</strong></h3>
+                    </div>
+                    <div class="cart-btn-container">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+</div>
