@@ -1,1 +1,100 @@
-<p>search works!</p>
+
+<div [ngStyle]="{'background-color':'#0b79bf'}">
+  <ng-container>
+    <mat-grid-list cols="11" rowHeight="4:1" [gutterSize]="'0px'">
+
+      <mat-grid-tile
+        [colspan]="2"
+        [rowspan]="1">
+        <mat-button-toggle-group>
+          <mat-button-toggle class="split-button-1 drop-down-button" [matMenuTriggerFor]="dropdownMenuOne">
+            Shop by department
+            <mat-icon>arrow_drop_down</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+
+        <mat-menu #dropdownMenuOne="matMenu" [overlapTrigger]="false">
+          <ng-container *ngFor="let department of shopByDepartments[0].children">
+            <span
+              (mouseenter)="recheckIfInMenu = true"
+              (mouseleave)="closeResourceMenu(); recheckIfInMenu = true"
+              *ngIf="department.children">
+              <li mat-menu-item class="mat-button-toggle-label-content" >
+                {{department.label}}
+              </li>
+            </span>
+          </ng-container>
+        </mat-menu>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+        [colspan]="6"
+        [rowspan]="1">
+        <form class="flex-spacer">
+          <mat-form-field class="flex-item" [style.width.%]=210>
+            <label>
+              
+              <input type="text"
+                     placeholder="Search for products, brands..."
+                     matInput
+                     [formControl]="control"
+                     [matAutocomplete]="auto">
+            </label>
+            <mat-autocomplete  #auto="matAutocomplete">
+
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1">
+        <mat-form-field class="flex-item" [style.width.%]=100>
+          <mat-label>All Departments</mat-label>
+          <mat-select [(value)]="selected" >
+            <mat-option>All Departments</mat-option>
+            <mat-option *ngFor="let option of departments" [value]="option">{{option}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1">
+        <i class="material-icons">search</i>
+      </mat-grid-tile>
+      <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1">
+
+      </mat-grid-tile>
+
+      <mat-grid-tile
+        [colspan]="2"
+        [rowspan]="1">
+
+      </mat-grid-tile>
+
+
+      <mat-grid-tile
+        *ngFor="let tile of devices"
+        [colspan]="1"
+        [rowspan]="1">
+        {{tile.name}}
+      </mat-grid-tile>
+
+      <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1">
+
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
+
+
+
+  </ng-container>
+</div>
+
