@@ -1,5 +1,25 @@
 
+<div fxLayout="row" [ngStyle]="{'background-color':'#0b79bf'}" class="flex">
+  <div fxLayout="row" class="center">
+    <div class="left-cell">
+      <app-nested-dropdown></app-nested-dropdown>
+    </div>
+    <div fxLayout="column" class="right-cell">
+      <div fxLayout="row">
+        <app-search-bar></app-search-bar>
+        <app-compact-dropdown></app-compact-dropdown>
+      </div>
+      <div class="right-bottom">
+        <app-offers></app-offers>
+      </div>
+    </div>
 
+  </div>
+</div>
+
+
+<!--
+SPACE
 <div [ngStyle]="{'background-color':'#0b79bf'}">
   <ng-container>
     <mat-grid-list cols="11" rowHeight="4:1" [gutterSize]="'0px'">
@@ -59,3 +79,4 @@
 
   </ng-container>
 </div>
+-->

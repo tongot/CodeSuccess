@@ -29,7 +29,7 @@ import { ThemeComponent } from './components';
 import { SearchBarComponent } from './components';
 import { NestedDropdownComponent } from './components';
 import { OffersComponent } from './components';
-import { CompactDropdownComponent } from './components/search/compact-dropdown/compact-dropdown.component';
+import { CompactDropdownComponent } from './components';
 
 
 @NgModule({

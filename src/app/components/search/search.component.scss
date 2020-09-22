@@ -1,4 +1,24 @@
 
 .div {
   padding-top: 50px;
+  justify-content: center;
 }
+
+.center {
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 12.5%;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.left-cell {
+  padding-right: 2.5%;
+}
+
+
