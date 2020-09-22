@@ -1,0 +1,9 @@
+<mat-form-field class="flex-item" [style.width.%]=100>
+  <mat-label>All Departments</mat-label>
+  <mat-select [(value)]="selected" >
+    <mat-option>All Departments</mat-option>
+    <mat-icon>arrow_drop_down</mat-icon>
+    <mat-option *ngFor="let option of departments" [value]="option">{{option}}</mat-option>
+  </mat-select>
+
+</mat-form-field>

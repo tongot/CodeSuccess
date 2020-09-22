@@ -1,0 +1,15 @@
+.div {
+  padding-bottom: 5px;
+}
+
+::ng-deep mat-button-toggle.split-button-1 {
+  background-color: black;
+}
+
+mat-button-toggle {
+  color: white;
+}
+
+.mat-button-toggle-checked {
+  color: white;
+}

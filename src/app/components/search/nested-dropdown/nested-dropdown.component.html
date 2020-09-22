@@ -1,0 +1,21 @@
+
+<mat-button-toggle-group>
+  <mat-button-toggle class="split-button-1 drop-down-button" [matMenuTriggerFor]="dropdownMenuOne">
+    Shop by department
+    <mat-icon>arrow_drop_down</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<mat-menu #dropdownMenuOne="matMenu" [overlapTrigger]="false">
+  <ng-container *ngFor="let department of shopByDepartments[0].children">
+          <span
+            (mouseenter)="recheckIfInMenu = true"
+            (mouseleave)="closeResourceMenu(); recheckIfInMenu = true"
+            *ngIf="department.children">
+            <li mat-menu-item class="mat-button-toggle-label-content" >
+              {{department.label}}
+            </li>
+          </span>
+  </ng-container>
+</mat-menu>
+

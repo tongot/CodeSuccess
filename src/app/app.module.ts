@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { A11yModule } from '@angular/cdk/a11y';
 
 import { MaterialModule } from './material.module';
 import { AllMaterialModules } from "./material.module"
@@ -25,6 +26,10 @@ import { AboutComponent } from './components';
 import { CareersComponent } from './components';
 import { SearchComponent } from './components';
 import { ThemeComponent } from './components';
+import { SearchBarComponent } from './components';
+import { NestedDropdownComponent } from './components';
+import { OffersComponent } from './components';
+import { CompactDropdownComponent } from './components/search/compact-dropdown/compact-dropdown.component';
 
 
 @NgModule({
@@ -42,6 +47,10 @@ import { ThemeComponent } from './components';
     CareersComponent,
     SearchComponent,
     ThemeComponent,
+    SearchBarComponent,
+    NestedDropdownComponent,
+    OffersComponent,
+    CompactDropdownComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +61,8 @@ import { ThemeComponent } from './components';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    A11yModule
   ],
   providers: [],
   bootstrap: [AppComponent],
