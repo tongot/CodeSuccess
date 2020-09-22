@@ -1,39 +1,35 @@
-/*
+@import '~@angular/material/theming';
 
-::ng-deep mat-form-field.mat-form-field-appearance-outline .mat-form-field-wrapper {
-  // margin: 20px;
-  align-content: center;
-  margin-right: 20%;
-  margin-left: 20%;
-}
-
-::ng-deep mat-carousel {
-  align-content: center;
-  margin-right: 20%;
-  margin-left: 20%;
-}
-*/
-
-.div {
-  padding: 20px;
+div.theme {
+  padding: 2px;
+  width: 1292px;
+  height: 50%;
 }
 
 :host {
   // border: 2px solid dimgray;
   // display: block;
-  display: inline-block;
+  // display: inline-block;
   // padding: 20px;
-  width: 800px;
-  height: 400px;
+  width: auto;
+  min-height: 400px;
+  height: auto;
+  display:  flex;
+  // flex-wrap: wrap;
   justify-content: center;
-  padding-left: 30%;
+  // padding-left: 25%;
+  padding-top: 1.5%;
 }
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font: bold 24px/45px Helvetica, Sans-Serif;
-  color: #ffc107;
+div.brand-carousel {
+  width: 1292px;
+  margin: auto;
+  padding-left: 12.5%;
+}
+
+.clickable {
+  cursor: pointer;
+  &:hover {
+    @include mat-elevation(8);
+  }
 }
