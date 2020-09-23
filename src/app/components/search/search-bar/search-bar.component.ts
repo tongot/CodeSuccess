@@ -20,6 +20,8 @@ export class SearchBarComponent implements OnInit {
   selected = 'Shop by department';
   departments = Departments;
 
+  value = "null";
+
   streets: string[] = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
 
   constructor() { }

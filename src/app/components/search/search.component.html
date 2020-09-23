@@ -1,13 +1,19 @@
 
-<div fxLayout="row" [ngStyle]="{'background-color':'#0b79bf'}" class="flex">
-  <div fxLayout="row" class="center">
+<div>
+  <div fxLayout="row wrap" [ngStyle]="{'background-color':'#0b79bf'}" class="flex">
+
     <div class="left-cell">
       <app-nested-dropdown></app-nested-dropdown>
     </div>
     <div fxLayout="column" class="right-cell">
-      <div fxLayout="row">
-        <app-search-bar></app-search-bar>
-        <app-compact-dropdown></app-compact-dropdown>
+      <div fxLayout="row" class="right-inner-cell">
+        <div class="inner-left-cell">
+          <app-search-bar></app-search-bar>
+        </div>
+        <div class="inner-right-cell">
+          <app-compact-dropdown></app-compact-dropdown>
+
+        </div>
       </div>
       <div class="right-bottom">
         <app-offers></app-offers>
@@ -16,67 +22,3 @@
 
   </div>
 </div>
-
-
-<!--
-SPACE
-<div [ngStyle]="{'background-color':'#0b79bf'}">
-  <ng-container>
-    <mat-grid-list cols="11" rowHeight="4:1" [gutterSize]="'0px'">
-
-      <mat-grid-tile
-        [colspan]="2"
-        [rowspan]="1">
-        <app-nested-dropdown></app-nested-dropdown>
-      </mat-grid-tile>
-
-      <mat-grid-tile
-        [colspan]="6"
-        [rowspan]="1">
-        <app-search-bar></app-search-bar>
-      </mat-grid-tile>
-
-      <mat-grid-tile
-        [colspan]="1"
-        [rowspan]="1">
-        <app-compact-dropdown></app-compact-dropdown>
-      </mat-grid-tile>
-
-      <mat-grid-tile
-        [colspan]="1"
-        [rowspan]="1">
-        <i class="material-icons">search</i>
-      </mat-grid-tile>
-      <mat-grid-tile
-        [colspan]="1"
-        [rowspan]="1">
-
-      </mat-grid-tile>
-
-      <mat-grid-tile
-        [colspan]="2"
-        [rowspan]="1">
-
-      </mat-grid-tile>
-
-
-      <mat-grid-tile
-        [colspan]="8"
-        [rowspan]="1">
-        <app-offers></app-offers>
-      </mat-grid-tile>
-
-      <mat-grid-tile
-        [colspan]="1"
-        [rowspan]="1">
-
-      </mat-grid-tile>
-    </mat-grid-list>
-
-
-
-
-
-  </ng-container>
-</div>
--->

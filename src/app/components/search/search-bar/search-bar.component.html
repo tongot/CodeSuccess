@@ -1,30 +1,14 @@
-<form class="flex-space">
-  <mat-form-field appearance="outline" class="flex-item" [style.width.%]=200 color="white">
-    <label>
 
+
+<form class="flex-space">
+  <mat-form-field appearance="outline" color="primary-background">
       <input type="text"
              placeholder="Search for products, brands..."
              matInput
-             [formControl]="control"
-             [matAutocomplete]="auto">
-    </label>
-
-    <mat-autocomplete  #auto="matAutocomplete">
-
-    </mat-autocomplete>
+             [formControl]="control">
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>search</mat-icon>
+    </button>
   </mat-form-field>
-
-
-
-  <!--
-  <mat-form-field class="flex-item" [style.width.%]=100>
-    <mat-label>All Departments</mat-label>
-    <mat-select [(value)]="selected" >
-      <mat-option>All Departments</mat-option>
-      <mat-option *ngFor="let option of departments" [value]="option">{{option}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <i class="material-icons">search</i>
-  -->
 </form>
+
