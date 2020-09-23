@@ -62,7 +62,7 @@ import { CompactDropdownComponent } from './components';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    A11yModule
+    A11yModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

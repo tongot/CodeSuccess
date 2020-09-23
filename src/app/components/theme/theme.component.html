@@ -2,8 +2,8 @@
 <div>
 
   <div fxLayout="row" fxLayoutGap="2px">
-    <div fxLayout="column">
-      <div class="brand-carousel">
+    <div fxLayout="column" >
+      <div class="brand-carousel" ngClass.md="carousel-width">
         <mat-carousel
           timings="250ms ease-in"
           [autoplay]="false"
@@ -24,13 +24,13 @@
             overlayColor="#00000040"
             [hideOverlay]="true">
 
-            <img src="{{product.src}}" alt="Image" width="1033" height="100%">
+            <img src="{{product.src}}" alt="Image" width="1033" height="100%" >
 
           </mat-carousel-slide>
         </mat-carousel>
       </div>
 
-      <div class="brand-carousel">
+      <div class="brand-carousel" ngClass.md="carousel-width">
         <h2>FEATURED BRANDS</h2>
 
         <mat-carousel
@@ -91,7 +91,7 @@
 
     </div>
 
-    <div fxLayout="column">
+    <div fxLayout="column" [fxHide.md]="true" [fxHide.xs]="true">
       <mat-card (click)="onCardClick($event)" matRipple class="clickable" >
         <mat-card-content>
           <div fxLayout="row">
@@ -100,7 +100,7 @@
             </div>
             <div fxLayout="column">
               <mat-card-title> Where is my order? </mat-card-title>
-              <mat-cart-content>Check your delivery or collection status</mat-cart-content>
+              <mat-card-content>Check your delivery or collection status</mat-card-content>
             </div>
           </div>
         </mat-card-content>
