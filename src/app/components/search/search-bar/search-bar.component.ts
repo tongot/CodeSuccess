@@ -45,4 +45,6 @@ export class SearchBarComponent implements OnInit {
     return value.toLowerCase().replace(/\s/g, '');
   }
 
+
+
 }
