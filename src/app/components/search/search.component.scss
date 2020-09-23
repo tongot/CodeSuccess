@@ -1,3 +1,43 @@
+.flex {
+  height: auto;
+  width: 100%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.left-cell {
+  width: 13%;
+  margin-left: 1%;
+}
+
+.right-cell {
+  justify-content: left;
+  flex-direction: row;
+  width: 83%;
+  margin-right: 1%;
+}
+
+.right-inner-cell {
+  justify-content: left;
+  flex-direction: row;
+  width: 99%;
+}
+
+.inner-left-cell {
+  width: 80%;
+}
+
+.inner-right-cell {
+  width: 100%;
+  justify-content: right;
+}
 
 .div {
   padding-top: 0px;
@@ -8,38 +48,16 @@
   justify-content: center;
 }
 
-.flex {
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  width: 100%;
-  align-content: flex-start;
-  justify-content: center;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-}
 
-.left-cell {
-  padding-right: 0.5%;
-}
 
-.right-cell {
-  justify-content: left;
-  flex-direction: row;
-  width: 68%;
-}
 
-.right-inner-cell {
-  justify-content: left;
-  flex-direction: row;
-  width: 100%;
-}
 
-.inner-right-cell {
-  width: 16%;
-  justify-content: right;
-}
 
-.inner-left-cell {
-  width: 80%;
-}
+
+
+
+
+
+
+
+
