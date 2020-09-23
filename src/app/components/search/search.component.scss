@@ -1,0 +1,45 @@
+
+.div {
+  padding-top: 0px;
+  justify-content: center;
+}
+
+.center {
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  align-content: flex-start;
+  justify-content: center;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+.left-cell {
+  padding-right: 0.5%;
+}
+
+.right-cell {
+  justify-content: left;
+  flex-direction: row;
+  width: 68%;
+}
+
+.right-inner-cell {
+  justify-content: left;
+  flex-direction: row;
+  width: 100%;
+}
+
+.inner-right-cell {
+  width: 16%;
+  justify-content: right;
+}
+
+.inner-left-cell {
+  width: 80%;
+}

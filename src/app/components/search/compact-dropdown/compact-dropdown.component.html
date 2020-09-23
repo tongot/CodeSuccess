@@ -1,0 +1,30 @@
+
+<mat-form-field [style.width.%]=25 style="background-color: #e7e7e7; color: #212121">
+  <mat-label>All Departments</mat-label>
+  <mat-select [(value)]="selected">
+    <button mat-flat-button style="background-color: #e7e7e7">All Departments<mat-icon>arrow_drop_down</mat-icon></button>
+    <mat-option *ngFor="let option of departments" [value]="option">{{option}}</mat-option>
+  </mat-select>
+
+</mat-form-field>
+
+
+<!--
+
+<mat-button-toggle-group>
+  <mat-button-toggle class="split-dropdown-1 drop-down-button"
+                     [matMenuTriggerFor]="compactDropdown">
+    <mat-icon>arrow_drop_down</mat-icon>
+    All Departments
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+
+<mat-menu #compactDropdown="matMenu" [overlapTrigger]="false">
+  <mat-option *ngFor="let option of departments" [value]="option">{{option}}</mat-option>
+</mat-menu>
+-->
+
+<!--
+<mat-button-toggle class="split-search-1"><mat-icon>search</mat-icon></mat-button-toggle>
+-->

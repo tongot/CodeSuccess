@@ -1,0 +1,74 @@
+<ng-container *ngFor="let menuItem of shopByDepartmentsList">
+
+  <ng-container *ngIf="!menuItem.children">
+    <a class="nav-link">
+      <span class="icon fa" [ngClass]="menuItem.icon"></span>
+      <span class="text-holder">{{menuItem.label}}</span>
+    </a>
+  </ng-container>
+  <ng-container *ngIf="menuItem.children.length > 0" >
+    <mat-button-toggle class="split-button-1 drop-down-button" #button [matMenuTriggerFor]="levelOne"  #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger)" (mouseleave)="buttonLeave(levelOneTrigger, button)" style="z-index:1050; background: #4d4d4f;  font-size: 100%; width: 100%">
+      Shop by Department
+      <mat-icon>arrow_drop_down</mat-icon>
+    </mat-button-toggle>
+
+    <mat-menu #levelOne="matMenu" direction="down" yPosition="below" [overlapTrigger]="false">
+      <span (mouseenter)="menuEnter()" (mouseleave)="menuLeave(levelOneTrigger, button)">
+      <ng-container *ngFor="let childL1 of menuItem.children">
+        <li class="p-0" *ngIf="!childL1.children" mat-menu-item>
+          <a class="nav-link">{{childL1.label}}
+            <i *ngIf="childL1.icon" [ngClass]="childL1.icon"></i>
+          </a>
+        </li>
+        <ng-container *ngIf="childL1.children && childL1.children.length > 0">
+          <li mat-menu-item #levelTwoTrigger="matMenuTrigger" [matMenuTriggerFor]="levelTwo">
+            <span class="icon fa" [ngClass]="childL1.icon"></span>
+            <span>{{childL1.label}}</span>
+          </li>
+
+          <mat-menu #levelTwo="matMenu" [overlapTrigger]="false">
+            <span (mouseenter)="menu2enter()" (mouseleave)="menu2Leave(levelOneTrigger,levelTwoTrigger, button)">
+            <ng-container *ngFor="let childL2 of childL1.children">
+              <li class="p-0" mat-menu-item>
+                <a class="nav-link">{{childL2.label}}
+                  <i *ngIf="childL2.icon" [ngClass]="childL2.icon"></i>
+                </a>
+              </li>
+            </ng-container>
+            </span>
+          </mat-menu>
+        </ng-container>
+      </ng-container>
+      </span>
+    </mat-menu>
+  </ng-container>
+
+</ng-container>
+
+
+
+
+
+
+<!--
+<mat-button-toggle-group>
+  <mat-button-toggle class="split-button-1 drop-down-button" [matMenuTriggerFor]="dropdownMenuOne">
+    Shop by department
+    <mat-icon>arrow_drop_down</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<mat-menu #dropdownMenuOne="matMenu" [overlapTrigger]="false">
+  <ng-container *ngFor="let department of shopByDepartments[0].children">
+          <span
+            (mouseenter)="recheckIfInMenu = true"
+            (mouseleave)="closeResourceMenu(); recheckIfInMenu = true"
+            *ngIf="department.children">
+            <li mat-menu-item class="mat-button-toggle-label-content" >
+              {{department.label}}
+            </li>
+          </span>
+  </ng-container>
+</mat-menu>
+
+-->

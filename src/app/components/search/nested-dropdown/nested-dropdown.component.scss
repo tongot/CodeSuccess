@@ -1,0 +1,32 @@
+.div {
+  padding-bottom: 5px;
+}
+
+::ng-deep mat-button-toggle.split-button-1 {
+  background-color: #4d4d4f;
+}
+
+mat-button-toggle {
+  color: white;
+  width: 80%;
+  background-color: white;
+}
+
+.mat-button-toggle-checked {
+  color: white;
+}
+
+/*
+::ng-deep .mat-icon{
+  height:48px;
+  width:48px !important;
+  font-size:48px !important;
+  // background-color: #212121;
+}
+ */
+
+::ng-deep .mat-button-toggle-checked{
+  height:50% !important;
+  width: 100% !important;
+  font-size:48px !important;
+}

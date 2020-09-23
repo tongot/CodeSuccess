@@ -1,0 +1,118 @@
+
+<div>
+
+  <div fxLayout="row" fxLayoutGap="2px">
+    <div fxLayout="column" >
+      <div class="brand-carousel" ngClass.md="carousel-width">
+        <mat-carousel
+          timings="250ms ease-in"
+          [autoplay]="false"
+          interval="5000"
+          color="accent"
+          maxWidth="80%"
+          proportion="30"
+          slides="4"
+          [loop]="false"
+          [hideArrows]="false"
+          [hideIndicators]="false"
+          [useKeyboard]="true"
+          [useMouseWheel]="false"
+          orientation="ltr">
+          <mat-carousel-slide
+            #matCarouselSlide
+            *ngFor="let product of slides; let i = index;"
+            overlayColor="#00000040"
+            [hideOverlay]="true">
+
+            <img src="{{product.src}}" alt="Image" width="1033" height="100%" >
+
+          </mat-carousel-slide>
+        </mat-carousel>
+      </div>
+
+      <div class="brand-carousel" ngClass.md="carousel-width">
+        <h2>FEATURED BRANDS</h2>
+
+        <mat-carousel
+          timings="250ms ease-in"
+          [autoplay]="false"
+          interval="500"
+          color="accent"
+          maxWidth="80%"
+          proportion="10"
+          slides="5"
+          [loop]="true"
+          [hideArrows]="false"
+          [hideIndicators]="true"
+          [useKeyboard]="true"
+          [useMouseWheel]="false"
+          orientation="ltr">
+          <mat-carousel-slide
+            #matCarouselSlide
+            *ngFor="let product of brands;  index as i; first as isFirst; last as isLast; even as isEven;"
+            overlayColor="#00000040"
+            [hideOverlay]="true">
+
+            <img *ngIf="product == brands[0]" src="{{brands[3].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[1]" src="{{brands[4].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[2]" src="{{brands[0].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[3]" src="{{brands[1].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[4]" src="{{brands[2].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[5]" src="{{brands[3].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+
+            <img *ngIf="product == brands[0]" src="{{brands[4].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[1]" src="{{brands[0].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[2]" src="{{brands[1].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[3]" src="{{brands[2].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[4]" src="{{brands[3].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[5]" src="{{brands[4].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+
+            <img src="{{product.src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+
+            <img *ngIf="product == brands[0]" src="{{brands[1].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[1]" src="{{brands[2].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[2]" src="{{brands[3].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[3]" src="{{brands[4].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[4]" src="{{brands[5].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[5]" src="{{brands[0].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+
+            <img *ngIf="product == brands[0]" src="{{brands[2].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[1]" src="{{brands[3].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[2]" src="{{brands[4].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[3]" src="{{brands[5].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[4]" src="{{brands[0].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+            <img *ngIf="product == brands[5]" src="{{brands[1].src}}" alt="Image" width="200" height="80" (click)="myFunction(i)">
+
+
+          </mat-carousel-slide>
+
+        </mat-carousel>
+      </div>
+
+    </div>
+
+    <div fxLayout="column" [fxHide.md]="true" [fxHide.xs]="true">
+      <mat-card (click)="onCardClick($event)" matRipple class="clickable" >
+        <mat-card-content>
+          <div fxLayout="row">
+            <div [ngStyle]="{'background-color':'#7FC7F5'}">
+              <img src="assets/Images/index.svg" alt="Delivery">
+            </div>
+            <div fxLayout="column">
+              <mat-card-title> Where is my order? </mat-card-title>
+              <mat-card-content>Check your delivery or collection status</mat-card-content>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <div>
+        <mat-card (click)="onCardClick($event)" matRipple class="clickable">
+          <img src="/assets/Images/contactless_RHB_1.png" alt="Delivery">
+        </mat-card>
+      </div>
+    </div>
+
+  </div>
+
+</div>

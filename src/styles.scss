@@ -1,4 +1,60 @@
+@import '~@angular/material/theming';
+
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "variables";
+html,
+body {
+  height: 100%;
+}
+body {
+  font-size: 13;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container {
+  margin: 20%;
+  display: flex;
+}
+
+$lt-gray: #ddd;
+$background-dark: #512da8;
+$primary-background: #ffffff;
+$background-light: #9575cd;
+$background-pale: #d1c4e9;
+$primary-color-dark: #512da8;
+$primary-color: #0b79bf;
+$primary-color-light: #d1c4e9;
+$primary-color-text: #ffffff;
+$accent-color: #ffc107;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #bdbdbd;
+
+.background-primary {
+  background-color: $background-dark !important;
+}
+.background-accent {
+  background-color: $accent-color !important;
+}
+.text-floral-white {
+  color: floralwhite !important;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+.highlight {
+  background-color: $background-pale;
+  border: 1px solid $primary-color-dark;
+  z-index: 1;
+  transform: scale(1.01);
+}
+.site-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
