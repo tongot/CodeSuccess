@@ -2,17 +2,23 @@
   margin: 0; padding: 0; box-sizing: border-box; /* reset */
 }
 
+.mat-brand {
+  color: black;
+  background-color: white;
+  // width: 164px;
+}
+
 .div {
   display: inline-block;
 }
 
 .hr * {
-  display: inline-block;
+  display: block;
   text-align: center;
-  width: 100%;
-
+  // width: 140%;
+  // width: 165px;
 }
 
-button {
-  width: 40%;
+.master * {
+  width: 100%;
 }
