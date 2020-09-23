@@ -7,7 +7,7 @@
     </a>
   </ng-container>
   <ng-container *ngIf="menuItem.children.length > 0">
-    <button #button mat-button [matMenuTriggerFor]="levelOne" #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger)" (mouseleave)="buttonLeave(levelOneTrigger, button)" style="z-index:1050">
+    <button class="split-button-1 drop-down-button" #button mat-button [matMenuTriggerFor]="levelOne" #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger)" (mouseleave)="buttonLeave(levelOneTrigger, button)" style="z-index:1050">
       <span class="icon fa" [ngClass]="menuItem.icon"></span>
       <span>{{menuItem.label}}
         <i class="fa fa-chevron-down"></i>
