@@ -6,15 +6,13 @@
       <span class="text-holder">{{menuItem.label}}</span>
     </a>
   </ng-container>
-  <ng-container *ngIf="menuItem.children.length > 0">
-    <button class="split-button-1 drop-down-button" #button mat-button [matMenuTriggerFor]="levelOne" #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger)" (mouseleave)="buttonLeave(levelOneTrigger, button)" style="z-index:1050">
-      <span class="icon fa" [ngClass]="menuItem.icon"></span>
-      <span>{{menuItem.label}}
-        <i class="fa fa-chevron-down"></i>
-      </span>
-    </button>
+  <ng-container *ngIf="menuItem.children.length > 0" >
+    <mat-button-toggle class="split-button-1 drop-down-button" #button [matMenuTriggerFor]="levelOne"  #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger)" (mouseleave)="buttonLeave(levelOneTrigger, button)" style="z-index:1050; background: #4d4d4f;  font-size: 100%; width: 100%">
+      Shop by Department
+      <mat-icon>arrow_drop_down</mat-icon>
+    </mat-button-toggle>
 
-    <mat-menu #levelOne="matMenu" direction="down" yPosition="below">
+    <mat-menu #levelOne="matMenu" direction="down" yPosition="below" [overlapTrigger]="false">
       <span (mouseenter)="menuEnter()" (mouseleave)="menuLeave(levelOneTrigger, button)">
       <ng-container *ngFor="let childL1 of menuItem.children">
         <li class="p-0" *ngIf="!childL1.children" mat-menu-item>
@@ -28,7 +26,7 @@
             <span>{{childL1.label}}</span>
           </li>
 
-          <mat-menu #levelTwo="matMenu">
+          <mat-menu #levelTwo="matMenu" [overlapTrigger]="false">
             <span (mouseenter)="menu2enter()" (mouseleave)="menu2Leave(levelOneTrigger,levelTwoTrigger, button)">
             <ng-container *ngFor="let childL2 of childL1.children">
               <li class="p-0" mat-menu-item>
