@@ -1,54 +1,82 @@
-<div class="site-container">
+<mat-toolbar style="background-color: #ffffff">
 
-    <nav class="nav">
-        <ul class="left-menu">
-            <li><img src="../../../assets/Images/takealot-logo.png" alt=""></li>
-            <li class="border-menu-item"><a href="#">Help</a></li>
-            <li class="sell"><a href="#">Sell at takealot</a></li>
-        </ul>
-        <ul class="right-menu">
-            <li class="border-menu-item user"><a href="#">Log in</a></li>
-            <li class="border-menu-item user"><a href="#">Register</a></li>
-            <li class="border-menu-item sell"><a href="#">Order</a></li>
-            <li id="drop-menu" (mouseover)="openMenu(upArrow,downArrow)" (mouseleave)="closeMenu(upArrow,downArrow)">
-                <a href="#"> My account
-                    <span #upArrow style="font-size: 20px; margin-top:70px">&#9662;</span>
-                    <span #downArrow style="font-size: 20px; margin-top:70px; display: none;">&#9652;</span>
-                </a>
-                <ul>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Track Order</a></li>
-                    <li><a href="#">Log return</a></li>
-                    <li><a href="#">Invoice</a></li>
-                    <li><a href="#">Personal Details</a></li>
-                    <li><a href="#">Digital Library </a></li>
-                    <li><a href="#">Help </a></li>
-                </ul>
-            </li>
-            <li>
-                <button mat-mini-fab>
-                    <mat-icon>favorite</mat-icon>
-                </button>
-            </li>
+  <img src="/assets/Images/takealot-logo.png" routerLink='/home' routerLinkActive="active" alt="Image" width="200" height="60">
 
-            <li class="cart-chip">
-                <mat-chip-list>
-                    <mat-chip>
-                        <mat-icon left>
-                            shopping_cart
-                        </mat-icon>
-                        {{CartItems.length}}
-                    </mat-chip>
-                </mat-chip-list>
-                <div #cart class="menu-cart">
-                    <div class="total-header">
-                        <h3><strong>Total: R 10</strong></h3>
-                    </div>
-                    <div class="cart-btn-container">
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </nav>
+  <a class="text"  mat-flat-button routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-sign-in fa-lg"></span>Help</a>
 
-</div>
+  <mat-divider [vertical]="true" style="height:50%"></mat-divider>
+
+  <a class="text"  mat-flat-button routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-home fa-lg"></span>Sell on Takealot</a>
+
+  <span class="flex-spacer"></span>
+
+  <a class="text"  mat-flat-button routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-sign-in fa-lg"></span>Login</a>
+
+  <mat-divider [vertical]="true" style="height:50%"></mat-divider>
+
+  <a class="text"  mat-flat-button routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;" ><span class="fa fa-sign-in fa-lg"></span>Register</a>
+
+  <mat-divider [vertical]="true" style="height:50%"></mat-divider>
+
+  <a class="text"  mat-flat-button routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span> Orders</a>
+
+  <mat-divider [vertical]="true" style="height:50%"></mat-divider>
+
+  <a class="text" mat-flat-button  [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()" style="background-color: #ffffff;">
+    <span class="fa fa-sign-in fa-lg">
+      My Account
+    </span>
+    <mat-icon>arrow_drop_down</mat-icon>
+  </a>
+
+      <mat-menu #menu="matMenu" [overlapTrigger]="false" >
+      <span (mouseleave)="menuTrigger.closeMenu()" >
+        <a class="inText"  mat-menu-item routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff; width: 200px"><span class="fa fa-info fa-lg"></span>My Account</a>
+        <a class="inText"  mat-menu-item routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span>Track Order</a>
+        <a class="inText"  mat-menu-item routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span>Log Return</a>
+        <a class="inText"  mat-menu-item routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span>Invoices</a>
+        <a class="inText"  mat-menu-item routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span>Personal Details</a>
+        <a class="inText"  mat-menu-item routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span>Digital Library</a>
+        <a class="inText"  mat-menu-item routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span>Help</a>
+      </span>
+      </mat-menu>
+
+
+  <mat-divider [vertical]="true" style="height:1%"></mat-divider>
+
+  <a>
+    <span class="fa fa-sign-in fa-lg"></span>
+    <button mat-fab style="width: 200%; height: 150%; background-color: red; color: white" aria-label="Example icon button with a heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+  </a>
+
+  <a class="text"  mat-flat-button routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span></a>
+
+  <a [matMenuTriggerFor]="cart" #cartTrigger="matMenuTrigger" (mouseover)="cartTrigger.openMenu()">
+    <span class="fa fa-sign-in fa-lg"></span>
+    <button mat-flat-button style="width: 80%; height: 200%; background-color: green; color: white; border-radius: 25%" aria-label="Example icon button with a heart icon">
+      <mat-icon>shopping_cart</mat-icon> 23
+    </button>
+  </a>
+  <mat-menu #cart="matMenu" [overlapTrigger]="false" >
+      <span (mouseleave)="cartTrigger.closeMenu()" >
+        <mat-card>
+          <mat-card-header>
+
+          </mat-card-header>
+          <mat-card-content>
+                Nothing to see here
+          </mat-card-content>
+          <mat-card-footer>
+
+          </mat-card-footer>
+        </mat-card>
+      </span>
+  </mat-menu>
+
+  <a class="text"  mat-flat-button routerLink='/holidays' routerLinkActive="active" style="background-color: #ffffff;"><span class="fa fa-info fa-lg"></span></a>
+
+
+</mat-toolbar>
+

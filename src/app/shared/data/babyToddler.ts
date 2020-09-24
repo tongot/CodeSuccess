@@ -4,7 +4,7 @@ export const BabyToddler: Product[] = [
   {
     id: '10',
     name: 'Comfortable First Walker Baby Sheep Ear Shoes',
-    image: ['/assets/images/babyToddler/57639395-1-zoom.jpeg'],
+    image: ['/assets/departments/babyToddler/57639395-1-zoom.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -22,7 +22,7 @@ export const BabyToddler: Product[] = [
   {
     id: '11',
     name: 'Totland Long Sleeves Eva Feeding bib - Fun in the Jungle',
-    image: ['/assets/images/babyToddler/s-zoom.file.jpeg'],
+    image: ['/assets/departments/babyToddler/s-zoom.file.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -38,7 +38,7 @@ export const BabyToddler: Product[] = [
   {
     id: '12',
     name: 'All Heart Baby Knee Pads With Rubber Studs - Black',
-    image: ['/assets/images/babyToddler/ALOT0014890-1-zoom.jpg', '/assets/images/babyToddler/ALOT0014890-2-zoom.jpg'],
+    image: ['/assets/departments/babyToddler/ALOT0014890-1-zoom.jpg', '/assets/departments/babyToddler/ALOT0014890-2-zoom.jpg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -51,7 +51,7 @@ export const BabyToddler: Product[] = [
   {
     id: '13',
     name: 'Pack of 3 x Baby Knee Pads - Boy',
-    image: ['/assets/images/babyToddler/58036338-1-zoom.jpeg', '/assets/images/babyToddler/58036338-2-zoom.jpeg', '/assets/images/babyToddler/58036338-3-zoom.jpeg'],
+    image: ['/assets/images/babyToddler/58036338-1-zoom.jpeg', '/assets/departments/babyToddler/58036338-2-zoom.jpeg', '/assets/departments/babyToddler/58036338-3-zoom.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -66,7 +66,7 @@ export const BabyToddler: Product[] = [
   {
     id: '14',
     name: 'Cute Unicorn First Walker Baby Girl Shoes',
-    image: ['/assets/images/babyToddler/59241459-1-zoom.jpeg', '/assets/images/babyToddler/59241465-1-zoom.jpeg', '/assets/images/babyToddler/59241465-3-zoom.jpeg'],
+    image: ['/assets/departments/babyToddler/59241459-1-zoom.jpeg', '/assets/departments/babyToddler/59241465-1-zoom.jpeg', '/assets/images/babyToddler/59241465-3-zoom.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -83,7 +83,7 @@ export const BabyToddler: Product[] = [
   {
     id: '15',
     name: 'Baby Hat, Mittens & Booties Set (Size: 0-3 Months)',
-    image: ['/assets/images/babyToddler/55370821-1-zoom.jpeg', '/assets/images/babyToddler/55370822-1-zoom.jpeg', '/assets/images/babyToddler/55370823-1-zoom.jpeg'],
+    image: ['/assets/departments/babyToddler/55370821-1-zoom.jpeg', '/assets/departments/babyToddler/55370822-1-zoom.jpeg', '/assets/images/babyToddler/55370823-1-zoom.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -99,7 +99,7 @@ export const BabyToddler: Product[] = [
   {
     id: '16',
     name: 'Silicone Pocket Bib',
-    image: ['/assets/images/babyToddler/s-zoom16.file.png', '/assets/images/babyToddler/s-zoom17.file.png', '/assets/images/babyToddler/s-zoom18.file.png'],
+    image: ['/assets/departments/babyToddler/s-zoom16.file.png', '/assets/departments/babyToddler/s-zoom17.file.png', '/assets/departments/babyToddler/s-zoom18.file.png'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -118,7 +118,7 @@ export const BabyToddler: Product[] = [
   {
     id: '17',
     name: 'Qtees Africa - Lockdown 2020 Long Sleeve Baby Grow',
-    image: ['/assets/images/babyToddler/s-zoom1.file.jpeg', '/assets/images/babyToddler/s-zoom2.file.jpeg'],
+    image: ['/assets/departments/babyToddler/s-zoom1.file.jpeg', '/assets/departments/babyToddler/s-zoom2.file.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -137,7 +137,7 @@ export const BabyToddler: Product[] = [
   {
     id: '18',
     name: 'Lou Lou Lapin - Bear Essential Set',
-    image: ['/assets/images/babyToddler/s-zoom3.file.jpeg'],
+    image: ['/assets/departments/babyToddler/s-zoom3.file.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -150,7 +150,7 @@ export const BabyToddler: Product[] = [
   {
     id: '19',
     name: 'Baby Makia Girls Knot Turban - Pink',
-    image: ['/assets/images/babyToddler/57589758-1-zoom.jpeg', '/assets/images/babyToddler/57589758-2-zoom.jpeg', '/assets/images/babyToddler/57589758-3-zoom.jpeg', '/assets/images/babyToddler/57589759-3-zoom.jpeg'],
+    image: ['/assets/departments/babyToddler/57589758-1-zoom.jpeg', '/assets/departments/babyToddler/57589758-2-zoom.jpeg', '/assets/departments/babyToddler/57589758-3-zoom.jpeg', '/assets/departments/babyToddler/57589759-3-zoom.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [
@@ -168,7 +168,7 @@ export const BabyToddler: Product[] = [
   {
     id: '20',
     name: 'Kittikin - Fluffy Heart Baby Girl Set',
-    image: ['/assets/images/babyToddler/20-s-zoom.file.jpeg', '/assets/images/babyToddler/21-s-zoom.file.jpeg', 'assets/images/babyToddler/22-s-zoom.file.jpeg', 'assets/images/babyToddler/23-s-zoom.file.jpeg'],
+    image: ['/assets/departments/babyToddler/20-s-zoom.file.jpeg', '/assets/departments/babyToddler/21-s-zoom.file.jpeg', 'assets/departments/babyToddler/22-s-zoom.file.jpeg', 'assets/departments/babyToddler/23-s-zoom.file.jpeg'],
     department: 'Baby & Toddler',
     promotion: false,
     description: [

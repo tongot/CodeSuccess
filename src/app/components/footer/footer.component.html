@@ -1,63 +1,85 @@
-<div class="site-container">
-    <div class="footer">
-        <div class="footer-links" *ngFor="let item of footerItems">
-            <h3>{{item.heading}}</h3>
-            <li *ngFor="let listing of item.listings">
-                <a [href]="listing.link"> {{listing.name}}</a>
-            </li>
-        </div>
-        <div class="apps">
-            <div>
-                <h3>Download Our Apps</h3>
-                <a href="#">
-                    <img width="125" height="40" class="ImageButton" src="../../../assets/Images/AppStoreBtn.png"
-                        alt="">
-                </a>
-                <a href="#">
-                    <img width="135" height="40" class="ImageButton" src="../../../assets/Images/googlePlayBtn.png"
-                        alt="">
-                </a>
-            </div>
-            <div>
-                <div class="apps">
-                    <div style="padding-right:10px">
-                        <h3>Follow Us</h3>
-                        <a href="#">
-                            <mat-icon color="primary">
-                                facebook
-                            </mat-icon>
-                        </a>
-                        <a href="#">
-                            <mat-icon color="primary">
-                                facebook
-                            </mat-icon>
-                        </a>
-                        <a href="#">
-                            <mat-icon color="primary">
-                                facebook
-                            </mat-icon>
-                        </a>
-                    </div>
-                    <div>
-                        <h3>Takelot.group</h3>
-                        <a href="#">Superbalist.com</a><br>
-                        <a href="#">Mr D Food</a>
-                    </div>
+<div  fxLayout="row wrap" style="justify-content: space-around; width: 100%" >
+  <div class="new" *ngFor="let entry of footerItems; i as index" fxLayoutAlign="center">
 
-                </div>
-            </div>
+    <mat-card fxLayout="column">
+      <mat-card-header fxLayoutAlign="center">
+        <h2>{{entry.heading}}</h2>
+      </mat-card-header>
 
-        </div>
+      <mat-card-content fxLayoutAlign="center">
+        <ul>
+          <ul *ngFor="let item of entry.listings">
+            <a class="text" routerLink='/{{item.link}}' routerLinkActive="active" style="background-color: #ffffff;" ><span class="fa fa-sign-in fa-lg"></span>{{item.name}}</a>
+          </ul>
+        </ul>
+      </mat-card-content>
+
+    </mat-card>
+
+  </div>
+
+  <mat-card >
+    <mat-card-header>
+      <h2>Download</h2>
+    </mat-card-header>
+
+    <mat-card-content>
+      <img src="assets/footerImages/applications/appleIndex.svg">
+      <img src="assets/footerImages/applications/googlePlayIndex.svg">
+    </mat-card-content>
+
+    <mat-card-header>
+      <h2>Follow Us</h2>
+    </mat-card-header>
+
+    <mat-card-content>
+      <a class="text" routerLink='facebook.com' routerLinkActive="active" style="color: blue;" ><span class="fa fa-sign-in fa-lg"></span><mat-icon>facebook</mat-icon></a>
+      <a class="text" routerLink='facebook.com' routerLinkActive="active" style="color: blue;" ><span class="fa fa-sign-in fa-lg"></span><mat-icon>facebook</mat-icon></a>
+      <a class="text" routerLink='facebook.com' routerLinkActive="active" style="color: blue;" ><span class="fa fa-sign-in fa-lg"></span><mat-icon>facebook</mat-icon></a>
+    </mat-card-content>
+
+    <mat-card-header>
+      <h2>Takealot.group</h2>
+    </mat-card-header>
+
+    <mat-card-content>
+      <ul>
+        <ul><a class="text" routerLink='/#' routerLinkActive="active" style="background-color: #ffffff;" ><span class="fa fa-sign-in fa-lg"></span>Superbalist.com</a></ul>
+        <ul><a class="text" routerLink='/#' routerLinkActive="active" style="background-color: #ffffff;" ><span class="fa fa-sign-in fa-lg"></span>Superbalist.com</a></ul>
+      </ul>
+    </mat-card-content>
+  </mat-card>
 
 
-    </div>
-    <hr>
-    <ul class="breadcrumb">
-        <li *ngFor="let category of categories"><a href="#">{{category}}</a></li>
-    </ul>
 </div>
-<div class="bottom-footer">
-    <div class="site-container">
 
-    </div>
+<hr>
+
+<div>
+  <ul *ngFor="let category of categories" class="footer-inline">
+    <a class="text" routerLink='/{{category}}' routerLinkActive="active" style="background-color: #ffffff;" ><span class="fa fa-sign-in fa-lg"></span>{{category}}</a>
+  </ul>
 </div>
+
+<hr>
+
+<mat-toolbar style="background-color: #0b79bf">
+  <img src="assets/footerImages/payment/Visaindex.svg">
+  <img src="assets/footerImages/payment/MasterCardindex.svg">
+  <img src="assets/footerImages/payment/AmericanExpressindex.svg">
+  <img src="assets/footerImages/payment/diners-club-international-1fbac96b68e4b755fc496c84173bd211.svg">
+  <img src="assets/footerImages/payment/PayFastindex.svg">
+  <img src="assets/footerImages/payment/ozowIndex.svg">
+  <img src="assets/footerImages/payment/eBucksIndex.svg">
+  <img src="assets/footerImages/payment/mobiCredIndex.svg">
+  <img src="assets/footerImages/payment/discovery-miles-b1a590e7e0ede1cccf4e834d31d2cefc.svg">
+
+  <span class="flex-spacer"></span>
+
+  <ul>
+    <ul><a class="footer-text" routerLink='/#' routerLinkActive="active" ><span class="fa fa-sign-in fa-lg"></span>Switch to mobile</a></ul>
+    <ul><a class="footer-text" ><span class="fa fa-sign-in fa-lg"></span>&copy; Takealot Online (Pty) Ltd.</a></ul>
+  </ul>
+</mat-toolbar>
+
+

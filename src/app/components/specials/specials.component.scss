@@ -1,0 +1,73 @@
+.container{
+  background-color: #F4F4F4;
+  margin: 0px;
+}
+.content {
+  padding: 16px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.content > mat-card {
+  width: 200px;
+}
+
+mat-card:hover {
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.picture {
+  width: auto;
+  height: 250px;
+}
+
+.aligned-with-icon{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px; /* optional */
+}
+
+
+.brand-carousel {
+  width: 2000px;
+  margin: auto;
+  padding-left: 12.5%;
+}
+
+.carousel-width {
+  width: 720px;
+  margin: auto;
+  padding-left: 12.5%;
+}
+
+
+/*
+
+
+
+ */
+
+
+.slider-container {
+  display: flex;
+  flex-direction: column
+}
+
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  // This is not supported by all browsers. If you want a different animation, please feel free
+  // to find your own solution.
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}

@@ -30,7 +30,10 @@ import { SearchBarComponent } from './components';
 import { NestedDropdownComponent } from './components';
 import { OffersComponent } from './components';
 import { CompactDropdownComponent } from './components';
+import { SpecialsComponent } from './components/specials/specials.component';
 
+import { SliderItemDirective } from "./directive/slider-item.directive";
+import { CarouselComponent } from './components/specials/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,9 @@ import { CompactDropdownComponent } from './components';
     NestedDropdownComponent,
     OffersComponent,
     CompactDropdownComponent,
+    SpecialsComponent,
+    SliderItemDirective,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

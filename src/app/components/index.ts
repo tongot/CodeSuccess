@@ -10,6 +10,7 @@ export * from './login/login.component';
 export * from './search/search.component';
 export * from './signup/signup.component';
 export * from './theme/theme.component';
+export * from './specials/specials.component';
 
 /*
     NESTED COMPONENTS

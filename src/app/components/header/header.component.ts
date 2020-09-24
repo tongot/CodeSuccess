@@ -6,16 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+
+  cartElements = 0;
+
   constructor() {}
 
   ngOnInit(): void {}
-  openMenu(upArrow, downArrow) {
-    upArrow.style.display = 'none';
-    downArrow.style.display = '';
-  }
-  closeMenu(upArrow, downArrow) {
-    upArrow.style.display = '';
-    downArrow.style.display = 'none';
-  }
-  CartItems = [{ item: 'Timberland' }, { item: 'Mask' }];
+
+
 }
