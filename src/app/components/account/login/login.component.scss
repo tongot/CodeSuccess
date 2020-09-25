@@ -1,0 +1,11 @@
+mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+}
+.login {
+  height: 100vh;
+}
+.login-card {
+  margin-top: 50px;
+  height: 350px;
+  width: 550px;
+}

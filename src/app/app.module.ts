@@ -10,9 +10,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { A11yModule } from '@angular/cdk/a11y';
 
 import { MaterialModule } from './material.module';
-import { AllMaterialModules } from "./material.module"
+import { AllMaterialModules } from './material.module';
 
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './components';
 import { FooterComponent } from './components';
@@ -30,7 +30,8 @@ import { SearchBarComponent } from './components';
 import { NestedDropdownComponent } from './components';
 import { OffersComponent } from './components';
 import { CompactDropdownComponent } from './components';
-
+import { AccountComponent } from './components';
+import { MyAccountComponent } from './components';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,8 @@ import { CompactDropdownComponent } from './components';
     NestedDropdownComponent,
     OffersComponent,
     CompactDropdownComponent,
+    AccountComponent,
+    MyAccountComponent,
   ],
   imports: [
     BrowserModule,

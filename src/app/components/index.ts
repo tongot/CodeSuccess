@@ -6,11 +6,12 @@ export * from './favorites/favorites.component';
 export * from './footer/footer.component';
 export * from './header/header.component';
 export * from './index/index.component';
-export * from './login/login.component';
 export * from './search/search.component';
-export * from './signup/signup.component';
+export * from './account/signup/signup.component';
+export * from './account/login/login.component';
 export * from './theme/theme.component';
-
+export * from './account/account.component';
+export * from './account/myaccount/myaccount.component';
 /*
     NESTED COMPONENTS
  */

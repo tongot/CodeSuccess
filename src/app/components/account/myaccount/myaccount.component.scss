@@ -1,0 +1,61 @@
+$colorBlue: #0b79bf;
+.my-account {
+  padding-top: 20px;
+  perspective: 1000px;
+  h2 {
+    margin-bottom: 20px;
+    color: #4d4d4f;
+  }
+  .card {
+    margin-bottom: 20px;
+
+    //transition: opacity 1s ease-in;
+    opacity: 0;
+    $cut: 0.5;
+    @for $var from 0 through 5 {
+      &:nth-child(#{$var}) {
+        animation-name: cardIn;
+        animation-duration: 400ms;
+        animation-delay: (150ms * $var) - 300ms;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+      }
+    }
+    h3 {
+      color: #000;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    ul {
+      line-height: 2;
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+      li {
+        a {
+          padding-bottom: 3px;
+          text-decoration: none;
+          color: $colorBlue;
+        }
+
+        :hover {
+          border-bottom: 2px solid $colorBlue;
+        }
+      }
+    }
+  }
+  mat-card:not([class*="mat-elevation-z"]) {
+    box-shadow: 0 0 11px -10px;
+  }
+  @keyframes cardIn {
+    0% {
+      opacity: 0;
+      transform: translateY(80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
