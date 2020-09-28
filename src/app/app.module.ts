@@ -8,9 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { A11yModule } from '@angular/cdk/a11y';
 
 import { MaterialModule } from './material.module';
 import { AllMaterialModules } from './material.module';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './components';
 import { FooterComponent } from './components';
@@ -24,7 +27,12 @@ import { AboutComponent } from './components';
 import { CareersComponent } from './components';
 import { SearchComponent } from './components';
 import { ThemeComponent } from './components';
-
+import { SearchBarComponent } from './components';
+import { NestedDropdownComponent } from './components';
+import { OffersComponent } from './components';
+import { CompactDropdownComponent } from './components';
+import { AccountComponent } from './components';
+import { MyAccountComponent } from './components';
 
 // pipes
 import {ShortenTextPipe } from './shorten-text.pipe';
@@ -45,7 +53,13 @@ import {ShortenTextPipe } from './shorten-text.pipe';
     CareersComponent,
     SearchComponent,
     ThemeComponent,
-    ShortenTextPipe
+    ShortenTextPipe,
+    SearchBarComponent,
+    NestedDropdownComponent,
+    OffersComponent,
+    CompactDropdownComponent,
+    AccountComponent,
+    MyAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,8 +69,11 @@ import {ShortenTextPipe } from './shorten-text.pipe';
     FontAwesomeModule,
     MaterialModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
 
+    FormsModule,
+    ReactiveFormsModule,
+    A11yModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

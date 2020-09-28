@@ -1,3 +1,5 @@
+@import "~@angular/material/theming";
+
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
@@ -21,6 +23,7 @@ body {
 
 $lt-gray: #ddd;
 $background-dark: #512da8;
+$primary-background: #ffffff;
 $background-light: #9575cd;
 $background-pale: #d1c4e9;
 $primary-color-dark: #512da8;
@@ -29,7 +32,7 @@ $primary-color-light: #d1c4e9;
 $primary-color-text: #ffffff;
 $accent-color: #ffc107;
 $primary-text-color: #212121;
-$secondary-text-color: #757575;
+$secondary-text-color: #4d4d4f;
 $divider-color: #bdbdbd;
 
 .background-primary {
@@ -41,7 +44,9 @@ $divider-color: #bdbdbd;
 .text-floral-white {
   color: floralwhite !important;
 }
-
+.background-main {
+  background-color: #f4f4f4;
+}
 .flex-spacer {
   flex: 1 1 auto;
 }
@@ -51,7 +56,14 @@ $divider-color: #bdbdbd;
   z-index: 1;
   transform: scale(1.01);
 }
+
 .site-container {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+@media (min-width: 1200px) {
+  .site-container {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
 }

@@ -1,1 +1,24 @@
-<p>search works!</p>
+
+<div>
+  <div fxLayout="row wrap" [ngStyle]="{'background-color':'#0b79bf'}" class="flex">
+
+    <div class="left-cell">
+      <app-nested-dropdown></app-nested-dropdown>
+    </div>
+    <div fxLayout="column" class="right-cell">
+      <div fxLayout="row" class="right-inner-cell">
+        <div class="inner-left-cell">
+          <app-search-bar></app-search-bar>
+        </div>
+        <div class="inner-right-cell">
+          <app-compact-dropdown></app-compact-dropdown>
+
+        </div>
+      </div>
+      <div class="right-bottom">
+        <app-offers></app-offers>
+      </div>
+    </div>
+
+  </div>
+</div>

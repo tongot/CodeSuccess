@@ -7,18 +7,18 @@
             <li class="sell"><a href="#">Sell at takealot</a></li>
         </ul>
         <ul class="right-menu">
-            <li class="border-menu-item user"><a href="#">Log in</a></li>
-            <li class="border-menu-item user"><a href="#">Register</a></li>
+            <li class="border-menu-item user"><a routerLink="/account/login">Log in</a></li>
+            <li class="border-menu-item user"><a routerLink="/account/register">Register</a></li>
             <li class="border-menu-item sell"><a href="#">Order</a></li>
             <li id="drop-menu" (mouseover)="openMenu(upArrow,downArrow)" (mouseleave)="closeMenu(upArrow,downArrow)">
-                <a href="#"> My account
+                <a routerLink="/account"> My account
                     <span #upArrow style="font-size: 20px; margin-top:70px">&#9662;</span>
                     <span #downArrow style="font-size: 20px; margin-top:70px; display: none;">&#9652;</span>
                 </a>
                 <ul>
-                    <li><a href="#">My Account</a></li>
+                    <li><a routerLink="/account">My Account</a></li>
                     <li><a href="#">Track Order</a></li>
-                    <li><a href="#">Log return</a></li>
+                    <li><a routerLink="/account/login">Log return</a></li>
                     <li><a href="#">Invoice</a></li>
                     <li><a href="#">Personal Details</a></li>
                     <li><a href="#">Digital Library </a></li>
@@ -41,9 +41,12 @@
                     </mat-chip>
                 </mat-chip-list>
                 <div #cart class="menu-cart">
-                    <div class="total-header">
+                    <!--cart item here-->
+                    <mat-divider></mat-divider>
+                    <div fxLayoutAlign="end">
                         <h3><strong>Total: R 10</strong></h3>
                     </div>
+                    <mat-divider></mat-divider>
                     <div class="cart-btn-container">
                     </div>
                 </div>
