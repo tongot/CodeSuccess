@@ -10,7 +10,7 @@ import { Product } from './shared/product';
   providedIn: 'root'
 })
 export class BeautyService {
-  private dataUrl = 'data/.json';
+  private dataUrl = 'assets/api/beauty.json';
   length: any;
 
   constructor(private http: HttpClient, private route: Router) { }

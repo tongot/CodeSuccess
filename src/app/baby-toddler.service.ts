@@ -9,7 +9,7 @@ import { Product } from './shared/product';
   providedIn: 'root'
 })
 export class BabyToddlerService {
-  private dataUrl = 'data/babyToddler.json';
+  private dataUrl = 'assets/api/baby-toddler.json';
   length: any;
 
 
