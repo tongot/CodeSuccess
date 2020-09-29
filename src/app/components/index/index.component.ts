@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AutomotiveService } from 'src/app/automative.service';
-import { Product } from 'src/app/shared/product';
-import {BeautyService} from 'src/app/beauty.service';
+import { IProduct } from 'src/app/shared/product';
+import { ProductService } from './services/product-service';
+
 
 
 @Component({
@@ -13,7 +12,7 @@ import {BeautyService} from 'src/app/beauty.service';
 })
 export class IndexComponent implements OnInit {
 
-constructor(private autoService: BeautyService,
+constructor(private productService: ProductService,
             private route: ActivatedRoute ) { }
 
 sectionTitle = 'Automative Products';
@@ -24,14 +23,14 @@ rating: number;
 arrayFilter = '';
 
 // filteredProducts: IProduct[] = [];
-products: Product[] = [];
+products: IProduct[] = [];
 
   ngOnInit(): void {
-    this.autoService.getBeautyProducts().subscribe(
-      (products) => {
+    this.productService.getProducts().subscribe(
+      (products: IProduct[]) => {
         this.products = products;
       },
-      (err) => this.errorMessage = err
+      (err: string) => this.errorMessage = err
     );
     console.log(this.errorMessage);
   }

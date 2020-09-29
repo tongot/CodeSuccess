@@ -1,17 +1,19 @@
 // import
 
-export interface Product {
+export interface IProduct {
   id: string;
   name: string;
-  image: string[];
+  image: string;
   department: string;
   promotion: boolean;
-  description: string[];
+  description: string;
   price: number;
+  discount: number;
+  category: string;
   rating: number;
 }
 
 export interface ProductResolved {
-  product: Product;
+  product: IProduct;
   error?: any;
 }

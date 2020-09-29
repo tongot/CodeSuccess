@@ -13,6 +13,8 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { MaterialModule } from './material.module';
 import { AllMaterialModules } from './material.module';
 
+import {ProductsModule} from './products/products.module';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './components';
@@ -67,9 +69,11 @@ import {ShortenTextPipe } from './shorten-text.pipe';
     BrowserAnimationsModule,
     AllMaterialModules,
     FontAwesomeModule,
+    ProductsModule,
     MaterialModule,
     FlexLayoutModule,
     HttpClientModule,
+    // InMemoryWebApiModule.forRoot({}, { delay: 1000 }),
 
     FormsModule,
     ReactiveFormsModule,
