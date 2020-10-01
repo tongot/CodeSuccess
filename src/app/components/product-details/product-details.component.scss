@@ -1,0 +1,17 @@
+.container{
+  background-color: #F4F4F4;
+  // margin: 0px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+
+.productImage {
+  height: 100%;
+  // width: 10%;
+}
+
+.productImage:hover _{
+  background: #0b79bf;
+  border-color: black;
+}

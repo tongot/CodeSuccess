@@ -1,4 +1,11 @@
-<app-carousel></app-carousel>
+<!--
+<app-carousel [slides]="slides"></app-carousel>
+ -->
+<div class="container">
+  <app-automotive [dataSource]="dataSource"></app-automotive>
+</div>
+
+
 
 <!--
 <div class="container">
@@ -7,8 +14,7 @@
 
       <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%"
            *ngFor="let product of dataSource let i = index;">
-        <mat-card
-          (click)="select(product.id)">
+        <mat-card>
           <mat-card-content fxLayoutAlign="center">
             <img  class="picture" mat-card-sm-image src="{{product.image[0]}}" width="50px" height="30px">
           </mat-card-content>
@@ -24,7 +30,6 @@
   </div>
 </div>
 -->
-
 
 <!--
 <div class="container">

@@ -3,10 +3,12 @@ import { Product } from '../product';
 export const BabyToddler: Product[] = [
   {
     id: '10',
+    slug: null,
     name: 'Comfortable First Walker Baby Sheep Ear Shoes',
-    image: ['/assets/departments/babyToddler/57639395-1-zoom.jpeg'],
+    image: '/assets/departments/babyToddler/57639395-1-zoom.jpeg',
+    images: ['/assets/departments/babyToddler/57639395-1-zoom.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       'Description:',
       'No need to worry about socks getting lost or shoes falling off when you have our cosy and comfy baby boots. It has an adjustable strap so that they can stay put!',
@@ -17,14 +19,18 @@ export const BabyToddler: Product[] = [
       'These adorable sheep ear baby shoes are soft; fuzzy; cosy and cute and will make a thoughtful gift at any expecting mom\'s baby shower'
     ],
     price: 195,
-    rating: 5
+    rating: 5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '11',
+    slug: null,
     name: 'Totland Long Sleeves Eva Feeding bib - Fun in the Jungle',
-    image: ['/assets/departments/babyToddler/s-zoom.file.jpeg'],
+    image: '/assets/departments/babyToddler/s-zoom.file.jpeg',
+    images: ['/assets/departments/babyToddler/s-zoom.file.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '100% safe for your baby',
       'Made from machine washable waterproof fabric',
@@ -33,27 +39,35 @@ export const BabyToddler: Product[] = [
       'Sized to fit 2 - 5 years kids with adjustable tie closure; Length: 44 cm, Bust: 34 cm ,Sleeve: 41 cm'
     ],
     price: 180,
-    rating: 4.6
+    rating: 4.6,
+    category: "",
+    sub_category: ""
   },
   {
     id: '12',
+    slug: null,
     name: 'All Heart Baby Knee Pads With Rubber Studs - Black',
-    image: ['/assets/departments/babyToddler/ALOT0014890-1-zoom.jpg', '/assets/departments/babyToddler/ALOT0014890-2-zoom.jpg'],
+    image: '/assets/departments/babyToddler/ALOT0014890-1-zoom.jpg',
+    images: ['/assets/departments/babyToddler/ALOT0014890-1-zoom.jpg', '/assets/departments/babyToddler/ALOT0014890-2-zoom.jpg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '- Material: Polyester fibre',
       '- Warranty: 6 months',
     ],
     price: 139,
-    rating: 5
+    rating: 5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '13',
+    slug: null,
     name: 'Pack of 3 x Baby Knee Pads - Boy',
-    image: ['/assets/images/babyToddler/58036338-1-zoom.jpeg', '/assets/departments/babyToddler/58036338-2-zoom.jpeg', '/assets/departments/babyToddler/58036338-3-zoom.jpeg'],
+    image: '/assets/images/babyToddler/58036338-1-zoom.jpeg',
+    images: ['/assets/images/babyToddler/58036338-1-zoom.jpeg', '/assets/departments/babyToddler/58036338-2-zoom.jpeg', '/assets/departments/babyToddler/58036338-3-zoom.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '- Baby knee pads help protect your baby\'s knees from bruises and scrapes when crawling and learning to walk.',
       '- Perfect for any season. Set of 3 pairs of Baby Knee pads. Material: Cotton',
@@ -61,14 +75,18 @@ export const BabyToddler: Product[] = [
       '- Recommended for ages 6 - 18 months.'
     ],
     price: 179,
-    rating: 4
+    rating: 4,
+    category: "",
+    sub_category: ""
   },
   {
     id: '14',
+    slug: null,
     name: 'Cute Unicorn First Walker Baby Girl Shoes',
-    image: ['/assets/departments/babyToddler/59241459-1-zoom.jpeg', '/assets/departments/babyToddler/59241465-1-zoom.jpeg', '/assets/images/babyToddler/59241465-3-zoom.jpeg'],
+    image: '/assets/departments/babyToddler/59241459-1-zoom.jpeg',
+    images: ['/assets/departments/babyToddler/59241459-1-zoom.jpeg', '/assets/departments/babyToddler/59241465-1-zoom.jpeg', '/assets/images/babyToddler/59241465-3-zoom.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       'Soft and Comfortable',
       'They are the perfect shoes for first walkers. The material is soft enough that it moves with your little girl to avoid rubbing, yet sturdy enough to keep structure and support. - The soles are thick enough to protect yet also so light to keep from weighing your little one down or tripping him / her and no skidding or slipping when your toddler wear these.',
@@ -78,14 +96,18 @@ export const BabyToddler: Product[] = [
   'These adorable infant and toddler summer sandals have a golden unicorn horse horn surrounded by soft flowers. They are soft and stylish and will make a thoughtful gift at any expecting mom\'s baby shower.'
     ],
     price: 195,
-    rating: 5
+    rating: 5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '15',
+    slug: null,
     name: 'Baby Hat, Mittens & Booties Set (Size: 0-3 Months)',
-    image: ['/assets/departments/babyToddler/55370821-1-zoom.jpeg', '/assets/departments/babyToddler/55370822-1-zoom.jpeg', '/assets/images/babyToddler/55370823-1-zoom.jpeg'],
+    image: '/assets/departments/babyToddler/55370821-1-zoom.jpeg',
+    images: ['/assets/departments/babyToddler/55370821-1-zoom.jpeg', '/assets/departments/babyToddler/55370822-1-zoom.jpeg', '/assets/images/babyToddler/55370823-1-zoom.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '- Hat 100% cotton.',
       '- Booties 100% cotton.',
@@ -94,14 +116,18 @@ export const BabyToddler: Product[] = [
       '- Size: 0-3 months.'
     ],
     price: 225,
-    rating: 2.7
+    rating: 2.7,
+    category: "",
+    sub_category: ""
   },
   {
     id: '16',
+    slug: null,
     name: 'Silicone Pocket Bib',
-    image: ['/assets/departments/babyToddler/s-zoom16.file.png', '/assets/departments/babyToddler/s-zoom17.file.png', '/assets/departments/babyToddler/s-zoom18.file.png'],
+    image: '/assets/departments/babyToddler/s-zoom16.file.png',
+    images: ['/assets/departments/babyToddler/s-zoom16.file.png', '/assets/departments/babyToddler/s-zoom17.file.png', '/assets/departments/babyToddler/s-zoom18.file.png'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       'Supersoft.',
       'Keeping your little one clean and comfy.',
@@ -113,14 +139,18 @@ export const BabyToddler: Product[] = [
       'Food-grade silicone bibs are BPA and Phthalates free.'
     ],
     price: 185,
-    rating: 5
+    rating: 5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '17',
+    slug: null,
     name: 'Qtees Africa - Lockdown 2020 Long Sleeve Baby Grow',
-    image: ['/assets/departments/babyToddler/s-zoom1.file.jpeg', '/assets/departments/babyToddler/s-zoom2.file.jpeg'],
+    image: '/assets/departments/babyToddler/s-zoom1.file.jpeg',
+    images: ['/assets/departments/babyToddler/s-zoom1.file.jpeg', '/assets/departments/babyToddler/s-zoom2.file.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '100% Cotton Long sleeve Baby grow.',
       'Wash Care:',
@@ -132,27 +162,35 @@ export const BabyToddler: Product[] = [
       '- do not use bleach'
     ],
     price: 190,
-    rating: 4.7
+    rating: 4.7,
+    category: "",
+    sub_category: ""
   },
   {
     id: '18',
+    slug: null,
     name: 'Lou Lou Lapin - Bear Essential Set',
-    image: ['/assets/departments/babyToddler/s-zoom3.file.jpeg'],
+    image: '/assets/departments/babyToddler/s-zoom3.file.jpeg',
+    images: ['/assets/departments/babyToddler/s-zoom3.file.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       'Set perfect for your little one or as a gift for a baby shower.',
       'This cute set is made in cotton knit for added warmth, with a woodland bear printed on the vest.'
     ],
     price: 240,
-    rating: 3
+    rating: 3,
+    category: "",
+    sub_category: ""
   },
   {
     id: '19',
+    slug: null,
     name: 'Baby Makia Girls Knot Turban - Pink',
-    image: ['/assets/departments/babyToddler/57589758-1-zoom.jpeg', '/assets/departments/babyToddler/57589758-2-zoom.jpeg', '/assets/departments/babyToddler/57589758-3-zoom.jpeg', '/assets/departments/babyToddler/57589759-3-zoom.jpeg'],
+    image: '/assets/departments/babyToddler/57589758-1-zoom.jpeg',
+    images: ['/assets/departments/babyToddler/57589758-1-zoom.jpeg', '/assets/departments/babyToddler/57589758-2-zoom.jpeg', '/assets/departments/babyToddler/57589758-3-zoom.jpeg', '/assets/departments/babyToddler/57589759-3-zoom.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       'Turban Hats and Headwraps aren\'t only for bad baby hair days and winter...',
       'Headcovers are a necessity for babies, in any and every season and are such an integral part of any baby and toddler outfit, it is not something to be overlooked and definitely should not be the boring part of the outfit.',
@@ -163,20 +201,26 @@ export const BabyToddler: Product[] = [
       'Our Kids Sizes fit 42cm - 50cm head circumferences comfortably'
     ],
     price: 180,
-    rating: 5
+    rating: 5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '20',
+    slug: null,
     name: 'Kittikin - Fluffy Heart Baby Girl Set',
-    image: ['/assets/departments/babyToddler/20-s-zoom.file.jpeg', '/assets/departments/babyToddler/21-s-zoom.file.jpeg', 'assets/departments/babyToddler/22-s-zoom.file.jpeg', 'assets/departments/babyToddler/23-s-zoom.file.jpeg'],
+    image: '/assets/departments/babyToddler/20-s-zoom.file.jpeg',
+    images: ['/assets/departments/babyToddler/20-s-zoom.file.jpeg', '/assets/departments/babyToddler/21-s-zoom.file.jpeg', 'assets/departments/babyToddler/22-s-zoom.file.jpeg', 'assets/departments/babyToddler/23-s-zoom.file.jpeg'],
     department: 'Baby & Toddler',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       'This beautiful set will add a touch of unique charm to your little one’s wardrobe.',
       'Made of soft cotton material, your baby is guaranteed ultimate comfort while looking unique and adorable.',
       'Material: 100% Cotton'
     ],
     price: 379,
-    rating: 4.8
+    rating: 4.8,
+    category: "",
+    sub_category: ""
   }
 ];

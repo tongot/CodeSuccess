@@ -1,0 +1,46 @@
+<app-search></app-search>
+
+<div class="container">
+
+
+  <mat-card class="card">
+
+
+    <!-- content -->
+    <mat-card-content>
+      <div fxLayout="column">
+        <!-- Column-2 -->
+        <div fxLayout="row" style="height: 100%" fxLayoutAlign="justify content">
+          <!-- Column-2 Row-1-->
+          <div *ngIf="images>0" fxLayout="column" fxFlex="12" fxFlexFill  fxLayoutAlign="space-between strech">
+            <div fxLayout="row" fxFlex="25%"  fxLayoutAlign="center center">column2-1 row1</div>
+            <div fxLayout="row" fxFlex="25%"  fxLayoutAlign="center center">column2-2 row1</div>
+            <div fxLayout="row" fxFlex="25%"  fxLayoutAlign="center center">column2-3 row1</div>
+            <div fxLayout="row" fxFlex="25%"  fxLayoutAlign="center center">column2-4 row1</div>
+          </div>
+
+          <!-- Column-2 Row-2-->
+          <div fxLayout="row" fxFlex="40" fxFlexFill  fxLayoutAlign="center center" >
+            <div fxFlex="30"  fxLayoutAlign="center center" class="productImage">
+              <img src="{{productDetail['image']}}" alt="{{productDetail['image']}}"  >
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div fxLayout="column" fxFlex="12" fxFlexFill  fxLayoutAlign="justify content">
+            <div fxLayout="row" fxFlex="25%"  fxLayoutAlign="justify content">
+              <mat-card-header>
+                column2-1 row1
+              </mat-card-header>
+            </div>
+            <div fxLayout="row" fxFlex="25%"  fxLayoutAlign="center center">column2-2 row1</div>
+            <div fxLayout="row" fxFlex="25%"  fxLayoutAlign="center center">column2-3 row1</div>
+            <div fxLayout="row" fxFlex="25%"  fxLayoutAlign="center center">column2-4 row1</div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+
+</div>

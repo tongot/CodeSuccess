@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AutomotiveService } from 'src/app/automative.service';
+import { AutomotiveService } from 'src/app/services/automative.service';
 import { Product } from 'src/app/shared/product';
 
 import { SearchComponent } from "..";

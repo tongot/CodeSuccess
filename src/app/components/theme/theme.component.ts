@@ -7,8 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ThemeComponent implements OnInit {
 
-  /*
-  slides = [
+  public slides = [
     { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" },
     { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" },
     { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(36).jpg" },
@@ -17,15 +16,6 @@ export class ThemeComponent implements OnInit {
     { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(39).jpg" },
     { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(40).jpg" }
   ];
-   */
-
-  slides = [
-    { src: "/assets/carousel/new_shop_local_lp_carousel_1292x300_2020_1.png" },
-    { src: "/assets/carousel/new_shop_local_lp_carousel_1292x300_2020_1.png" },
-    { src: "/assets/carousel/new_shop_local_lp_carousel_1292x300_2020_1.png" },
-    { src: "/assets/carousel/new_shop_local_lp_carousel_1292x300_2020_1.png" }
-  ];
-
 
 
   brands = [

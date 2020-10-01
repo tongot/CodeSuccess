@@ -1,0 +1,107 @@
+
+
+<div class="carousel">
+  <ng-container class="slide" *ngFor="let product of dataSource; let i = index">
+
+  </ng-container>
+
+</div>
+
+<div class="children">
+  <button class="control prev" (click)="onPreviousClick()">
+    <span class="arrow left"></span>
+  </button>
+
+  <mat-card class="product-card"
+            (click)="selectProduct(dataSource[zero].name)"
+            [class.mat-elevation-z2]="!dataSource[zero].isSelected"
+            [class.mat-elevation-z8]="dataSource[zero].isSelected"    >
+    <mat-card-content fxLayoutAlign="center">
+      <img  class="picture" mat-card-sm-image src="{{dataSource[zero].image}}" width="50px" height="30px">
+    </mat-card-content>
+    <mat-card-content>
+      <p>{{dataSource[zero].name}}</p>
+      <hr>
+      <p> <b> R{{dataSource[zero].price}} </b> </p>
+      <p></p> <mat-icon style="color: gold">star</mat-icon> <span class="aligned-with-icon"> {{dataSource[zero].rating}}</span>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="product-card"
+            (click)="selectProduct(dataSource[one].name)"
+            [class.mat-elevation-z2]="!dataSource[one].isSelected"
+            [class.mat-elevation-z8]="dataSource[one].isSelected">
+    <mat-card-content fxLayoutAlign="center">
+      <img  class="picture" mat-card-sm-image src="{{dataSource[one].image}}" width="50px" height="30px">
+    </mat-card-content>
+    <mat-card-content>
+      <p>{{dataSource[one].name}}</p>
+      <hr>
+      <p> <b> R{{dataSource[one].price}} </b> </p>
+      <p></p> <mat-icon style="color: gold">star</mat-icon> <span class="aligned-with-icon"> {{dataSource[one].rating}}</span>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="product-card"
+            (click)="selectProduct(dataSource[two].name)"
+            [class.mat-elevation-z2]="!dataSource[two].isSelected"
+            [class.mat-elevation-z8]="dataSource[two].isSelected"  >
+    <mat-card-content fxLayoutAlign="center">
+      <img  class="picture" mat-card-sm-image src="{{dataSource[two].image}}" width="50px" height="30px">
+    </mat-card-content>
+    <mat-card-content>
+      <p>{{dataSource[two].name}}</p>
+      <hr>
+      <p> <b> R{{dataSource[two].price}} </b> </p>
+      <p></p> <mat-icon style="color: gold">star</mat-icon> <span class="aligned-with-icon"> {{dataSource[two].rating}}</span>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="product-card"
+            (click)="selectProduct(dataSource[three].name)"
+            [class.mat-elevation-z2]="!dataSource[three].isSelected"
+            [class.mat-elevation-z8]="dataSource[three].isSelected">
+    <mat-card-content fxLayoutAlign="center">
+      <img  class="picture" mat-card-sm-image src="{{dataSource[three].image}}" width="50px" height="30px">
+    </mat-card-content>
+    <mat-card-content>
+      <p>{{dataSource[three].name}}</p>
+      <hr>
+      <p> <b> R{{dataSource[three].price}} </b> </p>
+      <p></p> <mat-icon style="color: gold">star</mat-icon> <span class="aligned-with-icon"> {{dataSource[three].rating}}</span>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="product-card"
+            (click)="selectProduct(dataSource[four].name)"
+            [class.mat-elevation-z2]="!dataSource[four].isSelected"
+            [class.mat-elevation-z8]="dataSource[four].isSelected">
+    <mat-card-content fxLayoutAlign="center">
+      <img  class="picture" mat-card-sm-image src="{{dataSource[four].image}}" width="50px" height="30px">
+    </mat-card-content>
+    <mat-card-content>
+      <p>{{dataSource[four].name}}</p>
+      <hr>
+      <p> <b> R{{dataSource[four].price}} </b> </p>
+      <p></p> <mat-icon style="color: gold">star</mat-icon> <span class="aligned-with-icon"> {{dataSource[four].rating}}</span>
+    </mat-card-content>
+  </mat-card>
+
+
+  <button class="control next" (click)="onNextClick()">
+    <span class="arrow right"></span>
+  </button>
+</div>
+
+
+
+
+
+<!--
+
+<img src="{{dataSource[zero].image[0]}}" class="carol">
+  <img src="{{dataSource[one].image[0]}}" class="carol">
+  <img src="{{dataSource[two].image[0]}}" class="carol">
+  <img src="{{dataSource[three].image[0]}}" class="carol">
+  <img src="{{dataSource[four].image[0]}}" class="carol">
+-->

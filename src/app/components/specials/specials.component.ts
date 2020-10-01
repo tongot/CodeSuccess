@@ -1,49 +1,26 @@
-import { Component, OnInit, AfterContentInit, ContentChildren, ViewChild, QueryList, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from "@angular/router";
 import { Automotive } from '../../shared/data/automotive'
+import { CarouselComponent } from "./carousel/carousel.component";
 
-import { SliderItemDirective } from "../../directive/slider-item.directive";
+import { SliderItemDirective } from "../directive/slider-item.directive";
 
 @Component({
   selector: 'app-specials',
   templateUrl: './specials.component.html',
   styleUrls: ['./specials.component.scss']
 })
-export class SpecialsComponent implements AfterContentInit {
+export class SpecialsComponent implements OnInit {
 
-  @ContentChildren(SliderItemDirective, { read: ElementRef }) items
-    : QueryList<ElementRef<HTMLDivElement>>;
-  @ViewChild('slides') slidesContainer: ElementRef<HTMLDivElement>;
-
-  private slidesIndex = 0;
-
-  get currentItem(): ElementRef<HTMLDivElement> {
-    return this.items.find((item, index) => index === this.slidesIndex);
-  }
-
-  ngAfterContentInit() {
-    console.log('items', this.items);
-  }
-
-  ngAfterViewInit() {
-    console.log('slides', this.slidesContainer);
-  }
-
-  onClickLeft() {
-    this.slidesContainer.nativeElement.scrollLeft -= this.currentItem.nativeElement.offsetWidth;
-
-    if (this.slidesIndex > 0) {
-      this.slidesIndex--;
-    }
-  }
-
-  onClickRight() {
-    this.slidesContainer.nativeElement.scrollLeft += this.currentItem.nativeElement.offsetWidth;
-
-    if (this.slidesIndex < this.items.length - 1) {
-      this.slidesIndex++
-    }
-  }
+  public slides = [
+    { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" },
+    { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" },
+    { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(36).jpg" },
+    { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(37).jpg" },
+    { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(38).jpg" },
+    { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(39).jpg" },
+    { src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(40).jpg" }
+  ];
 
   onSpecial = [
     {
@@ -77,10 +54,6 @@ export class SpecialsComponent implements AfterContentInit {
   ngOnInit(): void {
   }
 
-  select(title) {
-    console.log(title);
-    this.router.navigate(['product', title]);
-  }
 
 
 

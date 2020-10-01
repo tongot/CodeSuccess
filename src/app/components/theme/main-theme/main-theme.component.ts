@@ -1,18 +1,20 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { trigger, transition, useAnimation } from "@angular/animations";
 
 @Component({
-  selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  selector: 'app-main-theme',
+  templateUrl: './main-theme.component.html',
+  styleUrls: ['./main-theme.component.scss']
 })
-export class CarouselComponent implements OnInit {
+export class MainThemeComponent implements OnInit {
 
   @Input() slides;
 
   currentSlide = 0;
 
   constructor() { }
+
+  ngOnInit(): void {
+  }
 
   onPreviousClick() {
     const previous = this.currentSlide - 1;
@@ -24,10 +26,6 @@ export class CarouselComponent implements OnInit {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
     console.log("next clicked, new current slide is: ", this.currentSlide);
-  }
-
-  ngOnInit() {
-    this.preloadImages(); // for the demo
   }
 
   preloadImages() {

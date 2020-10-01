@@ -3,25 +3,29 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, throwError, of } from 'rxjs';
 import { map, tap, catchError} from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Product } from './shared/product';
+import { Product } from '../shared/product';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class CampingOutdoorService {
-  private dataUrl = 'data/CampingOutdoor.json';
+
+export class AutomotiveService{
+
+  private dataUrl = 'data/automotive.json';
   length: any;
 
   constructor(private http: HttpClient, private route: Router) { }
-  getCampingOutdoorProducts(): Observable<Product[]> {
+
+  getAutoProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.dataUrl)
       .pipe(
-        tap(data => console.log(`All  baby toddler products: ${JSON.stringify(data)}`))
+        tap(data => console.log(`All  Automotive  products: ${JSON.stringify(data)}`))
       );
   }
-  getCampingOutdoorProduct(id: number): Observable<Product> {
+  getAutoProduct(id: number): Observable<Product> {
     if (id === 0) {
-      return of(this.initializeCampingOutdoorProduct());
+      return of(this.initializeProduct());
     }
     const url = `${this.dataUrl}/${id}`;
     return this.http.get<Product>(url)
@@ -31,7 +35,7 @@ export class CampingOutdoorService {
       );
   }
 
-  createCampingOutdoorProduct(product: Product): Observable<Product> {
+  createAutoProduct(product: Product): Observable<Product> {
     const headers = new HttpHeaders({ 'Content-Type': 'app/json' });
     product.id = null;
     return this.http.post<Product>(this.dataUrl, product, { headers })
@@ -41,7 +45,7 @@ export class CampingOutdoorService {
       );
   }
 
-  deleteBeautyProduct(id: number): Observable<{}> {
+  deleteAutoProduct(id: number): Observable<{}> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.dataUrl}/${id}`;
     return this.http.delete<Product>(url, { headers })
@@ -52,7 +56,7 @@ export class CampingOutdoorService {
 
   }
 
-  updateBeautyProduct(product: Product): Observable<Product> {
+  updateAutoProduct(product: Product): Observable<Product> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.dataUrl}/${product.id}`;
     return this.http.put<Product>(url, product, { headers })
@@ -83,17 +87,21 @@ export class CampingOutdoorService {
   }
 
 
-  private initializeCampingOutdoorProduct(): Product {
+  private initializeProduct(): Product {
     return {
       id: '0',
+      slug: null,
       name: null,
       image: null,
+      images: null,
       department: null,
       promotion: null,
       description: null,
       price: null,
-      rating: null
+      rating: null,
+      category: null,
+      sub_category: null
     };
   }
 
-}
+  }

@@ -19,3 +19,5 @@ export * from './search/nested-dropdown/nested-dropdown.component';
 export * from './search/offers/offers.component';
 export * from './search/search-bar/search-bar.component';
 export * from './search/compact-dropdown/compact-dropdown.component';
+export * from './specials/carousel/carousel.component';
+export * from './product-details/product-details.component';

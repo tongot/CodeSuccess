@@ -3,26 +3,25 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, throwError, of } from 'rxjs';
 import { map, tap, catchError} from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Product } from './shared/product';
-
+import { Product } from '../shared/product';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BeautyService {
-  private dataUrl = 'data/babyToddler.json';
+export class CampingOutdoorService {
+  private dataUrl = 'data/CampingOutdoor.json';
   length: any;
 
   constructor(private http: HttpClient, private route: Router) { }
-  getBeautyProducts(): Observable<Product[]> {
+  getCampingOutdoorProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.dataUrl)
       .pipe(
         tap(data => console.log(`All  baby toddler products: ${JSON.stringify(data)}`))
       );
   }
-  getBeautyProduct(id: number): Observable<Product> {
+  getCampingOutdoorProduct(id: number): Observable<Product> {
     if (id === 0) {
-      return of(this.initializeBeautyProduct());
+      return of(this.initializeCampingOutdoorProduct());
     }
     const url = `${this.dataUrl}/${id}`;
     return this.http.get<Product>(url)
@@ -32,7 +31,7 @@ export class BeautyService {
       );
   }
 
-  createBeautyProduct(product: Product): Observable<Product> {
+  createCampingOutdoorProduct(product: Product): Observable<Product> {
     const headers = new HttpHeaders({ 'Content-Type': 'app/json' });
     product.id = null;
     return this.http.post<Product>(this.dataUrl, product, { headers })
@@ -84,7 +83,7 @@ export class BeautyService {
   }
 
 
-  private initializeBeautyProduct(): Product {
+  private initializeCampingOutdoorProduct(): Product {
     return {
       id: '0',
       name: null,

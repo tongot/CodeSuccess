@@ -30,10 +30,14 @@ import { SearchBarComponent } from './components';
 import { NestedDropdownComponent } from './components';
 import { OffersComponent } from './components';
 import { CompactDropdownComponent } from './components';
-import { SpecialsComponent } from './components/specials/specials.component';
+import { SpecialsComponent } from './components';
 
-import { SliderItemDirective } from "./directive/slider-item.directive";
-import { CarouselComponent } from './components/specials/carousel/carousel.component';
+import { SliderItemDirective } from "./components/directive/slider-item.directive";
+import { CarouselComponent } from './components';
+import { MainThemeComponent } from './components/theme/main-theme/main-theme.component';
+import { BrandsComponent } from './components/theme/brands/brands.component';
+import { AutomotiveComponent } from './components/specials/automotive/automotive.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,11 @@ import { CarouselComponent } from './components/specials/carousel/carousel.compo
     CompactDropdownComponent,
     SpecialsComponent,
     SliderItemDirective,
-    CarouselComponent
+    CarouselComponent,
+    MainThemeComponent,
+    BrandsComponent,
+    AutomotiveComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

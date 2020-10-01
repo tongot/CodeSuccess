@@ -3,24 +3,26 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, throwError, of } from 'rxjs';
 import { map, tap, catchError} from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Product } from './shared/product';
+import { Product } from '../shared/product';
+
 @Injectable({
   providedIn: 'root'
 })
-export class BooksCoursesService {
-  private dataUrl = 'data/booksCourses.json';
+export class BabyToddlerService {
+  private dataUrl = 'data/babyToddler.json';
   length: any;
 
+
   constructor(private http: HttpClient, private route: Router) { }
-  getBooksCoursesProducts(): Observable<Product[]> {
+  getBabyProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.dataUrl)
       .pipe(
         tap(data => console.log(`All  baby toddler products: ${JSON.stringify(data)}`))
       );
   }
-  getBooksCoursesProduct(id: number): Observable<Product> {
+  getBabyProduct(id: number): Observable<Product> {
     if (id === 0) {
-      return of(this.initializeBooksCoursesProduct());
+      return of(this.initializeBabyProduct());
     }
     const url = `${this.dataUrl}/${id}`;
     return this.http.get<Product>(url)
@@ -30,7 +32,7 @@ export class BooksCoursesService {
       );
   }
 
-  createBooksCoursesProduct(product: Product): Observable<Product> {
+  createBabyProduct(product: Product): Observable<Product> {
     const headers = new HttpHeaders({ 'Content-Type': 'app/json' });
     product.id = null;
     return this.http.post<Product>(this.dataUrl, product, { headers })
@@ -40,7 +42,7 @@ export class BooksCoursesService {
       );
   }
 
-  deleteBooksCoursesProduct(id: number): Observable<{}> {
+  deleteBabyProduct(id: number): Observable<{}> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.dataUrl}/${id}`;
     return this.http.delete<Product>(url, { headers })
@@ -51,7 +53,7 @@ export class BooksCoursesService {
 
   }
 
-  updateBooksCoursesProduct(product: Product): Observable<Product> {
+  updateBabyProduct(product: Product): Observable<Product> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.dataUrl}/${product.id}`;
     return this.http.put<Product>(url, product, { headers })
@@ -82,7 +84,7 @@ export class BooksCoursesService {
   }
 
 
-  private initializeBooksCoursesProduct(): Product {
+  private initializeBabyProduct(): Product {
     return {
       id: '0',
       name: null,

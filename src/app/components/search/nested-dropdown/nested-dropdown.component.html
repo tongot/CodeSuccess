@@ -10,6 +10,9 @@
     <mat-button-toggle class="split-button-1 drop-down-button" #button [matMenuTriggerFor]="levelOne"  #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger)" (mouseleave)="buttonLeave(levelOneTrigger, button)" style="z-index:1050; background: #4d4d4f;  font-size: 100%; width: 100%">
       Shop by Department
       <mat-icon>arrow_drop_down</mat-icon>
+      <i class="fa fa-caret-down"></i>
+      <i class="fa fa-chevron-circle-down"></i>
+      <i class="fa fa-chevron-circle-down"></i>
     </mat-button-toggle>
 
     <mat-menu #levelOne="matMenu" direction="down" yPosition="below" [overlapTrigger]="false">

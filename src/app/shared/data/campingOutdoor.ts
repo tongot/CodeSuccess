@@ -1,12 +1,14 @@
 import { Product } from '../product';
 
-export  const CampingOutdoor: Product[] = [
+export const CampingOutdoor: Product[] = [
   {
     id: '40',
+    slug: null,
     name: 'Alva - Single Burner Canister Stove',
-    image: ['assets/images/campingOutdoor/6003339006747-1-zoom.jpg', 'assets/images/campingOutdoor/6003339006747-2-zoom.jpg', 'assets/images/campingOutdoor/6003339006747-3-zoom.jpg'],
+    image: 'assets/images/campingOutdoor/6003339006747-1-zoom.jpg',
+    images: ['assets/images/campingOutdoor/6003339006747-1-zoom.jpg', 'assets/images/campingOutdoor/6003339006747-2-zoom.jpg', 'assets/images/campingOutdoor/6003339006747-3-zoom.jpg'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '- Safety locking mechanism.',
       '- Variable heat control.',
@@ -19,14 +21,18 @@ export  const CampingOutdoor: Product[] = [
       '- Dimensions: L: 32cm  W: 10cm H: 35'
     ],
     price: 398,
-    rating: 5
+    rating: 5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '41',
+    slug: null,
     name: 'Gas Torch with Butane Gas Refill Canister Set',
-    image: ['assets/images/campingOutdoor/57596349-1-zoom.jpeg', 'assets/images/campingOutdoor/57596349-2-zoom.jpeg', 'assets/images/campingOutdoor/57596349-3-zoom.jpeg'],
+    image: 'assets/images/campingOutdoor/57596349-1-zoom.jpeg',
+    images: ['assets/images/campingOutdoor/57596349-1-zoom.jpeg', 'assets/images/campingOutdoor/57596349-2-zoom.jpeg', 'assets/images/campingOutdoor/57596349-3-zoom.jpeg'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       'This unique Gas Torch fitting is fit for most Gas canisters.',
       'The nozzle is very easy to fit onto and remove from the butane gas canister, allowing you to \'refill\' when needed.',
@@ -36,14 +42,18 @@ export  const CampingOutdoor: Product[] = [
       'Portable and stores away easily.'
     ],
     price: 429,
-    rating: 5
+    rating: 5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '42',
+    slug: null,
     name: 'Ultratec - Rechargable Camping or Emergency LED Lantern - White ',
-    image: ['assets/images/campingOutdoor/29935777-zoom.jpg'],
+    image: 'assets/images/campingOutdoor/29935777-zoom.jpg',
+    images: ['assets/images/campingOutdoor/29935777-zoom.jpg'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '- 4 LED Flashlight and 24 LED Lantern modes',
       '- 50 hour runtime in Lantern mode',
@@ -56,14 +66,18 @@ export  const CampingOutdoor: Product[] = [
       '- Built-in USB port'
     ],
     price: 460,
-    rating: 4.5
+    rating: 4.5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '43',
+    slug: null,
     name: '2 Person - Dome Tent',
-    image: ['assets/images/campingOutdoor/69088105-1-zoom.jpeg', 'assets/images/campingOutdoor/69088105-2-zoom.jpeg'],
+    image: 'assets/images/campingOutdoor/69088105-1-zoom.jpeg',
+    images: ['assets/images/campingOutdoor/69088105-1-zoom.jpeg', 'assets/images/campingOutdoor/69088105-2-zoom.jpeg'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '- Comfortable for two people',
       '- Compact and easy to erect',
@@ -74,24 +88,32 @@ export  const CampingOutdoor: Product[] = [
       '-Front opening only'
     ],
     price: 299,
-    rating: 4
+    rating: 4,
+    category: "",
+    sub_category: ""
   },
   {
     id: '44',
+    slug: null,
     name: '',
-    image: [''],
+    image: '',
+    images: [''],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [''],
     price: 0,
-    rating: 0
+    rating: 0,
+    category: "",
+    sub_category: ""
   },
   {
     id: '45',
+    slug: null,
     name: 'OZtrail - Genesis 4V Dome Tent - Grey/Silver',
-    image: ['assets/images/campingOutdoor/45328110-3-zoom.jpg'],
+    image: 'assets/images/campingOutdoor/45328110-3-zoom.jpg',
+    images: ['assets/images/campingOutdoor/45328110-3-zoom.jpg'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '- Colour: Grey/Silver',
       '- Material: Polyester',
@@ -104,14 +126,18 @@ export  const CampingOutdoor: Product[] = [
       '- Awning tent poles not included'
     ],
     price: 1499,
-    rating: 4
+    rating: 4,
+    category: "",
+    sub_category: ""
   },
   {
     id: '46',
+    slug: null,
     name: 'Mobicool 25 Coolbag - Red',
-    image: ['assets/images/campingOutdoor/51500656-1-zoom.JPG'],
+    image: 'assets/images/campingOutdoor/51500656-1-zoom.JPG',
+    images: ['assets/images/campingOutdoor/51500656-1-zoom.JPG'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       'Across the board of sports people, be it surfboarders or trekkers, quality of gears and secured function is a must. The Sail program follows this path, aiming at the best price-quality ratio, catering for the widest potential of urban and outdoor cool bag users. Sail 25 is a good family-day-out partner. Sail 35 caters for the large shopping. All have external utility pockets for tools, keys or phones. Heavy-duty jacquard fabric outer shell and one-piece inner foil are standard features.',
       '- Colour: Red',
@@ -121,24 +147,32 @@ export  const CampingOutdoor: Product[] = [
       '- Weight: 0.8kg'
     ],
     price: 379,
-    rating: 2
+    rating: 2,
+    category: "",
+    sub_category: ""
   },
   {
     id: '47',
+    slug: null,
     name: '',
-    image: ['assets/images/campingOutdoor/'],
+    image: 'assets/images/campingOutdoor/',
+    images: ['assets/images/campingOutdoor/'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [''],
     price: 0,
-    rating: 0
+    rating: 0,
+    category: "",
+    sub_category: ""
   },
   {
     id: '48',
+    slug: null,
     name: 'Cadac Gas Cylinder - 7kg',
-    image: ['assets/images/campingOutdoor/6001773055970-1-zoom.jpg'],
+    image: 'assets/images/campingOutdoor/6001773055970-1-zoom.jpg',
+    images: ['assets/images/campingOutdoor/6001773055970-1-zoom.jpg'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: [
       '- External valve system',
       '- Fingertip control',
@@ -148,16 +182,22 @@ export  const CampingOutdoor: Product[] = [
       '- Does not include gas'
     ],
     price: 649,
-    rating: 5
+    rating: 5,
+    category: "",
+    sub_category: ""
   },
   {
     id: '49',
+    slug: null,
     name: 'Leisurequip 8 LED Security Torch 100 Lumen',
-    image: ['assets/images/campingOutdoor/6001865843102-1-zoom.jpg'],
+    image: 'assets/images/campingOutdoor/6001865843102-1-zoom.jpg',
+    images: ['assets/images/campingOutdoor/6001865843102-1-zoom.jpg'],
     department: 'Camping & Outdoor',
-    promotion: false,
+    promotion: ['2020-01-03', '2020-03-16'],
     description: ['Leisurequip 8 LED Security Torch 100 Lumen takes 4 x D batteries not included'],
     price: 129,
-    rating: 4.5
+    rating: 4.5,
+    category: "",
+    sub_category: ""
   }
 ];
