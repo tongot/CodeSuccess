@@ -1,1 +1,112 @@
-<p>signup works!</p>
+<div class="site-container">
+    <div fxLayout="row">
+        <div fxFlex="20%" fxFlex.sm="0" fxFlex.xs="0" class="adverts">
+
+        </div>
+        <div fxFlex="40%" fxFlex.sm="100%" fxFlex.xs="100%" class="register-form">
+            <mat-card [class.mat-elevation-z0]="true">
+                <mat-card-title>Register</mat-card-title>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                    <form class="form" #registerForm="ngForm" (ngSubmit)="RegisterUser(registerForm)">
+                        <div fxLayout="column" fxLayoutAlign="space-even stretch">
+                            <mat-form-field appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input #firstName="ngModel" [(ngModel)]="newUser.firstName" name="firstName" matInput
+                                    type="text" required>
+                                <mat-hint class="error-message" *ngIf="firstName.touched && !firstName.valid">Name
+                                    is required
+                                </mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input #lastName="ngModel" [(ngModel)]="newUser.lastName" name="lastName" required
+                                    matInput type="text">
+                                <mat-hint class="error-message" *ngIf="lastName.touched && !lastName.valid">Last name is
+                                    required</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput #email="ngModel" [(ngModel)]="newUser.email" name="email" type="email"
+                                    email required>
+                                <mat-hint class="error-message" *ngIf="email.touched && !email.dirty">email is required
+                                </mat-hint>
+                                <mat-hint class="error-message" *ngIf="email.dirty && !email.valid">invalid email
+                                </mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Retype Email</mat-label>
+                                <input #confirmEmail="ngModel" [(ngModel)]="newUser.confirmEmail" name="confirmEmail"
+                                    required matInput type="text">
+                                <mat-hint class="error-message"
+                                    *ngIf="email.value!=confirmEmail.value && email.dirty && confirmEmail.touched">
+                                    email
+                                    did not match
+                                </mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input #password="ngModel" name="password" required [(ngModel)]="newUser.password"
+                                    matInput type="password">
+                                <mat-hint class="error-message" *ngIf="password.touched && !password.valid">Password is
+                                    required</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Retype Password</mat-label>
+                                <input matInput type="password" #confirmPassword="ngModel"
+                                    [(ngModel)]="newUser.confirmPassword" name="confirmPassword" required>
+                                <mat-hint class="error-message"
+                                    *ngIf="confirmPassword.touched && confirmPassword.invalid && !confirmPassword.dirty">
+                                    please confirm password
+                                </mat-hint>
+                                <mat-hint class="error-message"
+                                    *ngIf="password.value!=confirmPassword.value && confirmPassword.dirty"> password
+                                    did not match
+                                </mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Mobile / phone number
+                                </mat-label>
+                                <input matInput type="text" #mobile="ngModel" [(ngModel)]="newUser.mobile" name="mobile"
+                                    required>
+                                <mat-hint class="error-message" *ngIf="mobile.touched && !mobile.valid">mobile number is
+                                    required</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Date of birth</mat-label>
+                                <input matInput [matDatepicker]="picker" date required [(ngModel)]="newUser.dateOfBirth"
+                                    #dateOfBirth="ngModel" name="dateOfBirth">
+                                <mat-hint class="error-message" *ngIf="dateOfBirth.touched && !dateOfBirth.dirty">Date
+                                    of
+                                    birth is required</mat-hint>
+                                <mat-hint class="error-message" *ngIf="dateOfBirth.dirty && !dateOfBirth.valid">invalid
+                                    date</mat-hint>
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                            <mat-checkbox [(ngModel)]="newUser.receiveSpecialOffer" name="Offer">
+                                receive special offer notifications
+                            </mat-checkbox>
+                            <mat-checkbox [(ngModel)]="newUser.receiveOfferViaSMS" name="SMS">
+                                receive special offer by SMS
+                            </mat-checkbox>
+                            <div>
+                                <mat-checkbox [(ngModel)]="category.isSelected" name="category"
+                                    *ngFor="let category of newUser.selectedCategories">
+                                    {{category.categoryName}}
+                                </mat-checkbox>
+                            </div>
+
+
+                        </div>
+                        <button mat-flat-button color="primary" (ngSubmit)="RegisterUser(registerForm)"
+                            type="submit">Register</button>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+
+
+
+        </div>
+    </div>
+</div>

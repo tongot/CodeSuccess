@@ -1,3 +1,5 @@
+import { from } from 'rxjs';
+
 export * from './about/about.component';
 export * from './careers/careers.component';
 export * from './cart/cart.component';
@@ -12,6 +14,7 @@ export * from './account/login/login.component';
 export * from './theme/theme.component';
 export * from './account/account.component';
 export * from './account/myaccount/myaccount.component';
+//export * from './snack/snack.component';
 /*
     NESTED COMPONENTS
  */

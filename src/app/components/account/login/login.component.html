@@ -1,6 +1,38 @@
-<div class="login" fxLayout="column" fxLayoutAlign="space-even center">
-    <mat-card class="login-card">
-        <mat-card-content>
-        </mat-card-content>
-    </mat-card>
+<div class="background-main">
+    <div class="login" fxLayout="column" fxLayoutAlign="space-even center">
+        <mat-card class="login-card">
+            <mat-card class="login-inner-card">
+                <mat-card-title>login</mat-card-title>
+                <mat-card-content>
+                    <form>
+                        <div class="login-heading" fxLayout="column" fxLayoutAlign="space-even stretch">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email Address</mat-label>
+                                <input matInput type="text">
+                            </mat-form-field>
+                            <mat-label class="label-pass"> <a href="">forgot password?</a> </mat-label>
+                            <mat-form-field appearance="outline" type="password">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password">
+                            </mat-form-field>
+                            <div fxLayout="column" fxLayoutAlign=" center">
+                                <button mat-flat-button color="primary">
+                                    <mat-icon left>
+                                        lock
+                                    </mat-icon>
+                                    sign in
+                                </button>
+                                <mat-label class="label-new-account">new to takealot <a
+                                        routerLink="/account/register">create
+                                        account</a>
+                                </mat-label>
+                            </div>
+
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+
+        </mat-card>
+    </div>
 </div>

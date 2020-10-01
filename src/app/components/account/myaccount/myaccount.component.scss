@@ -7,9 +7,8 @@ $colorBlue: #0b79bf;
     color: #4d4d4f;
   }
   .card {
-    margin-bottom: 20px;
-
-    //transition: opacity 1s ease-in;
+    margin: 5px;
+    height: 180px;
     opacity: 0;
     $cut: 0.5;
     @for $var from 0 through 5 {

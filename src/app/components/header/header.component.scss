@@ -17,7 +17,8 @@
     align-items: center;
 
     li {
-      padding-right: 20px;
+      padding-right: 10px;
+      padding-left: 10px;
       height: 100%;
       &:hover {
         text-decoration: underline;
@@ -39,44 +40,23 @@
 .left-menu {
   float: left;
 }
-.right-menu {
-  float: right;
-
-  justify-content: flex-end;
-  ul {
-    position: absolute;
-    display: block;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 20px -15px;
-    margin-top: 8px;
-    margin-right: 20px;
-    border-radius: 2px;
-    right: 150px;
-    transition: transform 0.15s ease-in;
-    transform: scaleY(0);
-    transform-origin: top center;
-
-    li {
-      display: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
 #drop-menu {
   padding-left: 20px;
-  margin-bottom: -10px;
-  padding-bottom: 10px;
   &:hover {
     text-decoration: none;
-    li {
-      display: block;
-    }
     ul {
-      transform: scaleY(1);
+      transform: translateX(-50px) scale(1);
     }
+  }
+  ul {
+    transition: transform 300ms ease-in;
+    transform-origin: top;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 20px -15px;
+    padding: 10px;
+    padding-left: 20px;
+    transform: scale(0) translateX(0px);
   }
 }
 .mat-mini-fab:not([class*="mat-elevation-z"]) {
@@ -89,35 +69,12 @@
     text-decoration: none;
   }
 }
-.sell {
-  display: none;
-}
-.user {
-  display: none;
-}
 .border-menu-item {
   border-right: solid 1px #cccccc;
   padding-left: 20px;
 }
 
-@media (min-width: 1200px) {
-  .sell {
-    padding-left: 20px;
-    display: block;
-  }
-  .order {
-    display: block;
-  }
-}
-@media (min-width: 810px) {
-  .help {
-    display: block;
-  }
-  .user {
-    display: block;
-  }
-}
-//____________cart styles_______________________
+// //____________cart styles_______________________
 li {
   .menu-cart {
     padding-top: 25px;

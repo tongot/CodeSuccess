@@ -1,21 +1,21 @@
 <div class="site-container">
-
-    <nav class="nav">
-        <ul class="left-menu">
+    <nav fxLayout="row" class="nav" fxLayoutAlign="space-between center">
+        <ul>
             <li><img src="../../../assets/Images/takealot-logo.png" alt=""></li>
-            <li class="border-menu-item"><a href="#">Help</a></li>
-            <li class="sell"><a href="#">Sell at takealot</a></li>
+            <li class="border-menu-item"><a href="#" fxHide.sm fxHide.xs>Help</a></li>
+            <li><a href="#" fxHide.md fxHide.sm fxHide.xs>Sell at takealot</a></li>
         </ul>
-        <ul class="right-menu">
-            <li class="border-menu-item user"><a routerLink="/account/login">Log in</a></li>
-            <li class="border-menu-item user"><a routerLink="/account/register">Register</a></li>
-            <li class="border-menu-item sell"><a href="#">Order</a></li>
+        <ul fxLayout="row" fxLayoutAlign="space-between center">
+            <li class="border-menu-item"><a routerLink="/account/login" fxShow.gt-sm fxHide.xs>Log in</a></li>
+            <li class="border-menu-item" fxHide.md fxHide.sm fxHide.xs><a routerLink="/account/register">Register</a>
+            </li>
+            <li class="border-menu-item"><a href="#" fxHide.sm fxHide.xs>Order</a></li>
             <li id="drop-menu" (mouseover)="openMenu(upArrow,downArrow)" (mouseleave)="closeMenu(upArrow,downArrow)">
                 <a routerLink="/account"> My account
                     <span #upArrow style="font-size: 20px; margin-top:70px">&#9662;</span>
                     <span #downArrow style="font-size: 20px; margin-top:70px; display: none;">&#9652;</span>
                 </a>
-                <ul>
+                <ul fxLayout="column" fxLayoutAlign="center start">
                     <li><a routerLink="/account">My Account</a></li>
                     <li><a href="#">Track Order</a></li>
                     <li><a routerLink="/account/login">Log return</a></li>
@@ -41,7 +41,7 @@
                     </mat-chip>
                 </mat-chip-list>
                 <div #cart class="menu-cart">
-                    <!--cart item here-->
+                    cart item here
                     <mat-divider></mat-divider>
                     <div fxLayoutAlign="end">
                         <h3><strong>Total: R 10</strong></h3>
@@ -53,5 +53,42 @@
             </li>
         </ul>
     </nav>
+    <!-- <nav>
 
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <ul fxLayout="row" fxLayoutAlign=" center">
+                <a href="#"><img src="../../../assets/Images/takealot-logo.png" alt=""></a>
+                <li class="border-menu-item"><a href="#">Help</a></li>
+                <mat-divider [vertical]="true"></mat-divider>
+                <li class="sell"><a href="#">Sell at takealot</a></li>
+            </ul>
+            <ul fxLayout="row" fxLayoutAlign=" center">
+                <li class="border-menu-item user"><a routerLink="/account/login">Log in</a></li>
+                <li class="border-menu-item user"><a routerLink="/account/register">Register</a></li>
+                <li class="border-menu-item sell"><a href="#">Order</a></li>
+                <li class="drop-down" (mouseover)="openMenu(upArrow,downArrow)"
+                    (mouseleave)="closeMenu(upArrow,downArrow)">
+                    <a routerLink="/account"> My account
+                        <span #upArrow style="font-size: 20px; margin-top:70px">&#9662;</span>
+                        <span #downArrow style="font-size: 20px; margin-top:70px; display: none;">&#9652;</span>
+                    </a>
+                    <ul>
+                        <a routerLink="/account">My Account</a>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a routerLink="/account/login">Log return</a></li>
+                        <li><a href="#">Invoice</a></li>
+                        <li><a href="#">Personal Details</a></li>
+                        <li><a href="#">Digital Library </a></li>
+                        <li><a href="#">Help </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button mat-mini-fab>
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+    </nav> -->
 </div>

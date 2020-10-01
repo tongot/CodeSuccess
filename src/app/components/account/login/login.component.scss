@@ -9,3 +9,25 @@ mat-card:not([class*="mat-elevation-z"]) {
   height: 350px;
   width: 550px;
 }
+.login-inner-card {
+  padding: 30px;
+}
+.login-heading {
+  margin-top: 20px;
+}
+.label-pass {
+  display: flex;
+  justify-content: flex-end;
+  :hover {
+    text-decoration: underline;
+  }
+}
+.label-new-account {
+  margin-top: 20px;
+  :hover {
+    text-decoration: underline;
+  }
+}
+a {
+  text-decoration: none;
+}

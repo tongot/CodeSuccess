@@ -12,7 +12,12 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { MaterialModule } from './material.module';
 import { AllMaterialModules } from './material.module';
 
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+//services
+import { AccountService } from './Services/account.service';
+import { NotificationService } from './Services/notification.service';
 
 import { HeaderComponent } from './components';
 import { FooterComponent } from './components';
@@ -32,6 +37,7 @@ import { OffersComponent } from './components';
 import { CompactDropdownComponent } from './components';
 import { AccountComponent } from './components';
 import { MyAccountComponent } from './components';
+import { SnackComponent } from './components/snack/snack.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +60,7 @@ import { MyAccountComponent } from './components';
     CompactDropdownComponent,
     AccountComponent,
     MyAccountComponent,
+    SnackComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,8 +73,10 @@ import { MyAccountComponent } from './components';
     FormsModule,
     ReactiveFormsModule,
     A11yModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AccountService, NotificationService],
   bootstrap: [AppComponent],
+  entryComponents: [SnackComponent],
 })
 export class AppModule {}
