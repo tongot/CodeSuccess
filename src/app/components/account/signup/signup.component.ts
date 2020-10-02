@@ -27,8 +27,8 @@ export class SignupComponent implements OnInit {
   RegisterUser(registerForm): void {
     if (
       !registerForm.valid ||
-      !this.isPasswordMatch() ||
-      !this.isEmailMatch()
+      !this.newUser.isPasswordMatching() ||
+      !this.newUser.isEmailMatch()
     ) {
       return;
     }
@@ -40,11 +40,5 @@ export class SignupComponent implements OnInit {
       (data) => console.log('success', data),
       (error) => console.log('error', error)
     );
-  }
-  isPasswordMatch(): boolean {
-    return this.newUser.password != this.newUser.confirmPassword ? false : true;
-  }
-  isEmailMatch(): boolean {
-    return this.newUser.email != this.newUser.confirmEmail ? false : true;
   }
 }

@@ -1,5 +1,5 @@
 import { SelectedCategory } from '../CheckLists/CheckCategories';
-interface IRegister {
+export interface IRegister {
   firstName: string;
   lastName: string;
   email: string;
@@ -12,6 +12,8 @@ interface IRegister {
   receiveOfferViaSMS: boolean;
   newsLetter: boolean;
   dailyDeals: boolean;
+  isPasswordMatching(): boolean;
+  isEmailMatch(): boolean;
 }
 
 export class Register implements IRegister {
@@ -30,4 +32,11 @@ export class Register implements IRegister {
   public dateOfBirth: null;
   public firstName: '';
   public selectedCategories: SelectedCategory[];
+
+  public isPasswordMatching(): boolean {
+    return this.password == this.confirmPassword ? true : false;
+  }
+  public isEmailMatch(): boolean {
+    return this.email != this.confirmEmail ? false : true;
+  }
 }
