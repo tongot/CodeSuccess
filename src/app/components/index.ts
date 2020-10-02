@@ -14,7 +14,7 @@ export * from './account/login/login.component';
 export * from './theme/theme.component';
 export * from './account/account.component';
 export * from './account/myaccount/myaccount.component';
-//export * from './snack/snack.component';
+export * from './banner-carousel/banner-carousel.component';
 /*
     NESTED COMPONENTS
  */

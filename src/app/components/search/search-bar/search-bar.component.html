@@ -1,24 +1,23 @@
-
-<form class="flex-space" >
-  <mat-form-field appearance="outline" color="primary-background">
-    <input type="text"
-           placeholder="Search for products, brands..."
-           matInput
-           [formControl]="control">
-    <button mat-raised-button type="submit" style="background-color: #4d4d4f; width: border-box; box-shadow: " matSuffix mat-icon-button  (click)="value=''">
-    <mat-icon>search</mat-icon>
-    </button>
-  </mat-form-field>
+<form class="search-form">
+  <div>
+    <div fxLayout="row" fxLayoutAlign=" stretch">
+      <div fxFlex="80%">
+        <input class="input-search" type="text">
+      </div>
+      <div fxFlex="15%">
+        <select name="" id="">
+          <option [value]="department.name" *ngFor="let department of departments">{{department}}</option>
+        </select>
+      </div>
+      <div fxFlex="5%">
+        <button mat-flat-button color="primary">
+          <mat-icon>
+            search
+          </mat-icon>
+        </button>
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
 </form>
-
-
-<!--
-
-<div class="flex-space">
-  <input type="text"
-         placeholder="Search for a street"
-         [formControl]="control"
-         placeholder="Search for products, brands...">
-</div>
-
--->

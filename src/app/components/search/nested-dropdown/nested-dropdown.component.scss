@@ -1,32 +1,56 @@
-.div {
-  padding-bottom: 5px;
+.side-menu {
+  margin-right: 20px;
+  z-index: 1;
+  position: relative;
 }
-
-::ng-deep mat-button-toggle.split-button-1 {
-  background-color: #4d4d4f;
+.bordered-div {
+  border: solid 1px #f4f4f4;
 }
-
-mat-button-toggle {
-  color: white;
-  width: 80%;
+.side-menu-items {
+  height: 100%;
   background-color: white;
+  width: 100%;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 1px;
+    margin-top: 5px;
+  }
 }
+.menu-item {
+  padding-left: 10px;
 
-.mat-button-toggle-checked {
+  cursor: pointer;
+  &:hover {
+    background-color: #0b79bf;
+    color: white;
+  }
+}
+.expand-menu {
+  position: absolute;
+  background: white;
+  width: 600px;
+  margin-left: 100%;
+
+  div {
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+.drop-btn {
+  background-color: #4d4d4f;
   color: white;
+  height: 35px;
+  padding-left: 10px;
+  cursor: pointer;
 }
-
-/*
-::ng-deep .mat-icon{
-  height:48px;
-  width:48px !important;
-  font-size:48px !important;
-  // background-color: #212121;
-}
- */
-
-::ng-deep .mat-button-toggle-checked{
-  height:50% !important;
-  width: 100% !important;
-  font-size:48px !important;
+h4 {
+  font-weight: bold;
+  color: #0b79bf;
 }

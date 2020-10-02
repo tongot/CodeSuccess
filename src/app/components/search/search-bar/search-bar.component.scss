@@ -1,47 +1,22 @@
-
-.flex-space {
-  // min-width: 80%;
-  width: 143.8%;
+$colorGray: #f4f4f4;
+.search-form {
+  margin-bottom: 5px;
 }
-
-
-
-
-::ng-deep .mat-form-field {
-  .mat-input-element {
-    color: white;
-    // background-color: white;
-  }
-  .mat-form-field-label {
-    color: white;
-  }do apt-get update
-  .mat-form-field-underline {
-    background-color: white;
-  }
-  .mat-form-field-ripple {
-    background-color: white;
-  }
-  .mat-form-field-required-marker {
-    color: white;
+input {
+  height: 30px;
+  width: 100%;
+  border: solid 1px $colorGray;
+  border-radius: 5px 0 0 5px;
+  &:focus {
+    outline: none;
   }
 }
-
-//input outline color
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: white!important;
-  background-color: white;
-  border-radius: 5px;
-  // opacity: 1!important;
-}
-
-mat-form-field {
-  width: 158%;
-  color: white;
-}
-
-::ng-deep mat-button-toggle.split-search-1 {
-  background-color: #212121;
-  color: white;
-  height: auto;
-  justify-content: right;
+select {
+  width: 100%;
+  height: 34px;
+  border: solid 1px $colorGray;
+  background-color: $colorGray;
+  &:focus {
+    outline: none;
+  }
 }

@@ -19,7 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountService } from './Services/account.service';
 import { NotificationService } from './Services/notification.service';
 
-import { HeaderComponent } from './components';
+import { BannerCarouselComponent, HeaderComponent } from './components';
 import { FooterComponent } from './components';
 import { IndexComponent } from './components';
 import { LoginComponent } from './components';
@@ -61,6 +61,7 @@ import { SnackComponent } from './components/snack/snack.component';
     AccountComponent,
     MyAccountComponent,
     SnackComponent,
+    BannerCarouselComponent,
   ],
   imports: [
     BrowserModule,
