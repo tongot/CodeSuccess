@@ -1,1 +1,16 @@
-<p>banner-carousel works!</p>
+<div class="carousel">
+    <div class="carousel-items" [style]="getW" #CarouselItem>
+        <section (click)="go(item.url)" [style]="getIW" *ngFor="let item of items" class="carousel-item" fxLayout="row">
+            <img [src]="item.image" alt="">
+        </section>
+    </div><button mat-button class="btn-prev" (click)="prev(CarouselItem)">
+        <mat-icon>
+            keyboard_arrow_left
+        </mat-icon>
+    </button>
+    <button mat-button class="btn-next" (click)="next(CarouselItem)">
+        <mat-icon>
+            keyboard_arrow_right
+        </mat-icon>
+    </button>
+</div>

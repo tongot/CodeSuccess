@@ -1,14 +1,15 @@
 <div class="search-container">
   <div class="site-container" style="z-index: -2;">
     <div fxLayout="row" fxLayoutAlign="space-between start">
-      <div fxFlex="15%">
+      <div class="side-bar" fxShow fxHide.lt-lg>
         <app-nested-dropdown style="z-index: 1;"></app-nested-dropdown>
       </div>
-      <div fxFlex="85%" fxLayout="column" fxLayoutAlign="space-around stretch">
+      <div class="search-bar" fxFlex="100%" fxFlex.md="100%" fxFlex.sm="100%" fxLayout="column"
+        fxLayoutAlign="space-around stretch">
         <app-search-bar></app-search-bar>
-        <div>
+        <!-- <div>
           <app-offers></app-offers>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

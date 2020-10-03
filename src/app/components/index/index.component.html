@@ -1,14 +1,39 @@
-<app-search></app-search>
-<div fxLayout="row" fxLayoutAlign="start start" class="site-container">
-  <div fxFlex="15%">
-  </div>
-  <div fxFlex="100%">
-    <div fxLayout="row" fxLayoutAlign="start start">
-      <div fxFlex="70%" style="background-color: red;">
-        <app-banner-carousel></app-banner-carousel>
+<div class="index-container">
+  <div fxLayout="column" fxLayoutAlign="start stretch">
+    <div fxLayout="row" fxLayoutAlign="start start" class="site-container">
+      <div fxShow fxHide.lt-lg class="side-bar">
       </div>
-      <div fxFlex="30%" style="background-color: green;">
-        wewe
+      <div fxFlex="100%">
+        <div fxLayout="row" fxLayoutAlign="start start">
+          <div fxFlex="100%" fxFlex.lt-xs="75%">
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+              <div class="banner">
+                <app-banner-carousel></app-banner-carousel>
+              </div>
+              <div class="lower-banner" style="background-color: blue;">
+                featured store
+              </div>
+            </div>
+          </div>
+          <div fxShow fxHide.lt-lg fxFlex="25%" style="background-color: green;">
+            prom
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="items-container">
+      <div class="site-container">
+        <div fxLayout="row" fxLayoutAlign="start start">
+          <div fxFlex="100%" fxFlex.lt-xs="79%">
+            <div class="category">
+              <h2>Baby line</h2>
+              <app-items-slider></app-items-slider>
+            </div>
+          </div>
+          <div fxShow fxHide.lt-lg fxFlex="21%" style="background-color: green;">
+            promo
+          </div>
+        </div>
       </div>
     </div>
   </div>

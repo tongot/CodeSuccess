@@ -1,7 +1,7 @@
 .side-menu {
-  margin-right: 20px;
   z-index: 1;
   position: relative;
+  width: 200px;
 }
 .bordered-div {
   border: solid 1px #f4f4f4;
@@ -31,8 +31,9 @@
   position: absolute;
   background: white;
   width: 600px;
+  height: 100%;
   margin-left: 100%;
-
+  box-shadow: 0 0 20px -15px;
   div {
     width: 100%;
     height: 100%;
@@ -41,6 +42,7 @@
     width: 100%;
     height: 100%;
     border: none;
+    object-fit: cover;
   }
 }
 .drop-btn {
@@ -53,4 +55,9 @@
 h4 {
   font-weight: bold;
   color: #0b79bf;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.featured-shop {
+  background-color: #f4f4f4;
 }

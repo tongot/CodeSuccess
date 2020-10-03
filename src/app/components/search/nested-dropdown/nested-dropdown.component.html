@@ -1,5 +1,5 @@
 <div fxLayout="column" class="side-menu">
-  <div fxLayout="column" (mouseover)="openDropdown=true" (mouseleave)="openDropdown=false"
+  <div fxLayout="column" (mouseover)="openMenuOnHover()" (mouseleave)="closeMenuOnHover()"
     fxLayoutAlign="start stretch">
     <div fxLayout="row" class="drop-btn" fxLayoutAlign="space-between center">
       <span>Shop by Department</span>
@@ -7,7 +7,7 @@
         keyboard_arrow_down
       </mat-icon>
     </div>
-    <div fxLayout="row" (mouseover)="closeMenu=false" (mouseleave)="closeMenu=true">
+    <div fxLayout="row" [fxShow]="openDropdown" (mouseover)="closeMenu=false" (mouseleave)="closeMenu=true">
       <div class="side-menu-items bordered-div">
         <ul>
           <li *ngFor="let shopBy of shopByDepartmentsList; let i=index" (mouseover)="getSubCategory(shopBy)">
@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div fxLayout="row" class="expand-menu" [fxHide]="closeMenu" fxLayoutAlign="space-evenly start">
-        <mat-card fxFlex="33%" class="mat-elevation-z0">
+        <div fxFlex="33%">
           <div class="side-menu-items">
             <h4>{{currentMenu}}</h4>
             <ul>
@@ -32,10 +32,11 @@
               </li>
             </ul>
           </div>
-        </mat-card>
-        <mat-card fxFlex="33%" class="mat-elevation-z0">
+        </div>
+        <div class="featured-shop" fxFlex="33%">
           <h4>Featured Shops</h4>
-        </mat-card>
+
+        </div>
         <div fxFlex="33%">
           <img width="200px" [src]="currentBannerImage" alt="">
         </div>

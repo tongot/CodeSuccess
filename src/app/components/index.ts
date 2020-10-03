@@ -15,6 +15,7 @@ export * from './theme/theme.component';
 export * from './account/account.component';
 export * from './account/myaccount/myaccount.component';
 export * from './banner-carousel/banner-carousel.component';
+export * from './items-slider/items-slider.component';
 /*
     NESTED COMPONENTS
  */
