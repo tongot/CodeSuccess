@@ -1,1 +1,133 @@
-<p>product-edit works!</p>
+<!-- 
+ <mat-card>
+ <mat-card-title>{{pageTitle}}</mat-card-title>
+ <mat-card-content>
+   <mat-label>Product Name:</mat-label>
+   <mat-form-field appearance= "fill">
+     <input matInput type= "text"
+     placeholder="Name (required)"
+     required
+     minlength= "3"
+     [(ngModel)]="products.name"
+     name="name"
+     #name="ngModel" >
+     <mat-error *ngIf =name.errors.required>
+      Product name is required.
+    </mat-error>
+    <mat-error *ngIf = name.errors.minlength(3)>
+      Product name must be at least three characters.
+    </mat-error>
+   </mat-form-field>
+   <section>
+    <mat-label>Category:</mat-label>
+<mat-form-field>
+  <input matInput type= "text" 
+                   placeholder="Code (required)"
+                   required
+                   [(ngModel)]= "products.category"
+                   name="category"
+                   #category="ngModel"
+  >
+  <mat-error *ngIf = "category.errors.required" >
+    Product category is required.
+  </mat-error>
+</mat-form-field>
+</section>
+ </mat-card-content>
+</mat-card>
+    
+      -->
+ 
+
+  
+  
+ <!-- <h4>{{pageTitle}}</h4>
+  
+    <form  #productForm="ngForm" novalidate>
+          <mat-label for="productNameId">
+                 Product Name:
+          </mat-label>
+          
+            <mat-form-field appearance ="fill">
+            <input matInput
+                  
+                    /> 
+            </mat-form-field >
+            
+              
+           
+
+        
+          <mat-label 
+             for="productCodeId">Product Category
+          </mat-label>
+            <mat-form-field>
+            <input matInput 
+              />
+              </mat-form-field>
+              
+          <mat-label 
+                 for="productCodeId">Product Category</mat-label>
+          
+            <mat-form-field>
+            <input matInput
+                   id="productCodeId"
+                   type="text"
+                   placeholder="Code (required)"
+                   required
+                   [(ngModel)]= "products.category"
+                   name="category"
+                   #category="ngModel"
+                   />
+                </mat-form-field>
+          
+              <mat-error *ngIf= category.errors.required>
+                Product category is required.
+              </mat-error>
+           
+  
+          <mat-label class="col-md-2 col-form-label"
+                 for="productPriceId">Price</mat-label>
+          <section>
+          <mat-form-field>
+            <input matInput 
+                   id="price"
+                   type="text"
+                   placeholder="Price (required)"
+                   required
+                   [(ngModel)]= "products.price"
+                   name="price"
+                   #price="ngModel"
+                   />
+            </mat-form-field>
+            
+              <mat-error  *ngIf =price.errors.required>
+                Product price is required.
+              </mat-error>
+         
+          <mat-label
+                 for="descriptionId">Description      
+          </mat-label>
+          <mat-form-field>
+            <textarea matInput
+                      id="descriptionId"
+                      placeholder="Description"
+                      rows=3
+                      [(ngModel)]= "products.description"
+                      name="description">
+                  description  
+            </textarea>
+          </mat-form-field>
+        
+      <mat-error *ngIf='errorMessage'>
+      
+      </mat-error>
+      <button mat-button primary
+      title="Delete this product"
+      (click)="deleteProduct()"
+      [routerLink]="['/']"
+      [disabled]="!isValid()"
+      >
+Delete
+</button> 
+</form> -->
