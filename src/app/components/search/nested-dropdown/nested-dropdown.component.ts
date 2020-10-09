@@ -17,11 +17,12 @@ export class NestedDropdownComponent implements OnInit {
 
   constructor(private router: Router) {
     this.shopByDepartmentsList = ShopByDepartments[0].children;
+    router.events.subscribe(() => {
+      this.openDropdown = this.isOnIndexPage() ? true : false;
+    });
   }
 
-  ngOnInit(): void {
-    this.openDropdown = this.isOnIndexPage() ? true : false;
-  }
+  ngOnInit(): void {}
 
   //get a shortened word if word too long for menu
   getLabel(name: string): string {

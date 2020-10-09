@@ -7,9 +7,11 @@
 .mat-brand {
   color: black;
   background-color: white;
-  // width: 164px;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 300;
+  height: 35px;
 }
-
 .div {
   display: inline-block;
 }
@@ -17,8 +19,6 @@
 .hr * {
   display: block;
   text-align: center;
-  // width: 140%;
-  // width: 165px;
 }
 
 .master * {

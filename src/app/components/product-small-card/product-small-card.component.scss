@@ -1,0 +1,37 @@
+.product-card {
+  cursor: pointer;
+  height: 100%;
+  box-shadow: 0;
+  transition: box-shadow 0.5s ease-in-out;
+  &:hover {
+    box-shadow: 0px 2px 20px -12px rgba(0, 0, 0, 0.93);
+  }
+  //   width: 200px;
+}
+.product-image {
+  //   height: 150px;
+  //   width: 150px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.product-details {
+  //  margin-top: 2px;
+}
+.product-description {
+  height: 50px;
+}
+.product-price {
+  font-weight: 800;
+  font-size: 15px;
+}
+.product-rating {
+  margin-top: 2px;
+  //  font-size: 13px;
+}
+.mat-icon {
+  color: #fbb600;
+  margin-right: 5px;
+}

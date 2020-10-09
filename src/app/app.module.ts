@@ -23,6 +23,8 @@ import {
   BannerCarouselComponent,
   HeaderComponent,
   ItemsSliderComponent,
+  ProductSmallCardComponent,
+  PromotionCardComponent,
 } from './components';
 import { FooterComponent } from './components';
 import { IndexComponent } from './components';
@@ -34,14 +36,13 @@ import { FavoritesComponent } from './components';
 import { AboutComponent } from './components';
 import { CareersComponent } from './components';
 import { SearchComponent } from './components';
-import { ThemeComponent } from './components';
 import { SearchBarComponent } from './components';
 import { NestedDropdownComponent } from './components';
 import { OffersComponent } from './components';
-import { CompactDropdownComponent } from './components';
 import { AccountComponent } from './components';
 import { MyAccountComponent } from './components';
 import { SnackComponent } from './components/snack/snack.component';
+import { InfiniteCarouselComponent } from './components/infinite-carousel/infinite-carousel.component';
 
 @NgModule({
   declarations: [
@@ -57,16 +58,17 @@ import { SnackComponent } from './components/snack/snack.component';
     AboutComponent,
     CareersComponent,
     SearchComponent,
-    ThemeComponent,
     SearchBarComponent,
     NestedDropdownComponent,
     OffersComponent,
-    CompactDropdownComponent,
     AccountComponent,
     MyAccountComponent,
     SnackComponent,
     BannerCarouselComponent,
     ItemsSliderComponent,
+    InfiniteCarouselComponent,
+    PromotionCardComponent,
+    ProductSmallCardComponent,
   ],
   imports: [
     BrowserModule,

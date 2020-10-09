@@ -5,18 +5,22 @@
       </div>
       <div fxFlex="100%">
         <div fxLayout="row" fxLayoutAlign="start start">
-          <div fxFlex="100%" fxFlex.lt-xs="75%">
+          <div fxFlex="100%" fxFlex.lt-xs="79%">
             <div fxLayout="column" fxLayoutAlign="start stretch">
               <div class="banner">
-                <app-banner-carousel></app-banner-carousel>
+                <app-banner-carousel [bannerSlide]="bannerSlide"></app-banner-carousel>
               </div>
-              <div class="lower-banner" style="background-color: blue;">
-                featured store
+              <div class="lower-banner">
+                <app-infinite-carousel [slideItem]="slideItem"></app-infinite-carousel>
               </div>
             </div>
           </div>
-          <div fxShow fxHide.lt-lg fxFlex="25%" style="background-color: green;">
-            prom
+          <div fxShow fxHide.lt-lg class="right-sidebar">
+            <div style=" height: 20%;">
+            </div>
+            <div class="right-sidebar" fxLayout="column" fxLayoutAlign=" end">
+              <app-promotion-card></app-promotion-card>
+            </div>
           </div>
         </div>
       </div>
@@ -30,8 +34,10 @@
               <app-items-slider></app-items-slider>
             </div>
           </div>
-          <div fxShow fxHide.lt-lg fxFlex="21%" style="background-color: green;">
-            promo
+          <div fxShow fxHide.lt-lg>
+            <div class="right-sidebar" fxLayout="column" fxLayoutAlign=" end">
+              <app-promotion-card></app-promotion-card>
+            </div>
           </div>
         </div>
       </div>

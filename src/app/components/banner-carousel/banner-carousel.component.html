@@ -1,14 +1,16 @@
 <div class="carousel">
-    <div class="carousel-items" [style]="getW" #CarouselItem>
-        <section (click)="go(item.url)" [style]="getIW" *ngFor="let item of items" class="carousel-item" fxLayout="row">
-            <img [src]="item.image" alt="">
+    <div class="carousel-items" [style.width]="bannerSlide.getInnerBannerWidth"
+        [style.transform]="bannerSlide.transform" #CarouselItem>
+        <section (click)="go(item.url)" [style]="bannerSlide.getItemWidth" *ngFor="let item of bannerSlide.items"
+            class="carousel-item" fxLayout="row">
+            <img [src]="item.imageLink" alt="">
         </section>
-    </div><button mat-button class="btn-prev" (click)="prev(CarouselItem)">
+    </div><button mat-button class="btn-prev" (click)="prev()">
         <mat-icon>
             keyboard_arrow_left
         </mat-icon>
     </button>
-    <button mat-button class="btn-next" (click)="next(CarouselItem)">
+    <button mat-button class="btn-next" (click)="next()">
         <mat-icon>
             keyboard_arrow_right
         </mat-icon>

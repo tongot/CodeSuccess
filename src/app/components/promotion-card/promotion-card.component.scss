@@ -1,0 +1,17 @@
+.promo-card {
+  padding: 3px;
+  margin-left: 2px;
+  .card {
+    .card-content {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.card.mat-card {
+  padding: 5px;
+  max-width: 300px;
+}

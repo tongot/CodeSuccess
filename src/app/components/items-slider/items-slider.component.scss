@@ -1,26 +1,28 @@
 .slide-container {
   width: 100%;
-  height: 100%;
+  height: 330px;
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: flex-start;
+  // display: flex;
+  // justify-content: flex-start;
   overflow: hidden;
   position: relative;
 }
 .item {
-  background-color: red;
   height: 100%;
   margin: 5px;
+  max-width: 210px;
+  margin-bottom: 2px;
 }
 section {
-  height: 100%;
+  height: 280px;
   min-width: 20%;
   flex-shrink: 0;
+  padding: 5px;
 }
 .slider {
   width: 2000%;
-  display: flex;
+  //display: flex;
   transition: all 0.5s;
 }
 .btn-prev {

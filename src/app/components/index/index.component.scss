@@ -9,7 +9,7 @@
 }
 .items-container {
   background-color: #f4f4f4;
-  height: 400px;
+  height: 410px;
   margin-top: 20px;
 }
 .category {
@@ -24,4 +24,26 @@
 h2 {
   margin-bottom: 20px;
   color: #4d4d4f;
+}
+.mini-ad-card {
+  height: 100%;
+  margin: 3px;
+}
+.advert-bar {
+  height: 440px;
+}
+.promo-card-1 {
+  padding: 3px;
+  height: 50px;
+  margin-left: 2px;
+  .card {
+    height: 100%;
+  }
+}
+.card.mat-card {
+  width: 100%;
+}
+.right-sidebar {
+  width: 350px;
+  height: 80%;
 }

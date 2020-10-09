@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompactDropdownComponent } from './compact-dropdown.component';
+import { InfiniteCarouselComponent } from './infinite-carousel.component';
 
-describe('CompactDropdownComponent', () => {
-  let component: CompactDropdownComponent;
-  let fixture: ComponentFixture<CompactDropdownComponent>;
+describe('InfiniteCarouselComponent', () => {
+  let component: InfiniteCarouselComponent;
+  let fixture: ComponentFixture<InfiniteCarouselComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CompactDropdownComponent ]
+      declarations: [ InfiniteCarouselComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CompactDropdownComponent);
+    fixture = TestBed.createComponent(InfiniteCarouselComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

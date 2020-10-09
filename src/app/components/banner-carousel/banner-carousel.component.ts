@@ -1,64 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { BannerSliderItems } from 'src/app/Models/OtherModels/bannerSlider';
 
 @Component({
   selector: 'app-banner-carousel',
   templateUrl: './banner-carousel.component.html',
   styleUrls: ['./banner-carousel.component.scss'],
 })
-export class BannerCarouselComponent implements OnInit {
+export class BannerCarouselComponent implements OnInit, OnDestroy {
+  @Input() bannerSlide: BannerSliderItems;
+  IntervalSlide;
   constructor() {}
-  moveRight = false;
-  currentTrans = 0;
-  private width = 100; //carousel length by default
-  private itemWidth = 0; //with of slide items
-
-  items = [
-    { image: '../../../assets/carousel/722541220058344269.png', url: '#' },
-    {
-      image:
-        '../../../assets/carousel/new_shop_local_lp_carousel_1292x300_2020_1.png',
-      url: '#',
-    },
-  ];
-
+  ngOnDestroy(): void {
+    clearInterval(this.IntervalSlide);
+  }
   ngOnInit(): void {
-    this.calculateWidth();
+    this.SlideAutoRun();
   }
-  get getW() {
-    return 'width: ' + this.width + '%';
+  next() {
+    this.bannerSlide.moveSlideRight(false);
   }
-  get getIW() {
-    return (
-      'width: ' + this.itemWidth + '%;' + 'flex-basis:' + this.itemWidth + '%;'
-    );
-  }
-
-  calculateWidth(): void {
-    if (this.items.length > 0) {
-      this.width = this.width * this.items.length;
-      //100= full width
-      //divide full with by number of items to get length of each item
-      this.itemWidth = Math.round(100 / this.items.length);
-    }
-  }
-  next(carousel) {
-    if (this.items.length > 1) {
-      if (this.currentTrans < 100 - this.itemWidth) {
-        this.currentTrans += this.itemWidth;
-      }
-      carousel.style.transform = 'translate(-' + this.currentTrans + '%)'; //scroll to show next item
-    }
-  }
-  prev(carousel) {
-    if (this.items.length > 1) {
-      if (this.currentTrans > 0) {
-        this.currentTrans -= this.itemWidth;
-        console.log(this.currentTrans + 'hit  ');
-        carousel.style.transform = 'translate(-' + this.currentTrans + '%)'; //scroll to show prev item
-      }
-    }
+  prev() {
+    this.bannerSlide.moveSlideLeft(false);
   }
   go(url) {
     console.log(url);
+  }
+  SlideAutoRun() {
+    this.IntervalSlide = setInterval(() => {
+      this.bannerSlide.AutoRun();
+    }, 5000);
   }
 }

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="infinite-container" #container>
+        <div [style]="slideItem.getSliderWth" #slider class="slider">
+            <section fxLayout="column" [style]="slideItem.getItemW" [routerLink]="item.link"
+                fxLayoutAlign="center center" class="slider-item" *ngFor="let item of slideItem.sliderItems">
+                <img [src]="item.imageUrl" alt="">
+            </section>
+        </div>
+
+
+    </div>
+    <button mat-button class="btn-prev" (click)="prev(container,slider)">
+        <mat-icon>
+            keyboard_arrow_left
+        </mat-icon>
+    </button>
+    <button mat-button class="btn-next" (click)="next(container,slider)">
+        <mat-icon>
+            keyboard_arrow_right
+        </mat-icon>
+    </button>
+</div>

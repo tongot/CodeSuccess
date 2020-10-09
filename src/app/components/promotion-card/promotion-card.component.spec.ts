@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThemeComponent } from './theme.component';
+import { PromotionCardComponent } from './promotion-card.component';
 
-describe('ThemeComponent', () => {
-  let component: ThemeComponent;
-  let fixture: ComponentFixture<ThemeComponent>;
+describe('PromotionCardComponent', () => {
+  let component: PromotionCardComponent;
+  let fixture: ComponentFixture<PromotionCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ThemeComponent ]
+      declarations: [ PromotionCardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ThemeComponent);
+    fixture = TestBed.createComponent(PromotionCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
