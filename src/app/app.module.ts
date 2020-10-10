@@ -17,9 +17,15 @@ import {ProductsModule} from './products/products.module';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HeaderComponent } from './components';
-import { FooterComponent } from './components';
-import { IndexComponent } from './components';
+import { SearchComponent } from './components';
+import { ThemeComponent } from './components';
+import { SearchBarComponent } from './components';
+import { NestedDropdownComponent } from './components';
+import { OffersComponent } from './components';
+import { CompactDropdownComponent } from './components';
+import { HeaderComponent } from "./components";
+import { FooterComponent } from "./components";
+import { IndexComponent } from "./components";
 import { LoginComponent } from './components';
 import { SignupComponent } from './components';
 import { CheckoutComponent } from './components';
@@ -38,6 +44,7 @@ import { MyAccountComponent } from './components';
 
 // pipes
 import {ShortenTextPipe } from './shorten-text.pipe';
+
 
 
 @NgModule({

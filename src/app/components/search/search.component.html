@@ -1,6 +1,7 @@
 
-<div>
-  <div fxLayout="row wrap" [ngStyle]="{'background-color':'#0b79bf'}" class="flex">
+
+<div  [ngStyle]="{'background-color':'#0b79bf'}" class="flex">
+  <div fxLayout="row wrap" class="search-container">
 
     <div class="left-cell">
       <app-nested-dropdown></app-nested-dropdown>
@@ -12,7 +13,6 @@
         </div>
         <div class="inner-right-cell">
           <app-compact-dropdown></app-compact-dropdown>
-
         </div>
       </div>
       <div class="right-bottom">
@@ -22,3 +22,4 @@
 
   </div>
 </div>
+
