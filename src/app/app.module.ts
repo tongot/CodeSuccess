@@ -10,8 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { A11yModule } from '@angular/cdk/a11y';
 
-import { MaterialModule } from './material.module';
-import { AllMaterialModules } from './material.module';
+import { AllMaterialModules, MaterialModule } from './material.module';
+
 
 import {ProductsModule} from './products/products.module';
 

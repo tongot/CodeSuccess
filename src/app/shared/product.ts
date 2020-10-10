@@ -13,7 +13,7 @@ export interface IProduct {
   rating: number;
 }
 
-export interface ProductResolved {
+export interface IProductResolved {
   product: IProduct;
   error?: any;
 }

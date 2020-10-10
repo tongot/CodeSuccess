@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import {
   AccountComponent,
@@ -10,6 +10,13 @@ import {
 } from './components';
 
 const routes: Routes = [
+  {
+    path: 'products',
+   // canActivate: [AuthGuard],
+    data: { preload: true },
+    loadChildren: () =>
+      import('./products/products.module').then(m => m.ProductsModule)
+  },
   { path: '', component: IndexComponent },
   {
     path: 'account',
@@ -24,7 +31,7 @@ const routes: Routes = [
         component: LoginComponent,
       },
       {
-        path: '',
+        path: 'myacc',
         component: MyAccountComponent,
       },
     ],
@@ -32,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

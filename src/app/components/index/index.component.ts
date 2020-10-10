@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProduct } from 'src/app/shared/product';
-import { ProductService } from './services/product-service';
+import { ProductService } from 'src/app/services/product-service';
+// import {ShortenTextPipe } from './shorten-text.pipe';
+
 
 
 
@@ -15,8 +17,10 @@ export class IndexComponent implements OnInit {
 constructor(private productService: ProductService,
             private route: ActivatedRoute ) { }
 
-sectionTitle = 'Automative Products';
+sectionTitle = 'Products';
 errorMessage = 'Cant get products';
+imageLength = 100;
+imageWidth = 90;
 // product: IProductResolved;
 rating: number;
 // tslint:disable-next-line: variable-name
@@ -24,6 +28,7 @@ arrayFilter = '';
 
 // filteredProducts: IProduct[] = [];
 products: IProduct[] = [];
+
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(

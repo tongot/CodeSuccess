@@ -1,35 +1,28 @@
 
-<!-- <a [routerLink]="[ '/path', routeParam ]"> -->
-
-  <!-- <app-root></app-root> -->
-
-  <div class="content"
-   fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    *ngFor="let auto of products"
-  >
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" >
+  <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products">
       <mat-card class="mat-elevation-z4" >
-        <mat-card-header>
-          <mat-card-title>{{sectionTitle}}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image
+        <img mat-card-image 
         [src]="product.image"
-        [title]="product.name" >
+        [title]="product.name" 
+        [style.width.px]="imageWidth"
+        [style.width.px]="imageLength"               
+        >
         <mat-card-content>
-          <p><i class="far fa-star"></i></p>
-          <p>
-            {{product.description  | ShortenText: '...'}}
-            <p>{{product.price | currency:'R'}}</p>
+            <p>{{product.price | currency:'R'}}</p>-
+            <p>Rating: {{product.rating}}</p>
+            <div class="box">
+              <input type="checkbox" id="expanded">
+              <p>{{product.description}}</p>
+              <label for="expanded" role="button">read more</label>
+            </div>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button color="primary">LIKE</button>
-          <button mat-button>SHARE</button>
-          <button mat-button color="accent">Accent</button>
+          <button  [routerLink]="[product.id, 'edit']">Edit</button>  
         </mat-card-actions>
+        
       </mat-card>
     </div>
-  </div>
+  </div> 
 
-
-<!-- </a> -->
+  

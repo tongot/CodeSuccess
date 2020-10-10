@@ -1,139 +1,142 @@
 export const ShopByDepartments = [
   {
-    label: "DEPARTMENT",
+    label: 'DEPARTMENT',
     children: [{
-      label: "Automotive & DIY",
-      children:[{
-        label: "Engine Parts"
-      }, {
-        label: "Tyres & Accessories"
-      }, {
-        label: "Car Care & Cleaning"
-      }, {
-        label: "Motorcycle Accessories"
-      }]
-    }, {
-      label: "Baby & Toddler",
-      children:[{
-        label: "Baby Clothing"
-      }, {
-        label: "Health & Safety Equipment"
-      }, {
-        label: "Changing & Feeding"
-      }, {
-        label: "Baby care & Nursery"
-      }, {
-        label: "Travel & Play"
-      }]
-    }, {
-      label: "Beauty",
-      children:[{
-        label: "Luxury Beauty"
-      }, {
-        label: "Fragrances"
-      }, {
-        label: "Makeup"
-      }, {
-        label: "Body Care"
-      }, {
-        label: "Skin Care"
-      }, {
-        label: "Hair Care"
-      }, {
-        label: "Nail Care"
-      }, {
-        label: "Men's Grooming"
-      }, {
-        label: "Featured Stores"
-      }]
-    }, {
-      label: "Books & Courses",
+      label: 'Automotive & DIY',
       children: [{
-        label: "Fiction"
+        label: 'Engine Parts'
       }, {
-        label: "Non Fiction"
+        label: 'Tyres & Accessories'
       }, {
-        label: "Children's Books"
+        label: 'Car Care & Cleaning'
       }, {
-        label: "Inspired Reading"
-      }, {
-        label: "Christian Living"
-      }, {
-        label: "Cookbooks"
-      }, {
-        label: "Top Trending Books"
+        label: 'Motorcycle Accessories'
       }]
     }, {
-      label: "Camping & Outdoor",
+      label: 'Baby & Toddler',
       children: [{
-        label: "Tents & Outdoor"
+        label: 'Baby Clothing'
       }, {
-        label: "Camping Furniture"
+        label: 'Health & Safety Equipment'
       }, {
-        label: "Coolers & Refrigeration"
+        label: 'Changing & Feeding'
       }, {
-        label: "Outdoor Kitchen"
+        label: 'Baby care & Nursery'
       }, {
-        label: "Lighting"
+        label: 'Travel & Play'
       }]
     }, {
-      label: "Cellphones & Wearables",
+      label: 'Beauty',
       children: [{
-        label: "Cellular Accessories"
+        label: 'Luxury Beauty'
       }, {
-        label: "Airtime & Data"
+        label: 'Fragrances'
       }, {
-        label: "Tablets & Kindles"
+        label: 'Makeup'
       }, {
-        label: "Wearable Tech"
+        label: 'Body Care'
       }, {
-        label: "Apple"
+        label: 'Skin Care'
+      }, {
+        label: 'Hair Care'
+      }, {
+        label: 'Nail Care'
+      }, {
+        label: 'Men\'s Grooming'
+      }, {
+        label: 'Featured Stores'
       }]
     }, {
-      label: "Computers & Electronics",
+      label: 'Books & Courses',
+      children: [{
+        label: 'Fiction'
+      }, {
+        label: 'Non Fiction'
+      }, {
+        label: 'Children\'s Books'
+      }, {
+        label: 'Inspired Reading'
+      }, {
+        label: 'Christian Living'
+      }, {
+        label: 'Cookbooks'
+      }, {
+        label: 'Top Trending Books'
+      }]
+    }, {
+      label: 'Camping & Outdoor',
+      children: [{
+        label: 'Tents & Outdoor'
+      }, {
+        label: 'Camping Furniture'
+      }, {
+        label: 'Coolers & Refrigeration'
+      }, {
+        label: 'Outdoor Kitchen'
+      }, {
+        label: 'Lighting'
+      }]
+    }, {
+      label: 'Cellphones & Wearables',
+      children: [{
+        label: 'Cellular Accessories'
+      }, {
+        label: 'Airtime & Data'
+      }, {
+        label: 'Tablets & Kindles'
+      }, {
+        label: 'Wearable Tech'
+      }, {
+        label: 'Apple'
+      }]
+    }, {
+      label: 'Computers & Electronics',
       children: [{}]
     }, {
-      label: "Fashion & Luggage",
+      label: 'Fashion & Luggage',
       children: [{}]
     }, {
-      label: "Gaming",
+      label: 'Gaming',
       children: [{}]
     }, {
-      label: "Garden, Pool & Patio",
+      label: 'Garden, Pool & Patio',
       children: [{}]
     }, {
-      label: "Groceries & Household",
+      label: 'Groceries & Household',
       children: [{}]
     }, {
-      label: "Health & Hygiene",
+      label: 'Health & Hygiene',
       children: [{}]
     }, {
-      label: "Home Appliances",
+      label: 'Home Appliances',
       children: [{}]
     }, {
-      label: "Liquor",
+      label: 'Liquor',
       children: [{}]
     }, {
-      label: "Office Stationery",
+      label: 'Office Stationery',
       children: [{}]
     }, {
-      label: "Pets",
+      label: 'Pets',
       children: [{}]
     }, {
-      label: "Sport & Training",
+      label: 'Sport & Training',
       children: [{}]
     }, {
-      label: "Toys",
+      label: 'Toys',
       children: [{}]
     }, {
-      label: "TV, Audio and media",
+      label: 'TV, Audio and media',
       children: [{}]
     }]
   }
-]
+];
 
 // export const Departments: <array>;
 
 export const Departments = [
-  "Automotive & DIY", "Baby & Toddler", "Beauty","Books & Courses", "Camping & Outdoor", "Cellphones & Wearables", "Computers & Electronics", "Fashion & Luggage", "Gaming", "Garden, Pool & Patio", "Groceries & Household", "Health & Hygiene", "Home Appliances", "Liquor", "Office Stationery", "Pets", "Sport & Training", "Toys", "TV, Audio and media",
-]
+  'Automotive & DIY', 'Baby & Toddler', 'Beauty', 'Books & Courses', 'Camping & Outdoor',
+  'Cellphones & Wearables', 'Computers & Electronics', 'Fashion & Luggage', 'Gaming',
+  'Garden, Pool & Patio', 'Groceries & Household', 'Health & Hygiene', 'Home Appliances', 'Liquor',
+  'Office Stationery', 'Pets', 'Sport & Training', 'Toys', 'TV, Audio and media',
+];

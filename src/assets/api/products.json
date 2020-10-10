@@ -1,8 +1,8 @@
 [
     {
-      "id": "0",
+      "id": "0a",
      " name": "Xtreme Living - Pump Hand Aluminium Body",
-      "image": ["/assets/images/automotive/53047140-zoom.jpg"],
+      "image": ["/assets/departments/automotive/53047140-zoom.jpg"],
       "department": "automotive",
       "promotion": false,
       "description": ["Weight: 0.8kg", "Colour: Silver", "Material: Aluminium"],
@@ -10,9 +10,9 @@
      "rating": 4
     },
     {
-      "id": "1",
+      "id": "1a",
       "name": "Mini Bluetooth OBD2 ELM 327 Vehicle Diagnostic Scanner",
-      "image": ["/assets/images/automotive/53028183-1-zoom.jpg","/assets/images/automotive/53028183-2-zoom.jpg"],
+      "image": ["/assets/departments/automotive/53028183-1-zoom.jpg","/assets/images/automotive/53028183-2-zoom.jpg"],
       "department": "automotive",
       "promotion": false,
       "description": [
@@ -22,9 +22,9 @@
       "rating": 3.5
     },
     {
-      "id": "2",
+      "id": "2a",
       "name": "Shield - Diesel Injector Cleaner 350Ml",
-      "image": ["/assets/images/automotive/6001878002312-1-zoom.jpg"],
+      "image": ["/assets/departments/automotive/6001878002312-1-zoom.jpg"],
       "department": "automotive",
       "promotion": false,
      "description": [
@@ -34,11 +34,11 @@
       "rating": 4.2
     },
     {
-      "id": "3",
+      "id": "3a",
       "name": "Car Parking Sensor Assistant",
-      "image": ["/assets/images/automotive/44022499-1-zoom.jpg", "/assets/images/automotive/44022499-2-zoom.jpg", "/assets/images/automotive/44022499-3-zoom.jpg"],
+      "image": ["/assets/departments/automotive/44022499-1-zoom.jpg", "/assets/images/automotive/44022499-2-zoom.jpg", "/assets/images/automotive/44022499-3-zoom.jpg"],
       "department": "automotive",
-     "promotion": false,
+      "promotion": false,
       "description": [
         "-Support 4 ultrasonic sensors.", "-Show the distance by LED.", "-Alert the distance by simulator", "-Waterproof anti-drizzle and quakeproof", "-Detection range is as far as 200cm from 30cm", " -Have probe self-checking function"
       ],
@@ -46,9 +46,9 @@
       "rating": 5
     },
     {
-      "id": "4",
+      "id": "4a",
       "name": "Moto-Quip - In Line Fuse Holder",
-     "image": ["/assets/images/automotive/6001865757102-1-zoom.jpg"],
+     "image": ["/assets/departments/automotive/6001865757102-1-zoom.jpg"],
       "department": "automotive",
       "promotion": false,
       "description": [
@@ -58,9 +58,9 @@
       "rating": 4.5
     },
     {
-      "id": "5",
+      "id": "5a",
       "name": "Electronic Water Pump and Housing for VW/Audi 06L121111G",
-      "image": ["/assets/images/automotive/62219251-1-zoom.jpeg"],
+      "image": ["/assets/departments/automotive/62219251-1-zoom.jpeg"],
       "department": "automotive",
       "promotion": false,
       "description": [
@@ -70,9 +70,9 @@
       "rating": 4.8
     },
     {
-      "id": "6",
+      "id": "6a",
       "name": "Honda - Petrol Engine - Electric Taper Shaft 13HP",
-      "image": ["/assets/images/automotive/s-zoom.file.jpeg"],
+      "image": ["/assets/departments/automotive/s-zoom.file.jpeg"],
       "department": "automotive",
       "promotion": false,
      "description": ["The Honda GX390 is the engine for the next generation", "This engine has more power and quieter performance", "Low fuel consumption and emission","Commonly used on:", "Generators",  "Commercial lawn and garden equipment", "Construction / industrial equipment", "Agricultural equipment", "Water pumps", "Type: Air-cooled, 4-stroke, OHV", "Displacement: 389cm?", "Bore x stroke: 88 x 64mm", "Net Power Output: 13hp @ 3600rmp", "Starting system: Recoil/Electric", "Shaft: Taper J609B 25mm", "Fuel tank capacity: 6.1"
@@ -81,9 +81,9 @@
       "rating": null
     },
     {
-      "id": "7",
+      "id": "7a",
       "name": "Car Reverse Parking Sensor Assistant - Silver",
-      "image": ["/assets/images/automotive/57570643-1-zoom.jpeg", "/assets/images/automotive/57570643-2-zoom.jpeg"],
+      "image": ["/assets/departments/automotive/57570643-1-zoom.jpeg", "/assets/images/automotive/57570643-2-zoom.jpeg"],
       "department": "automotive",
      " promotion": false,
       "description": [  "4 Sensor Car Parking Sensor system with LED display,", "The Car Reverse Radar Sensor System helps to prevent dangerous and costly collisions that occur so easily when behind the wheel. It also helps provide increased safety for passengers, pedestrians, and family members who happen to be around the moving vehicle. Detect small Children and low walls as well.",   "A car parking sensor is a proximity sensor designed for vehicles to alert the driver whenever there is an obstacle while parking. The popularity of car parking sensor is rapidly increasing simply because a lot of people finds it really useful. Without car parking sensor there is a high possibility of damaging your car while you park because you can’t see clearly what’s going on behind your vehicle.",  "If you are worried about damaging your car every time you park your vehicle, you might as well consider installing car parking sensor. Nowadays, it is but usual for us to park in a congested parking lot. In that case, it is pretty much an effort to park your car without damaging it and other cars as well", "It lets you determine the space between your vehicle and the surrounding objects. Hence, you have full control on when and where to stop the car as you park. To put it simply, safety is the key benefit of car parking sensor."
@@ -92,9 +92,9 @@
       "rating": 5
     },
     {
-      "id": "8",
+      "id": "8a",
      " name": "Electronic Fuel Pump - Pressure Pump",
-      "image": ["/assets/images/automotive/45072814-1-zoom.jpg"],
+      "image": ["/assets/departments/automotive/45072814-1-zoom.jpg"],
       "department": "automotive",
       "promotion": false,
       "description": [
@@ -104,9 +104,9 @@
       "rating": 4.5
     },
     {
-     "id": "9",
+     "id": "9a",
       "name": "Engine Water Pump Fits Audi/VW 1.2TSI 1.4TSI 04E121042H",
-      "image": ["/assets/images/automotive/s-zoom.file9.jpeg", "/assets/images/automotive/s-zoom.file10.jpeg"],
+      "image": ["/assets/departments/automotive/s-zoom.file9.jpeg", "/assets/images/automotive/s-zoom.file10.jpeg"],
       "department": "automotive",
       "promotion": true,
       "description": [
