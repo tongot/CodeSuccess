@@ -10,12 +10,14 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductEditGuard } from './product-edit/product-edit.guard';
 import { ProductResolver } from './product-edit/product-resolver.resolver';
 import { MaterialModule } from '../material.module';
+import {ProductEditInfoComponent} from './product-edit/product-edit-info/product-edit-info.component';
 
 
 @NgModule({
   declarations: [
     ProductDetailComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductEditInfoComponent
   ],
   imports: [
     CommonModule,

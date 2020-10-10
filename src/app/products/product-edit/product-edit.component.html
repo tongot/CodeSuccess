@@ -40,94 +40,47 @@
  
 
   
-  
- <!-- <h4>{{pageTitle}}</h4>
-  
-    <form  #productForm="ngForm" novalidate>
-          <mat-label for="productNameId">
-                 Product Name:
-          </mat-label>
-          
-            <mat-form-field appearance ="fill">
-            <input matInput
-                  
-                    /> 
-            </mat-form-field >
-            
-              
-           
-
-        
-          <mat-label 
-             for="productCodeId">Product Category
-          </mat-label>
-            <mat-form-field>
-            <input matInput 
-              />
-              </mat-form-field>
-              
-          <mat-label 
-                 for="productCodeId">Product Category</mat-label>
-          
-            <mat-form-field>
-            <input matInput
-                   id="productCodeId"
-                   type="text"
-                   placeholder="Code (required)"
-                   required
-                   [(ngModel)]= "products.category"
-                   name="category"
-                   #category="ngModel"
-                   />
-                </mat-form-field>
-          
-              <mat-error *ngIf= category.errors.required>
-                Product category is required.
-              </mat-error>
-           
-  
-          <mat-label class="col-md-2 col-form-label"
-                 for="productPriceId">Price</mat-label>
-          <section>
-          <mat-form-field>
-            <input matInput 
-                   id="price"
-                   type="text"
-                   placeholder="Price (required)"
-                   required
-                   [(ngModel)]= "products.price"
-                   name="price"
-                   #price="ngModel"
-                   />
-            </mat-form-field>
-            
-              <mat-error  *ngIf =price.errors.required>
-                Product price is required.
-              </mat-error>
-         
-          <mat-label
-                 for="descriptionId">Description      
-          </mat-label>
-          <mat-form-field>
-            <textarea matInput
-                      id="descriptionId"
-                      placeholder="Description"
-                      rows=3
-                      [(ngModel)]= "products.description"
-                      name="description">
-                  description  
-            </textarea>
-          </mat-form-field>
-        
-      <mat-error *ngIf='errorMessage'>
+      <mat-card>
+        <mat-card-title>
+          {{pageTitle}}
+        </mat-card-title>
       
-      </mat-error>
-      <button mat-button primary
-      title="Delete this product"
-      (click)="deleteProduct()"
-      [routerLink]="['/']"
-      [disabled]="!isValid()"
-      >
-Delete
-</button> 
-</form> -->
+      
+        <mat-card-content>
+          <router-outlet></router-outlet>
+          <section>
+            
+              <button mat-button 
+                      style="width:80px"
+                      type="button"
+                      [title]="isValid() ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                      [disabled]="!isValid()"
+                      (click)="saveProduct()"
+                      [routerLink]="['/']">
+      
+                Save
+              </button>
+              <button mat-button class="primary"
+                      style="width:80px"
+                      type="button"
+                      title="Back"
+                      [routerLink]="['/products']">
+                Back
+              </button>
+              <button  mat-button class="primary"
+                      style="width:80px"
+                      type="button"
+                      title="Delete this product"
+                      (click)="deleteProduct()"
+                      [routerLink]="['/']"
+                      [disabled]="!isValid()"
+                      >
+                Delete
+              </button>
+           
+          </section>
+      </mat-card-content>
+      </mat-card>
+      <mat-error
+           *ngIf="errorMessage">{{errorMessage}}
+    </mat-error>

@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product-service';
 import { IProduct, IProductResolved } from 'src/app/shared/product';
-import {  NgForm } from '@angular/forms';
 
 
 @Component({
@@ -14,8 +13,6 @@ import {  NgForm } from '@angular/forms';
 export class ProductEditComponent implements OnInit {
   pageTitle = 'Product Edit';
   errorMessage: string;
-  productForm: NgForm;
-  products: IProduct;
   Addmode = false;
 
   private dataIsValid: { [key: string]: boolean } = {};
@@ -51,15 +48,14 @@ export class ProductEditComponent implements OnInit {
 
   onProductRetrieved(product: IProduct): void {
     this.product = product;
-    this.Addmode = true;
-    if (!this.product) {
+    if (!product) {
       this.pageTitle = 'No product found';
     } else {
-      if (this.Addmode === true && product.id === '0' ) {
+      if ( product.id === '0' ) {
         this.pageTitle = 'Add Product';
-        this.router.navigate(['/products,0,edit']);
+        this.router.navigate(['/products,0, edit']);
       } else {
-        this.pageTitle = `Edit Product: ${this.product.name}`;
+        this.pageTitle = `Edit Product: ${product.name}`;
       }
     }
   }
