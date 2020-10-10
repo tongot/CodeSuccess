@@ -3,12 +3,12 @@
 
   <!-- <app-root></app-root> -->
 
-  <app-search></app-search>
-  <app-theme></app-theme>
-
-<!--
-  <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let auto of products">
+  <div class="content"
+   fxLayout="row wrap"
+    fxLayoutGap="16px grid"
+    *ngFor="let auto of products"
+  >
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" >
       <mat-card class="mat-elevation-z4" >
         <mat-card-header>
           <mat-card-title>{{sectionTitle}}</mat-card-title>
@@ -19,7 +19,8 @@
         <mat-card-content>
           <p><i class="far fa-star"></i></p>
           <p>
-            {{product.description}}
+            {{product.description  | ShortenText: '...'}}
+            <p>{{product.price | currency:'R'}}</p>
         </mat-card-content>
         <mat-card-actions>
           <button mat-button color="primary">LIKE</button>
@@ -29,10 +30,6 @@
       </mat-card>
     </div>
   </div>
-
--->
-
-
 
 
 <!-- </a> -->

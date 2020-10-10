@@ -1,10 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AutomotiveService } from 'src/app/automative.service';
-import { Product } from 'src/app/shared/product';
+import { IProduct } from 'src/app/shared/product';
+import { ProductService } from './services/product-service';
 
-import { SearchComponent } from "..";
+
 
 @Component({
   selector: 'app-index',
@@ -13,22 +12,27 @@ import { SearchComponent } from "..";
 })
 export class IndexComponent implements OnInit {
 
-constructor(// private autoService: AutomotiveService,
-            // private http: HttpClient,
+constructor(private productService: ProductService,
             private route: ActivatedRoute ) { }
 
-/*
-sectionTitle = 'Products';
-errorMessage = '';
+sectionTitle = 'Automative Products';
+errorMessage = 'Cant get products';
 // product: IProductResolved;
 rating: number;
 // tslint:disable-next-line: variable-name
 arrayFilter = '';
 
 // filteredProducts: IProduct[] = [];
-products: Product[] = [];
-*/
+products: IProduct[] = [];
+
   ngOnInit(): void {
+    this.productService.getProducts().subscribe(
+      (products: IProduct[]) => {
+        this.products = products;
+      },
+      (err: string) => this.errorMessage = err
+    );
+    console.log(this.errorMessage);
   }
 
 }

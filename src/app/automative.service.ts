@@ -10,9 +10,9 @@ import { Product } from './shared/product';
   providedIn: 'root'
 })
 
-export class AutomotiveService{
+export class AutomotiveService {
 
-  private dataUrl = 'data/automotive.json';
+  private dataUrl = 'assets/api/automotive.json';
   length: any;
 
   constructor(private http: HttpClient, private route: Router) { }

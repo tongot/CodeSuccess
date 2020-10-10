@@ -3,39 +3,39 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, throwError, of } from 'rxjs';
 import { map, tap, catchError} from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Product } from './shared/product';
+import { IProduct } from './shared/product';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class BeautyService {
-  private dataUrl = 'data/babyToddler.json';
+  private dataUrl = 'assets/api/beauty.json';
   length: any;
 
   constructor(private http: HttpClient, private route: Router) { }
-  getBeautyProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.dataUrl)
+  getBeautyProducts(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(this.dataUrl)
       .pipe(
         tap(data => console.log(`All  baby toddler products: ${JSON.stringify(data)}`))
       );
   }
-  getBeautyProduct(id: number): Observable<Product> {
+  getBeautyProduct(id: number): Observable<IProduct> {
     if (id === 0) {
       return of(this.initializeBeautyProduct());
     }
     const url = `${this.dataUrl}/${id}`;
-    return this.http.get<Product>(url)
+    return this.http.get<IProduct>(url)
       .pipe(
         tap(data => console.log(`getProduct: ${JSON.stringify(data)}`)),
         catchError(this.handleError)
       );
   }
 
-  createBeautyProduct(product: Product): Observable<Product> {
+  createBeautyProduct(product: IProduct): Observable<IProduct> {
     const headers = new HttpHeaders({ 'Content-Type': 'app/json' });
     product.id = null;
-    return this.http.post<Product>(this.dataUrl, product, { headers })
+    return this.http.post<IProduct>(this.dataUrl, product, { headers })
       .pipe(
         tap(data => console.log('createProduct: ' + JSON.stringify(data))),
         catchError(this.handleError)
@@ -45,7 +45,7 @@ export class BeautyService {
   deleteBeautyProduct(id: number): Observable<{}> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.dataUrl}/${id}`;
-    return this.http.delete<Product>(url, { headers })
+    return this.http.delete<IProduct>(url, { headers })
       .pipe(
         tap(data => console.log('deleteProduct: ' + id)),
         catchError(this.handleError)
@@ -53,12 +53,12 @@ export class BeautyService {
 
   }
 
-  updateBeautyProduct(product: Product): Observable<Product> {
+  updateBeautyProduct(product: IProduct): Observable<IProduct> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.dataUrl}/${product.id}`;
-    return this.http.put<Product>(url, product, { headers })
+    return this.http.put<IProduct>(url, product, { headers })
       .pipe(
-        tap(() => console.log('Product: ' + product.id + 'has been updated' )),
+        tap(() => console.log('IProduct: ' + product.id + 'has been updated' )),
         // Return the product on an update
         map(() => product),
         catchError(this.handleError)
@@ -84,7 +84,7 @@ export class BeautyService {
   }
 
 
-  private initializeBeautyProduct(): Product {
+  private initializeBeautyProduct(): IProduct {
     return {
       id: '0',
       name: null,
