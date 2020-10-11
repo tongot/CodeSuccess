@@ -1,0 +1,92 @@
+
+
+
+  <mat-card>
+    <mat-card-title></mat-card-title>
+    <mat-card-content>
+    <form  #productForm = "ngForm" novalidate>
+          <mat-label>
+                 Product Name:
+          </mat-label>
+          
+            <mat-form-field appearance ="fill">
+            <input matInput type= "text" 
+                                  name="name" 
+                                  #name= "ngModel"
+                                  [(ngModel)]="product.name"
+                                  required
+                                  minlength="3"/> 
+            </mat-form-field >
+            <mat-error *ngIf = "name.errors.required">
+            Product name is required
+            </mat-error>
+  <section> 
+          <mat-label>
+            Product Category
+          </mat-label>
+            <mat-form-field appearance ="fill">
+            <input matInput
+                   type="text"
+                   placeholder="Code (required)"
+                   required
+                   [(ngModel)]= "product.category"
+                   name="category"
+                   #category="ngModel"/>
+                </mat-form-field>
+          
+              <mat-error *ngIf= "(category.touched || category.dirty) && !category.valid">
+                Product category is required.
+              </mat-error>
+  </section> 
+  <section>     
+  
+          <mat-label>
+            Price
+          </mat-label>
+          <mat-form-field appearance ="fill">
+            <input matInput 
+                   id="price"
+                   type="text"
+                   placeholder="Price (required)"
+                   required
+                   [(ngModel)]= "product.price"
+                   name="price"
+                   #price="ngModel"/>
+            </mat-form-field>
+            
+              <mat-error  *ngIf ="(price.touched ||
+                                  price.dirty ||
+                                  product.id !== '0') &&
+                                  !price.valid"
+              >
+                Product price is required.
+              </mat-error>
+  </section>  
+  <section>
+          <mat-label
+                 for="descriptionId">Description      
+          </mat-label>
+          <mat-form-field appearance ="fill">
+            <textarea matInput
+                      id="descriptionId"
+                      placeholder="Description"
+                      rows=3
+                      [(ngModel)]= "product.description"
+                      name="description"
+                      #description = "ngModel"
+                      >
+                  Description  
+            </textarea>
+          </mat-form-field>
+        
+      <mat-error *ngIf="(description.touched ||
+                        description.dirty ||
+                        product.id !== '0') &&
+                        !description.valid">
+      Description is required!
+      </mat-error>
+</section> 
+
+</form> 
+</mat-card-content>
+</mat-card>

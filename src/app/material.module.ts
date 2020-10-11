@@ -34,23 +34,25 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTreeModule } from '@angular/material/tree';
 
 // *************** BUTTONS & INDICATORS ***************
-import { MatButtonModule } from '@angular/material/button';
+import {MatButtonModule} from '@angular/material/button';
 // tslint:disable-next-line: import-spacing
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatIconModule } from '@angular/material/icon';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatRippleModule } from '@angular/material/core';
+import {MatButtonToggleModule}    from '@angular/material/button-toggle';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatRippleModule} from '@angular/material/core';
 
 // *************** POPUPS & MODALS ***************
-import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
-import { MatCarouselSlideComponent } from '@ngmodule/material-carousel';
+
+import { MatCarouselSlideComponent } from "@ngmodule/material-carousel";
+
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 
@@ -58,6 +60,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+
 
 export const AllMaterialModules = [
   MatAutocompleteModule,

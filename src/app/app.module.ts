@@ -3,30 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { A11yModule } from '@angular/cdk/a11y';
 
-import { MaterialModule } from './material.module';
-import { AllMaterialModules } from './material.module';
+import { AllMaterialModules, MaterialModule } from './material.module';
 
-import { HttpClientModule } from '@angular/common/http';
+
+import {ProductsModule} from './products/products.module';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //services
 import { AccountService } from './Services/account.service';
 import { NotificationService } from './Services/notification.service';
 
-import {
-  BannerCarouselComponent,
-  HeaderComponent,
-  ItemsSliderComponent,
-  ProductSmallCardComponent,
-  PromotionCardComponent,
-} from './components';
-import { FooterComponent } from './components';
+import { BannerCarouselComponent, FooterComponent, HeaderComponent, InfiniteCarouselComponent, ItemsSliderComponent, ProductSmallCardComponent, PromotionCardComponent } from './components';
 import { IndexComponent } from './components';
 import { LoginComponent } from './components';
 import { SignupComponent } from './components';
@@ -42,7 +37,12 @@ import { OffersComponent } from './components';
 import { AccountComponent } from './components';
 import { MyAccountComponent } from './components';
 import { SnackComponent } from './components/snack/snack.component';
-import { InfiniteCarouselComponent } from './components/infinite-carousel/infinite-carousel.component';
+//import { InfiniteCarouselComponent } from './components/infinite-carousel/infinite-carousel.component';
+
+// pipes
+import {ShortenTextPipe } from './shorten-text.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -58,6 +58,7 @@ import { InfiniteCarouselComponent } from './components/infinite-carousel/infini
     AboutComponent,
     CareersComponent,
     SearchComponent,
+    ShortenTextPipe,
     SearchBarComponent,
     NestedDropdownComponent,
     OffersComponent,
@@ -76,8 +77,12 @@ import { InfiniteCarouselComponent } from './components/infinite-carousel/infini
     BrowserAnimationsModule,
     AllMaterialModules,
     FontAwesomeModule,
+    ProductsModule,
     MaterialModule,
     FlexLayoutModule,
+    HttpClientModule,
+    // InMemoryWebApiModule.forRoot({}, { delay: 1000 }),
+
     FormsModule,
     ReactiveFormsModule,
     A11yModule,

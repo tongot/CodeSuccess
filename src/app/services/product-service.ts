@@ -1,54 +1,50 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { Observable, throwError, of } from 'rxjs';
-import { map, tap, catchError} from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Product } from './shared/product';
-
+import { Observable, of, throwError } from 'rxjs';
+import { tap, catchError, map } from 'rxjs/operators';
+import { IProduct } from '../shared/product';
 
 @Injectable({
   providedIn: 'root'
 })
-
-export class AutomotiveService{
-
-  private dataUrl = 'data/automotive.json';
+export class ProductService {
+  private dataUrl = 'assets/api/products.json';
   length: any;
 
   constructor(private http: HttpClient, private route: Router) { }
 
-  getAutoProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.dataUrl)
+  getProducts(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(this.dataUrl)
       .pipe(
-        tap(data => console.log(`All  Automotive  products: ${JSON.stringify(data)}`))
+        tap(data => console.log(`All   products: ${JSON.stringify(data)}`))
       );
   }
-  getAutoProduct(id: number): Observable<Product> {
-    if (id === 0) {
+  getProduct(id: string): Observable<IProduct> {
+    if (id === '0') {
       return of(this.initializeProduct());
     }
-    const url = `${this.dataUrl}/${id}`;
-    return this.http.get<Product>(url)
+    return this.http.get<IProduct>(this.dataUrl)
       .pipe(
-        tap(data => console.log(`getProduct: ${JSON.stringify(data)}`)),
+        tap(data => {return data[3]}),
         catchError(this.handleError)
       );
   }
 
-  createAutoProduct(product: Product): Observable<Product> {
+  createProduct(product: IProduct): Observable<IProduct> {
     const headers = new HttpHeaders({ 'Content-Type': 'app/json' });
     product.id = null;
-    return this.http.post<Product>(this.dataUrl, product, { headers })
+    return this.http.post<IProduct>(this.dataUrl, product, { headers })
       .pipe(
         tap(data => console.log('createProduct: ' + JSON.stringify(data))),
         catchError(this.handleError)
       );
   }
 
-  deleteAutoProduct(id: number): Observable<{}> {
+  deleteProduct(id: string): Observable<{}> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.dataUrl}/${id}`;
-    return this.http.delete<Product>(url, { headers })
+    return this.http.delete<IProduct>(url, { headers })
       .pipe(
         tap(data => console.log('deleteProduct: ' + id)),
         catchError(this.handleError)
@@ -56,10 +52,10 @@ export class AutomotiveService{
 
   }
 
-  updateAutoProduct(product: Product): Observable<Product> {
+  updateProduct(product: IProduct): Observable<IProduct> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.dataUrl}/${product.id}`;
-    return this.http.put<Product>(url, product, { headers })
+    return this.http.put<IProduct>(url, product, { headers })
       .pipe(
         tap(() => console.log('Product: ' + product.id + 'has been updated' )),
         // Return the product on an update
@@ -87,17 +83,18 @@ export class AutomotiveService{
   }
 
 
-  private initializeProduct(): Product {
+  private initializeProduct(): IProduct {
     return {
-      id: '0',
+      id: null,
       name: null,
       image: null,
       department: null,
       promotion: null,
       description: null,
       price: null,
+      discount: null,
+      category: null,
       rating: null
     };
   }
-
-  }
+}

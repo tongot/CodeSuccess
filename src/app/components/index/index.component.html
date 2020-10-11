@@ -44,3 +44,29 @@
     </div>
   </div>
 </div>
+<!-- 
+  <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products">
+      <mat-card class="mat-elevation-z4" >
+        <img mat-card-image 
+        [src]="product.image"
+        [title]="product.name" 
+        [style.width.px]="imageWidth"
+        [style.width.px]="imageLength"               
+        >
+        <mat-card-content>
+            <p>{{product.price | currency:'R'}}</p>-
+            <p>Rating: {{product.rating}}</p>
+            <div class="box">
+              <input type="checkbox" id="expanded">
+              <p>{{product.description}}</p>
+              <label for="expanded" role="button">read more</label>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button  [routerLink]="[product.id, 'edit']">Edit</button>  
+        </mat-card-actions>
+        
+      </mat-card>
+    </div>
+  </div>  -->

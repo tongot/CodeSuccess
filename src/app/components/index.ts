@@ -15,6 +15,7 @@ export * from './banner-carousel/banner-carousel.component';
 export * from './items-slider/items-slider.component';
 export * from './promotion-card/promotion-card.component';
 export * from './product-small-card/product-small-card.component';
+export * from './infinite-carousel/infinite-carousel.component'
 /*
     NESTED COMPONENTS
  */

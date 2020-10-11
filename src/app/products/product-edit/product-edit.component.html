@@ -1,0 +1,86 @@
+<!-- 
+ <mat-card>
+ <mat-card-title>{{pageTitle}}</mat-card-title>
+ <mat-card-content>
+   <mat-label>Product Name:</mat-label>
+   <mat-form-field appearance= "fill">
+     <input matInput type= "text"
+     placeholder="Name (required)"
+     required
+     minlength= "3"
+     [(ngModel)]="products.name"
+     name="name"
+     #name="ngModel" >
+     <mat-error *ngIf =name.errors.required>
+      Product name is required.
+    </mat-error>
+    <mat-error *ngIf = name.errors.minlength(3)>
+      Product name must be at least three characters.
+    </mat-error>
+   </mat-form-field>
+   <section>
+    <mat-label>Category:</mat-label>
+<mat-form-field>
+  <input matInput type= "text" 
+                   placeholder="Code (required)"
+                   required
+                   [(ngModel)]= "products.category"
+                   name="category"
+                   #category="ngModel"
+  >
+  <mat-error *ngIf = "category.errors.required" >
+    Product category is required.
+  </mat-error>
+</mat-form-field>
+</section>
+ </mat-card-content>
+</mat-card>
+    
+      -->
+ 
+
+  
+      <mat-card>
+        <mat-card-title>
+          {{pageTitle}}
+        </mat-card-title>
+      
+      
+        <mat-card-content>
+          <router-outlet></router-outlet>
+          <section>
+            
+              <button mat-button 
+                      style="width:80px"
+                      type="button"
+                      [title]="isValid() ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                      [disabled]="!isValid()"
+                      (click)="saveProduct()"
+                      [routerLink]="['/']">
+      
+                Save
+              </button>
+              <button mat-button class="primary"
+                      style="width:80px"
+                      type="button"
+                      title="Back"
+                      [routerLink]="['/products']">
+                Back
+              </button>
+              <button  mat-button class="primary"
+                      style="width:80px"
+                      type="button"
+                      title="Delete this product"
+                      (click)="deleteProduct()"
+                      [routerLink]="['/']"
+                      [disabled]="!isValid()"
+                      >
+                Delete
+              </button>
+           
+          </section>
+      </mat-card-content>
+      </mat-card>
+      <mat-error
+           *ngIf="errorMessage">{{errorMessage}}
+    </mat-error>

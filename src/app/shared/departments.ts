@@ -211,7 +211,7 @@ export const ShopByDepartments = [
       },
     ],
   },
-];
+]
 
 // export const Departments: <array>;
 
