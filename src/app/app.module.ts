@@ -17,12 +17,6 @@ import {ProductsModule} from './products/products.module';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { SearchComponent } from './components';
-import { ThemeComponent } from './components';
-import { SearchBarComponent } from './components';
-import { NestedDropdownComponent } from './components';
-import { OffersComponent } from './components';
-import { CompactDropdownComponent } from './components';
 import { HeaderComponent } from "./components";
 import { FooterComponent } from "./components";
 import { IndexComponent } from "./components";

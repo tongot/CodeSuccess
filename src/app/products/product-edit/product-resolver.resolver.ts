@@ -18,18 +18,17 @@ import { Observable, of } from 'rxjs';
             state: RouterStateSnapshot): Observable<IProductResolved> {
 const id = route.paramMap.get('id');
 
-if (!id) {
+if (!isNaN(+id)) {
   const message = `Product ${id} was not a string `;
   console.error(message);
   return of({ product: null, error: message });
 }
-
 return this.productService.getProduct(id)
   .pipe(
-    map(product => ({ product })),
+    map((product) => ({ product })),
     catchError(error => {
       const message = `Retrieval error: ${error}`;
-      console.error(message);
+      console.log(message);
       return of({ product: null, error: message });
     })
   );

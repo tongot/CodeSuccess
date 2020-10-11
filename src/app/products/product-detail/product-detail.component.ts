@@ -18,6 +18,7 @@ export class ProductDetailComponent implements OnInit {
       // tslint:disable-next-line: no-string-literal
       this.route.snapshot.data['resolvedData'];
     this.errorMessage = resolvedData.error;
+    console.log(resolvedData.product)
     this.onProductRetrieved(resolvedData.product);
   }
 

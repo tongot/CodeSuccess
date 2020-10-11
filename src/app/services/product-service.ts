@@ -24,10 +24,9 @@ export class ProductService {
     if (id === '0') {
       return of(this.initializeProduct());
     }
-    const url = `${this.dataUrl}/${id}`;
-    return this.http.get<IProduct>(url)
+    return this.http.get<IProduct>(this.dataUrl)
       .pipe(
-        tap(data => console.log(`getProduct: ${JSON.stringify(data)}`)),
+        tap(data => {return data[3]}),
         catchError(this.handleError)
       );
   }

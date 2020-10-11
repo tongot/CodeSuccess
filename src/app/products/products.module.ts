@@ -26,7 +26,8 @@ import {ProductEditInfoComponent} from './product-edit/product-edit-info/product
     ReactiveFormsModule,
     BrowserModule,
     RouterModule.forChild([
-       { path: '', redirectTo: 'products', pathMatch: 'full' },
+        
+      //{ path: '', redirectTo: 'products', pathMatch: 'full' },
         {
           path: ':id',
           component: ProductDetailComponent,
