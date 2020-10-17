@@ -19,7 +19,7 @@ import {
 import {
 IHeadLineProduct,
 } from '../../Models/IModel';
-import { ProductService } from 'src/app/services/product-service';
+import { ProductService } from 'src/app/services/product.service';
 import { IProduct } from 'src/app/Models/IModel';
 
 
