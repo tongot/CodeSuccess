@@ -1,7 +1,7 @@
 <div class="carousel">
-    <div class="carousel-items" [style.width]="bannerSlide.getInnerBannerWidth"
-        [style.transform]="bannerSlide.transform" #CarouselItem>
-        <section (click)="go(item.url)" [style]="bannerSlide.getItemWidth" *ngFor="let item of bannerSlide.items"
+    <div class="carousel-items" [style.width]="_banner.getInnerBannerWidth" [style.transform]="_banner.transform"
+        #CarouselItem>
+        <section (click)="go(item.url)" [style]="_banner.getItemWidth" *ngFor="let item of bannerSlide"
             class="carousel-item" fxLayout="row">
             <img [src]="item.imageLink" alt="">
         </section>

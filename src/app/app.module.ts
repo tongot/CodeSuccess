@@ -19,9 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //services
 import { AccountService } from './Services/account.service';
-import { NotificationService } from './Services/notification.service';
 
-import { BannerCarouselComponent, FooterComponent, HeaderComponent, InfiniteCarouselComponent, ItemsSliderComponent, ProductSmallCardComponent, PromotionCardComponent } from './components';
+import { BannerCarouselComponent, FooterComponent, HeaderComponent, InfiniteCarouselComponent, ItemsSliderComponent, ProductComponent, ProductSmallCardComponent, PromotionCardComponent } from './components';
 import { IndexComponent } from './components';
 import { LoginComponent } from './components';
 import { SignupComponent } from './components';
@@ -70,6 +69,7 @@ import {ShortenTextPipe } from './shorten-text.pipe';
     InfiniteCarouselComponent,
     PromotionCardComponent,
     ProductSmallCardComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,7 +88,7 @@ import {ShortenTextPipe } from './shorten-text.pipe';
     A11yModule,
     HttpClientModule,
   ],
-  providers: [AccountService, NotificationService],
+  providers: [AccountService],
   bootstrap: [AppComponent],
   entryComponents: [SnackComponent],
 })

@@ -2,13 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import {
   InfiniteSliderItems,
   InfiniteSlider,
-  IInfiniteSlider,
-} from '../../Models/OtherModels/InfiniteSlider';
+ 
+} from '../../Models/Model';
+
+import {
+   IInfiniteSlider,
+}
+from '../../Models/IModel';
+
+import {
+  IBannerSliderItem,
+} from '../../Models/IModel';
 import {
   BannerSliderItem,
-  BannerSliderItems,
-  IBannerSliderItem,
-} from '../../Models/OtherModels/bannerSlider';
+} from '../../Models/Model';
+import {
+IHeadLineProduct,
+} from '../../Models/IModel';
+import { ProductService } from 'src/app/services/product-service';
+import { IProduct } from 'src/app/Models/IModel';
 
 
 // import { ActivatedRoute } from '@angular/router';
@@ -33,8 +45,8 @@ export class IndexComponent implements OnInit {
     { link: '#', src: '/assets/carousel/brands/campground.webp' },
     { link: '#', src: '/assets/carousel/brands/computers.webp' },
     { link: '#', src: '/assets/carousel/brands/dyson.webp' },
-    { link: '#', src: '/assets/carousel/brands/dyson.webp' },
   ];
+
   bannerItems = [
     { image: '../../../assets/carousel/722541220058344269.png', url: '#' },
     {
@@ -47,38 +59,29 @@ export class IndexComponent implements OnInit {
 
   private slides: IInfiniteSlider[] = [];
   private banner: IBannerSliderItem[] = [];
+
+   headlines:IHeadLineProduct[]=[
+    {headline:"baby's' joy", TopTenProducts:[]},
+    {headline:"top 10 camping deals", TopTenProducts:[]},
+    {headline:"Best selling products", TopTenProducts:[]},
+    {headline:"Check out whats new", TopTenProducts:[]}
+  ]
+
   slideItem = null;
   bannerSlide = null;
-  constructor() {}
+  errorMessage = '';
+  
 
+constructor(private productService: ProductService) { }
+             
   ngOnInit(): void {
     this.slideItem = this.getBrands();
     this.bannerSlide = this.getBannerItems();
+    this.getSlideProducts();
+   
+    //get products to display in banner
+    
   }
-// constructor(private productService: ProductService,
-//             private route: ActivatedRoute ) { }
-
-// sectionTitle = 'Products';
-// errorMessage = 'Cant get products';
-// imageLength = 100;
-// imageWidth = 90;
-// // product: IProductResolved;
-// rating: number;
-// // tslint:disable-next-line: variable-name
-// arrayFilter = '';
-
-// // filteredProducts: IProduct[] = [];
-// products: IProduct[] = [];
-
-
-//   ngOnInit(): void {
-//     this.productService.getProducts().subscribe(
-//       (products: IProduct[]) => {
-//         this.products = products;
-//       },
-//       (err: string) => this.errorMessage = err
-//     );
-//     console.log(this.errorMessage);
 
 
   getBrands(): InfiniteSliderItems {
@@ -87,10 +90,22 @@ export class IndexComponent implements OnInit {
     });
     return new InfiniteSliderItems(this.slides, 5);
   }
-  getBannerItems(): BannerSliderItems {
+  getBannerItems(): IBannerSliderItem[] {
     this.bannerItems.forEach((item) => {
       this.banner.push(new BannerSliderItem(item.url, item.image));
     });
-    return new BannerSliderItems(this.banner);
+    return this.banner;
+  }
+  getSlideProducts():void{
+    this.productService.getProducts().subscribe(
+      (products: IProduct[]) => {
+        this.headlines.forEach((item)=>{
+           for (let p = 0; p < 10; p++) {
+          item.TopTenProducts.push(products[p]);
+        }
+        })
+       },
+       (err: string) => this.errorMessage = err
+    );
   }
 }

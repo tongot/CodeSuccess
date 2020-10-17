@@ -9,12 +9,12 @@
 }
 .items-container {
   background-color: #f4f4f4;
-  height: 410px;
+  //height: 410px;
   margin-top: 20px;
 }
 .category {
-  height: 300px;
-  margin-top: 20px;
+  height: 410px;
+  margin-top: 10px;
 }
 .side-bar {
   position: relative;
@@ -46,4 +46,7 @@ h2 {
 .right-sidebar {
   width: 350px;
   height: 80%;
+}
+.item-slider {
+  max-width: 100px;
 }

@@ -1,9 +1,9 @@
 <div fxLayout="row" class="slide-container" #container>
-    {{items}}
     <div fxLayout="row" class="slider" #slider>
-        <section *ngFor=" let item of [1,3,4,5,4]" class="">
+        <section (click)="getProduct(index)" routerLink="product/{{index}}"
+            *ngFor=" let product of productSForSlider; let index=index" class="">
             <div class="item">
-                <app-product-small-card></app-product-small-card>
+                <app-product-small-card [product]="product"></app-product-small-card>
             </div>
         </section>
     </div>

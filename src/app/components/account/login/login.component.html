@@ -4,16 +4,25 @@
             <mat-card class="login-inner-card">
                 <mat-card-title>login</mat-card-title>
                 <mat-card-content>
-                    <form>
+                    <form #formLogin="ngForm" (ngSubmit)="Login(formLogin)">
                         <div class="login-heading" fxLayout="column" fxLayoutAlign="space-even stretch">
                             <mat-form-field appearance="outline">
                                 <mat-label>Email Address</mat-label>
-                                <input matInput type="text">
+                                <input matInput type="text" name="username" #username="ngModel" required
+                                    [(ngModel)]="credentials.username">
+                                <mat-hint class="error-message" *ngIf="username.touched && !username.valid">username is
+                                    required
+                                </mat-hint>
                             </mat-form-field>
+
                             <mat-label class="label-pass"> <a href="">forgot password?</a> </mat-label>
                             <mat-form-field appearance="outline" type="password">
                                 <mat-label>Password</mat-label>
-                                <input matInput type="password">
+                                <input [(ngModel)]="credentials.password" name="password" #password="ngModel" matInput
+                                    required type="password">
+                                <mat-hint class="error-message" *ngIf="password.touched && !password.valid">password is
+                                    required
+                                </mat-hint>
                             </mat-form-field>
                             <div fxLayout="column" fxLayoutAlign=" center">
                                 <button mat-flat-button color="primary">

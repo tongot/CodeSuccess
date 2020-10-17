@@ -1,7 +1,7 @@
-import { ProductEditForm } from './product-edit-form';
+// import { ProductEditForm } from './product-edit-form';
 
-describe('ProductEditForm', () => {
-  it('should create an instance', () => {
-    expect(new ProductEditForm()).toBeTruthy();
-  });
-});
+// describe('ProductEditForm', () => {
+//   it('should create an instance', () => {
+//     expect(new ProductEditForm()).toBeTruthy();
+//   });
+// });

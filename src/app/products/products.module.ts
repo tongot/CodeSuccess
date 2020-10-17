@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
@@ -24,10 +24,11 @@ import {ProductEditInfoComponent} from './product-edit/product-edit-info/product
     FormsModule,
    MaterialModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
     BrowserModule,
     RouterModule.forChild([
         
-      //{ path: '', redirectTo: 'products', pathMatch: 'full' },
+      { path: '', redirectTo: 'products', pathMatch: 'full' },
         {
           path: ':id',
           component: ProductDetailComponent,
@@ -40,6 +41,6 @@ import {ProductEditInfoComponent} from './product-edit/product-edit-info/product
           resolve: { resolvedData: ProductResolver },
       }
     ])
-  ]
+   ]
 })
 export class ProductsModule { }

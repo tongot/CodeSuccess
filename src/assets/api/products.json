@@ -12,7 +12,7 @@
     {
       "id": "1a",
       "name": "Mini Bluetooth OBD2 ELM 327 Vehicle Diagnostic Scanner",
-      "image": ["/assets/departments/automotive/53028183-1-zoom.jpg","/assets/images/automotive/53028183-2-zoom.jpg"],
+      "image": ["/assets/departments/automotive/53028183-1-zoom.jpg"],
       "department": "automotive",
       "promotion": false,
       "description": [
@@ -36,7 +36,7 @@
     {
       "id": "3a",
       "name": "Car Parking Sensor Assistant",
-      "image": ["/assets/departments/automotive/44022499-1-zoom.jpg", "/assets/images/automotive/44022499-2-zoom.jpg", "/assets/images/automotive/44022499-3-zoom.jpg"],
+      "image": [ "/assets/images/automotive/44022499-2-zoom.jpg"],
       "department": "automotive",
       "promotion": false,
       "description": [
@@ -48,7 +48,7 @@
     {
       "id": "4a",
       "name": "Moto-Quip - In Line Fuse Holder",
-     "image": ["/assets/departments/automotive/6001865757102-1-zoom.jpg"],
+     "image": ["/assets/departments/automotive/62219251-1-zoom.jpeg"],
       "department": "automotive",
       "promotion": false,
       "description": [
@@ -83,7 +83,7 @@
     {
       "id": "7a",
       "name": "Car Reverse Parking Sensor Assistant - Silver",
-      "image": ["/assets/departments/automotive/57570643-1-zoom.jpeg", "/assets/images/automotive/57570643-2-zoom.jpeg"],
+      "image": ["/assets/departments/automotive/57570643-1-zoom.jpeg"],
       "department": "automotive",
      " promotion": false,
       "description": [  "4 Sensor Car Parking Sensor system with LED display,", "The Car Reverse Radar Sensor System helps to prevent dangerous and costly collisions that occur so easily when behind the wheel. It also helps provide increased safety for passengers, pedestrians, and family members who happen to be around the moving vehicle. Detect small Children and low walls as well.",   "A car parking sensor is a proximity sensor designed for vehicles to alert the driver whenever there is an obstacle while parking. The popularity of car parking sensor is rapidly increasing simply because a lot of people finds it really useful. Without car parking sensor there is a high possibility of damaging your car while you park because you can’t see clearly what’s going on behind your vehicle.",  "If you are worried about damaging your car every time you park your vehicle, you might as well consider installing car parking sensor. Nowadays, it is but usual for us to park in a congested parking lot. In that case, it is pretty much an effort to park your car without damaging it and other cars as well", "It lets you determine the space between your vehicle and the surrounding objects. Hence, you have full control on when and where to stop the car as you park. To put it simply, safety is the key benefit of car parking sensor."
@@ -106,7 +106,7 @@
     {
      "id": "9a",
       "name": "Engine Water Pump Fits Audi/VW 1.2TSI 1.4TSI 04E121042H",
-      "image": ["/assets/departments/automotive/s-zoom.file9.jpeg", "/assets/images/automotive/s-zoom.file10.jpeg"],
+      "image": ["/assets/departments/automotive/s-zoom.file9.jpeg"],
       "department": "automotive",
       "promotion": true,
       "description": [

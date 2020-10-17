@@ -3,21 +3,21 @@
         <div fxLayout="column">
             <div fxLayout="column" fxLayoutAlign=" center">
                 <div class="product-image">
-                    <img src="../../../assets/departments/beauty/01-s-zoom.file.jpeg" alt="">
+                    <img [src]="product.image" alt="">
                 </div>
             </div>
             <div fxLayout="column" class="product-details" fxLayoutAlign="start start">
                 <div class="product-description">
-                    This Product is the best .. think pad carbon...
+                    {{getDescription(product.name)}}
                 </div>
                 <div class="product-price">
-                    R 20
+                    R {{product.price}}
                 </div>
                 <div class="product-rating" fxLayout="row" fxLayoutAlign="start start">
                     <mat-icon left class="mat-icon">
                         start
                     </mat-icon>
-                    <span> 4.5</span>
+                    <span> {{product.rating}}</span>
                 </div>
             </div>
         </div>

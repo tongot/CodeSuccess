@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IProduct, IProductResolved } from 'src/app/shared/product';
+import { IProduct, IProductResolved } from '../../Models/IModel';
 
 @Component({
   templateUrl: './product-detail.component.html',
@@ -18,12 +18,11 @@ export class ProductDetailComponent implements OnInit {
       // tslint:disable-next-line: no-string-literal
       this.route.snapshot.data['resolvedData'];
     this.errorMessage = resolvedData.error;
-    console.log(resolvedData.product)
     this.onProductRetrieved(resolvedData.product);
   }
 
   onProductRetrieved(product: IProduct): void {
-    this.product = product;
+    this.product = product[5];
 
     if (this.product) {
       this.pageTitle = `Product Detail: ${this.product.name}`;

@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectedCategory } from 'src/app/Models/CheckLists/CheckCategories';
+import { SelectedCategory } from 'src/app/Models/Model';
 import { AccountService } from 'src/app/Services/account.service';
-import { Register } from '../../../Models/account/Register';
-import { NotificationService } from 'src/app/Services/notification.service';
+import { Register } from '../../../Models/Model';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
-  newUser = new Register(true, true);
+  newUser = new Register();
 
   constructor(
     private _accountService: AccountService,
-    private _notify: NotificationService
   ) {}
 
   ngOnInit(): void {
@@ -32,10 +30,6 @@ export class SignupComponent implements OnInit {
     ) {
       return;
     }
-    this._notify.openSnackBar({
-      message: 'We are the best',
-      snackType: 'info',
-    });
     this._accountService.RegisterUser(this.newUser).subscribe(
       (data) => console.log('success', data),
       (error) => console.log('error', error)

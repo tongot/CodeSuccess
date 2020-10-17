@@ -3,22 +3,20 @@
   height: 330px;
   padding: 0;
   margin: 0;
-  // display: flex;
-  // justify-content: flex-start;
   overflow: hidden;
   position: relative;
 }
 .item {
   height: 100%;
-  margin: 5px;
-  max-width: 210px;
+  max-width: 200px;
   margin-bottom: 2px;
 }
 section {
-  height: 280px;
-  min-width: 20%;
+  height: 270px;
+  max-width: 20%;
   flex-shrink: 0;
   padding: 5px;
+  margin-right: 24px;
 }
 .slider {
   width: 2000%;

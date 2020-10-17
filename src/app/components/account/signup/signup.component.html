@@ -12,7 +12,7 @@
                         <div fxLayout="column" fxLayoutAlign="space-even stretch">
                             <mat-form-field appearance="outline">
                                 <mat-label>First Name</mat-label>
-                                <input #firstName="ngModel" (ngModel)="newUser.firstName" name="firstName" matInput
+                                <input #firstName="ngModel" [(ngModel)]="newUser.firstName" name="firstName" matInput
                                     type="text" required>
                                 <mat-hint class="error-message" *ngIf="firstName.touched && !firstName.valid">Name
                                     is required
@@ -20,14 +20,14 @@
                             </mat-form-field>
                             <mat-form-field appearance="outline">
                                 <mat-label>Last Name</mat-label>
-                                <input #lastName="ngModel" (ngModel)="newUser.lastName" name="lastName" required
+                                <input #lastName="ngModel" [(ngModel)]="newUser.lastName" name="lastName" required
                                     matInput type="text">
                                 <mat-hint class="error-message" *ngIf="lastName.touched && !lastName.valid">Last name is
                                     required</mat-hint>
                             </mat-form-field>
                             <mat-form-field appearance="outline">
                                 <mat-label>Email</mat-label>
-                                <input matInput #email="ngModel" (ngModel)="newUser.email" name="email" type="email"
+                                <input matInput #email="ngModel" [(ngModel)]="newUser.email" name="email" type="email"
                                     email required>
                                 <mat-hint class="error-message" *ngIf="email.touched && !email.dirty">email is required
                                 </mat-hint>
@@ -36,7 +36,7 @@
                             </mat-form-field>
                             <mat-form-field appearance="outline">
                                 <mat-label>Retype Email</mat-label>
-                                <input #confirmEmail="ngModel" (ngModel)="newUser.confirmEmail" name="confirmEmail"
+                                <input #confirmEmail="ngModel" [(ngModel)]="newUser.confirmEmail" name="confirmEmail"
                                     required matInput type="text">
                                 <mat-hint class="error-message"
                                     *ngIf="email.value!=confirmEmail.value && email.dirty && confirmEmail.touched">
@@ -46,7 +46,7 @@
                             </mat-form-field>
                             <mat-form-field appearance="outline">
                                 <mat-label>Password</mat-label>
-                                <input #password="ngModel" name="password" required (ngModel)="newUser.password"
+                                <input #password="ngModel" name="password" required [(ngModel)]="newUser.password"
                                     matInput type="password">
                                 <mat-hint class="error-message" *ngIf="password.touched && !password.valid">Password is
                                     required</mat-hint>
@@ -54,7 +54,7 @@
                             <mat-form-field appearance="outline">
                                 <mat-label>Retype Password</mat-label>
                                 <input matInput type="password" #confirmPassword="ngModel"
-                                    (ngModel)="newUser.confirmPassword" name="confirmPassword" required>
+                                    [(ngModel)]="newUser.confirmPassword" name="confirmPassword" required>
                                 <mat-hint class="error-message"
                                     *ngIf="confirmPassword.touched && confirmPassword.invalid && !confirmPassword.dirty">
                                     please confirm password
@@ -67,14 +67,14 @@
                             <mat-form-field appearance="outline">
                                 <mat-label>Mobile / phone number
                                 </mat-label>
-                                <input matInput type="text" #mobile="ngModel" (ngModel)="newUser.mobile" name="mobile"
+                                <input matInput type="text" #mobile="ngModel" [(ngModel)]="newUser.mobile" name="mobile"
                                     required>
                                 <mat-hint class="error-message" *ngIf="mobile.touched && !mobile.valid">mobile number is
                                     required</mat-hint>
                             </mat-form-field>
                             <mat-form-field appearance="outline">
                                 <mat-label>Date of birth</mat-label>
-                                <input matInput [matDatepicker]="picker" date required (ngModel)="newUser.dateOfBirth"
+                                <input matInput [matDatepicker]="picker" date required [(ngModel)]="newUser.dateOfBirth"
                                     #dateOfBirth="ngModel" name="dateOfBirth">
                                 <mat-hint class="error-message" *ngIf="dateOfBirth.touched && !dateOfBirth.dirty">Date
                                     of
@@ -84,14 +84,14 @@
                                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
                             </mat-form-field>
-                            <mat-checkbox (ngModel)="newUser.receiveSpecialOffer" name="Offer">
+                            <mat-checkbox [(ngModel)]="newUser.receiveSpecialOffer" name="Offer">
                                 receive special offer notifications
                             </mat-checkbox>
-                            <mat-checkbox (ngModel)="newUser.receiveOfferViaSMS" name="SMS">
+                            <mat-checkbox [(ngModel)]="newUser.receiveOfferViaSMS" name="SMS">
                                 receive special offer by SMS
                             </mat-checkbox>
                             <div>
-                                <mat-checkbox (ngModel)="category.isSelected" name="category"
+                                <mat-checkbox [(ngModel)]="category.isSelected" name="category"
                                     *ngFor="let category of newUser.selectedCategories">
                                     {{category.categoryName}}
                                 </mat-checkbox>
@@ -99,8 +99,7 @@
 
 
                         </div>
-                        <button mat-flat-button color="primary" (ngSubmit)="RegisterUser(registerForm)"
-                            type="submit">Register</button>
+                        <button mat-flat-button color="primary" type="submit">Register</button>
                     </form>
                 </mat-card-content>
             </mat-card>

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
 import { tap, catchError, map } from 'rxjs/operators';
-import { IProduct } from '../shared/product';
+import {IProduct} from '../Models/IModel'
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +17,10 @@ export class ProductService {
   getProducts(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(this.dataUrl)
       .pipe(
-        tap(data => console.log(`All   products: ${JSON.stringify(data)}`))
+        tap(data => data)
       );
   }
+  
   getProduct(id: string): Observable<IProduct> {
     if (id === '0') {
       return of(this.initializeProduct());

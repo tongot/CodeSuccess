@@ -1,0 +1,80 @@
+<div class="product-detail" *ngIf="product">
+    <div class="site-container">
+        <div class="detail-container">
+            <div fxLayout="column">
+                <div fxLayout="row" fxLayoutAlign="start start">
+                    <div fxFlex="75%">
+                        <mat-card class="detail-card mat-elevation-z0">
+                            <mat-card-content>
+                                <div fxLayout="row" fxLayoutAlign="start space-between">
+                                    <div fxFlex="15%">
+                                        <mat-card class="thumb-nail detail-card mat-elevation-z0">
+                                            <img [src]="product.image" alt="">
+                                        </mat-card>
+                                    </div>
+                                    <div class="picture" fxFlex="45%">
+                                        <mat-card class="promotion-tag mat-elevation-z0">
+                                            30% OFF
+                                        </mat-card>
+                                        <mat-card class="product-pic detail-card mat-elevation-z0">
+                                            <img [src]="product.image" alt="">
+                                        </mat-card>
+
+                                    </div>
+                                    <div fxFlex="38%">
+                                        <mat-card class="mat-elevation-z0">
+                                            <h2>
+                                                {{product.name}}
+                                            </h2>
+
+                                            <mat-card-content>
+                                                <mat-divider></mat-divider>
+                                                <p class="description">{{product.description}}</p>
+                                                <p class="rating">
+                                                    <mat-icon>
+                                                        star
+                                                    </mat-icon>
+                                                    {{product.rating}}
+                                                </p>
+                                                <mat-divider></mat-divider>
+
+                                                <mat-divider></mat-divider>
+
+                                            </mat-card-content>
+                                        </mat-card>
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div fxFlex="25%">
+                        <mat-card class="card-add-to-cart mat-elevation-z0">
+                            <div fxLayout="column" fxLayoutAlign=" end">
+                                <mat-card-title>
+                                    R {{product.price}}
+                                </mat-card-title>
+                                <mat-card-content>
+                                    free delivery
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button mat-flat-button color="primary">
+                                        <mat-icon>
+                                            add_shopping_cart
+                                        </mat-icon>
+                                        Add to cart
+                                    </button>
+                                </mat-card-actions>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+                <div fxLayout="column">
+                    <div class="like-product">
+                        <h2>You might also like</h2>
+                        <app-product-small-card [product]="product"></app-product-small-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

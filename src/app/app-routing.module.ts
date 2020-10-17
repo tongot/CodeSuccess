@@ -7,16 +7,17 @@ import {
   LoginComponent,
   SignupComponent,
   MyAccountComponent,
+  ProductComponent,
 } from './components';
 
 const routes: Routes = [
-  {
-    path: 'products',
-   // canActivate: [AuthGuard],
-    data: { preload: true },
-    loadChildren: () =>
-      import('./products/products.module').then(m => m.ProductsModule)
-  },
+  // {
+  //   path: 'products',
+  //  // canActivate: [AuthGuard],
+  //   data: { preload: true },
+  //   loadChildren: () =>
+  //     import('./products/products.module').then(m => m.ProductsModule)
+  // },
   { path: '', component: IndexComponent },
   {
     path: 'account',
@@ -31,11 +32,12 @@ const routes: Routes = [
         component: LoginComponent,
       },
       {
-        path: 'myacc',
+        path: '',
         component: MyAccountComponent,
       },
     ],
   },
+  {path:'product/:id',component:ProductComponent}
 ];
 
 @NgModule({

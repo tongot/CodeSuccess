@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { BannerSliderItems } from 'src/app/Models/OtherModels/bannerSlider';
+import { IBannerSliderItem } from 'src/app/Models/IModel';
+import {BannerSliderServiceService} from '../../services/banner-slider-service.service'
+
 
 @Component({
   selector: 'app-banner-carousel',
@@ -7,27 +9,30 @@ import { BannerSliderItems } from 'src/app/Models/OtherModels/bannerSlider';
   styleUrls: ['./banner-carousel.component.scss'],
 })
 export class BannerCarouselComponent implements OnInit, OnDestroy {
-  @Input() bannerSlide: BannerSliderItems;
+  @Input() bannerSlide: IBannerSliderItem[];
   IntervalSlide;
-  constructor() {}
+  constructor( public _banner:BannerSliderServiceService) {
+
+  }
   ngOnDestroy(): void {
     clearInterval(this.IntervalSlide);
   }
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    this._banner.setNumberOfItems(this.bannerSlide);
     this.SlideAutoRun();
   }
   next() {
-    this.bannerSlide.moveSlideRight(false);
+    this._banner.moveSlideRight(false);
   }
   prev() {
-    this.bannerSlide.moveSlideLeft(false);
+    this._banner.moveSlideLeft(false);
   }
   go(url) {
     console.log(url);
   }
   SlideAutoRun() {
     this.IntervalSlide = setInterval(() => {
-      this.bannerSlide.AutoRun();
+      this._banner.autoRun();
     }, 5000);
   }
 }

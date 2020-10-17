@@ -23,6 +23,6 @@ export class OffersComponent implements OnInit {
   ];
 
   get isIndexPage(): boolean {
-    return this.router.url === '/' ? true : false;
+    return this.router.url === '/'? true : false;
   }
 }

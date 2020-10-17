@@ -7,6 +7,9 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  .logo {
+    cursor: pointer;
+  }
   ul {
     text-decoration: none;
     list-style: none;
