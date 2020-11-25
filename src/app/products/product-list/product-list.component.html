@@ -1,0 +1,80 @@
+
+<mat-card>
+    <mat-card-title>
+      {{pageTitle}}
+    </mat-card-title>
+  
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-2">Search products:</div>
+        <div class="col-md-4">
+          <input type="text" placeholder ="Search"
+                 [(ngModel)]="listFilter" />
+        </div>
+      </div>
+      <div class="row"
+           *ngIf="listFilter">
+        <div class="col-md-6">
+         
+        </div>
+      </div>
+  
+      <div class="table-responsive">
+        <table 
+        class="mat-elevation-z8"
+               *ngIf="products && products.length">
+          <thead>
+            <tr>
+              <th>
+                <button mat-raised-button color="primary"
+                        (click)="toggleImage()">
+                  {{showImage ? "Hide" : "Show"}} Image
+                </button>
+              </th>
+              <th>Product</th>
+              <th>Category</th>
+              <!-- <th>Available</th> -->
+              <th>Price</th>
+              <th>Rating</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of filteredProducts">
+              <td>
+                <img *ngIf="showImage && product.image"
+                     [src]="product.image"
+                     [title]="product.name"
+                     [style.width.px]="imageWidth"
+                     [style.margin.px]="imageMargin">
+              </td>
+              <td>
+                <a [routerLink]="['/products', product.id]">
+                  {{ product.name }}
+                </a>
+              </td>
+              <td>{{ product.category }}</td>
+              
+              <td>{{ product.price | currency:"ZAR":"R" }}</td>
+              <td>
+                {{product.rating}}
+            
+              </td>
+              <td>
+                <button mat-raised-button color="primary"
+                        [routerLink]="['/products', product.id, 'edit']">
+                  Edit
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </mat-card-content>
+</mat-card>
+  
+  <mat-error *ngIf="errorMessage"
+       class="alert alert-danger">
+    Error: {{ errorMessage }}
+</mat-error>

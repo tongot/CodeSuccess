@@ -12,10 +12,10 @@ export class BannerSliderItems {
   //#region private props
   private numberOfItems: number = this.items.length;
   private itemWidth: number = 100 / this.numberOfItems;
-  private currentSlide: number = 1;
-  private currentTransition: number = 0;
-  private currentDirection: number = 1;
-  private moveBy: number = 0;
+  private currentSlide = 1;
+  private currentTransition = 0;
+  private currentDirection = 1;
+  private moveBy = 0;
   //#endregion
 
   //#region getters

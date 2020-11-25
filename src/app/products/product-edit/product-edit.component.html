@@ -1,86 +1,160 @@
-<!-- 
- <mat-card>
- <mat-card-title>{{pageTitle}}</mat-card-title>
- <mat-card-content>
-   <mat-label>Product Name:</mat-label>
-   <mat-form-field appearance= "fill">
-     <input matInput type= "text"
-     placeholder="Name (required)"
-     required
-     minlength= "3"
-     [(ngModel)]="products.name"
-     name="name"
-     #name="ngModel" >
-     <mat-error *ngIf =name.errors.required>
-      Product name is required.
-    </mat-error>
-    <mat-error *ngIf = name.errors.minlength(3)>
-      Product name must be at least three characters.
-    </mat-error>
-   </mat-form-field>
-   <section>
-    <mat-label>Category:</mat-label>
-<mat-form-field>
-  <input matInput type= "text" 
-                   placeholder="Code (required)"
-                   required
-                   [(ngModel)]= "products.category"
-                   name="category"
-                   #category="ngModel"
-  >
-  <mat-error *ngIf = "category.errors.required" >
-    Product category is required.
-  </mat-error>
-</mat-form-field>
-</section>
- </mat-card-content>
-</mat-card>
-    
-      -->
- 
 
-  
-      <mat-card>
-        <mat-card-title>
-          {{pageTitle}}
-        </mat-card-title>
-      
-      
-        <mat-card-content>
-          <router-outlet></router-outlet>
+
+    <mat-card fxFlex="33">
+      <mat-card-title>
+        {{pageTitle}}
+      </mat-card-title>
+    
+      <mat-card-content>
+        <form novalidate
+              (ngSubmit)="saveProduct()"
+              [formGroup]="productForm">
+    
           <section>
-            
-              <button mat-button 
-                      style="width:80px"
-                      type="button"
-                      [title]="isValid() ? 'Save your entered data' : 'Disabled until the form data is valid'"
-                      [disabled]="!isValid()"
-                      (click)="saveProduct()"
-                      [routerLink]="['/']">
-      
-                Save
-              </button>
-              <button mat-button class="primary"
-                      style="width:80px"
-                      type="button"
-                      title="Back"
-                      [routerLink]="['/products']">
-                Back
-              </button>
-              <button  mat-button class="primary"
-                      style="width:80px"
-                      type="button"
-                      title="Delete this product"
-                      (click)="deleteProduct()"
-                      [routerLink]="['/']"
-                      [disabled]="!isValid()"
-                      >
-                Delete
-              </button>
+            <label mat-label
+                   for="nameId">Product Name:</label>
+            <mat-form-field appearance= "outline">
+              <input  matInput 
+                     id="nameId"
+                     type="text"
+                     placeholder="Name (required)"
+                     formControlName = "name"
+                    />
+                    </mat-form-field>
+              <mat-error>
+                {{displayMessage.name}}
+              </mat-error>
+          
+          </section>
+    
+          <section>
+            <label 
+                   for="categoryId">Product Category:</label>
+            <mat-form-field appearance= "outline">
+              <input  matInput 
+                     id="categoryId"
+                     type="text"
+                     placeholder="Code (required)"
+                     formControlName="category"
+                     />
+                    </mat-form-field>
+              <mat-error>
+                {{displayMessage.category}}
+                  </mat-error>
            
           </section>
+
+          <section>
+            <label class="col-md-2 col-form-label"
+                   for="rating">Product Price:</label>
+    
+            <mat-form-field appearance= "outline">
+              <input  matInput 
+                     id="price"
+                     type="number"
+                     placeholder="Product price"
+                     formControlName="price"
+                     [ngClass]="{'is-invalid': displayMessage.price}" />
+                    </mat-form-field>
+              <mat-error>
+                {{displayMessage.price}}
+              </mat-error>
+          </section>
+    
+          <section>
+            <label 
+                   for="rating">Star Rating (1-5):</label>
+    
+            <mat-form-field appearance= "outline">
+              <input  matInput 
+                     id="rating"
+                     type="text"
+                     placeholder="Rating (1-5)"
+                     formControlName="rating"
+                     [ngClass]="{'is-invalid': displayMessage.rating}" />
+                    </mat-form-field>
+              <mat-error>
+                {{displayMessage.rating}}
+              </mat-error>
+           
+          </section>
+    
+          <div formArrayName="tags">
+            <div class="form-group row mb-2"
+                 *ngFor="let tag of tags.controls; let i=index">
+              <label class="col-md-2 col-form-label"
+                     [attr.for]="i">Tag:</label>
+    
+              <mat-form-field appearance = "outline">
+                <input matInput 
+                       [id]="i"
+                       type="text"
+                       placeholder="Tag"
+                       [formControlName]="i" />
+              </mat-form-field>
+              <button mat-raised-button color ="warn" 
+                      style="width:40px;"
+                      type="button"
+                      title="Delete this search tag"
+                      (click)="deleteTag(i)">X
+              </button>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-md-2 mb-2">
+              <button mat-raised-button color ="basic" 
+                      type="button"
+                      title="Add a search tag"
+                      (click)="addTag()">Add Tag:
+              </button>
+            </div>
+          </div>
+          
+          <section>
+            <mat-label
+                   for="descriptionId">Description:</mat-label>
+    
+            <mat-form-field appearance="outline">
+              <textarea matInput class="form-control"
+                        id="descriptionId"
+                        cols="16"
+                        rows="10"
+                        placeholder="Description"
+                        formControlName="description"
+                        [ngClass]="{'is-invalid': displayMessage.description}"></textarea>
+              <mat-error>
+                {{ displayMessage.description}}
+              </mat-error>
+            </mat-form-field>
+          </section>
+    
+          <div >
+            <div >
+              <button mat-raised-button color = "primary" 
+                      type="submit"
+                      [title]="productForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                      [disabled]="!productForm.valid">
+                Save
+              </button>
+              <button mat-raised-button color ="accent" 
+                      title="Cancel your edits"
+                      [routerLink]="['/products']">
+                Cancel
+              </button>
+              <button mat-raised-button  color="warn"
+                      title="Delete this product"
+                      (click)="deleteProduct()"
+                      [routerLink]="['/products']">
+
+                Delete
+              </button>
+            </div>
+          </div>
+        </form>
       </mat-card-content>
-      </mat-card>
-      <mat-error
-           *ngIf="errorMessage">{{errorMessage}}
+    
+      <mat-error *ngIf="errorMessage">
+        {{errorMessage}}
     </mat-error>
+    </mat-card>

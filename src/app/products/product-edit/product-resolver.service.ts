@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { catchError, map } from 'rxjs/operators';
 import { IProductResolved } from '../../shared/product';
-import { ProductService } from 'src/app/services/product-service';
+import { ProductService } from '../../services/product-service';
 import { Observable, of } from 'rxjs';
 
 
@@ -32,5 +32,5 @@ return this.productService.getProduct(id)
       return of({ product: null, error: message });
     })
   );
-}
   }
+}

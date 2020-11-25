@@ -1,0 +1,48 @@
+[{
+    "id": 84235,
+    "username": "Bongani",
+    "password": "mysecret@password",
+    "firstName": "Bongani",
+    "lastName": "Khumalo",
+    "role": "user",
+    "token?": null
+},
+
+{
+    "id": 83235,
+    "username": "Tebogo",
+    "password": "mysecret@password",
+    "firstName": "Tebogo",
+    "lastName": "Mokoena",
+    "role": "user",
+    "token?": null
+},
+{
+    "id": 20005,
+    "username": "Fiona",
+    "password": "mysecret@password",
+    "firstName": "Fiona",
+    "lastName": "Brown",
+    "role": "user",
+    "token?": null
+},
+{
+    "id": 84235,
+    "username": "Hlanga",
+    "password": "mysecret@password",
+    "firstName": "Hlanganani",
+    "lastName": "Maseko",
+    "role": "admin",
+    "token?": null
+},
+{
+    "id": 84235,
+    "username": "Tak",
+    "password": "mysecret@password",
+    "firstName": "Takudzwa",
+    "lastName": "Tongoona",
+    "role": "admin",
+    "token?": null
+}
+
+]

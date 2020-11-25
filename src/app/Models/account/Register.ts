@@ -1,4 +1,4 @@
-import { SelectedCategory } from '../CheckLists/CheckCategories';
+import { SelectedCategory } from '../checkLists/checkCategories';
 export interface IRegister {
   firstName: string;
   lastName: string;

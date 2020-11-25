@@ -1,44 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectedCategory } from 'src/app/Models/CheckLists/CheckCategories';
-import { AccountService } from 'src/app/Services/account.service';
-import { Register } from '../../../Models/account/Register';
-import { NotificationService } from 'src/app/Services/notification.service';
+import { AuthService } from 'src/app/services/auth.service';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss'],
+  styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  newUser = new Register(true, true);
 
-  constructor(
-    private _accountService: AccountService,
-    private _notify: NotificationService
-  ) {}
+  form: any = {};
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.newUser.selectedCategories = [
-      new SelectedCategory(false, 'Books'),
-      new SelectedCategory(false, 'Kitchen'),
-      new SelectedCategory(false, 'Home'),
-    ];
   }
 
-  RegisterUser(registerForm): void {
-    if (
-      !registerForm.valid ||
-      !this.newUser.isPasswordMatching() ||
-      !this.newUser.isEmailMatch()
-    ) {
-      return;
-    }
-    this._notify.openSnackBar({
-      message: 'We are the best',
-      snackType: 'info',
-    });
-    this._accountService.RegisterUser(this.newUser).subscribe(
-      (data) => console.log('success', data),
-      (error) => console.log('error', error)
+  onSubmit(): void {
+    this.authService.register(this.form).subscribe(
+      data => {
+        console.log(data);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+      },
+      err => {
+        this.errorMessage = err.error;
+        this.isSignUpFailed = true;
+      }
     );
   }
+
 }

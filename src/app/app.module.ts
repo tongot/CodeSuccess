@@ -1,32 +1,47 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {CartService } from './services/cart.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+// interceptors
+import { HttpConfigInterceptor } from './interceptor/httpconfig.interceptor';
+import {CacheInterceptor} from './shared/cache.interceptor';
+import { authInterceptorProviders} from './interceptor/auth.interceptor';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { A11yModule } from '@angular/cdk/a11y';
-
 import { AllMaterialModules, MaterialModule } from './material.module';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import {  HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 import {ProductsModule} from './products/products.module';
+import {UsersModule} from './users/users.module';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-//services
-import { AccountService } from './Services/account.service';
-import { NotificationService } from './Services/notification.service';
 
-import { BannerCarouselComponent, FooterComponent, HeaderComponent, InfiniteCarouselComponent, ItemsSliderComponent, ProductSmallCardComponent, PromotionCardComponent } from './components';
+
+// tslint:disable-next-line: max-line-length
+import {
+  BannerCarouselComponent,
+  FooterComponent,
+  HeaderComponent,
+  InfiniteCarouselComponent,
+  ItemsSliderComponent,
+  ProductSmallCardComponent,
+  PromotionCardComponent,
+  // BoardAdminComponent,
+  } from './components';
 import { IndexComponent } from './components';
 import { LoginComponent } from './components';
 import { SignupComponent } from './components';
 import { CheckoutComponent } from './components';
-import { CartComponent } from './components';
+
 import { FavoritesComponent } from './components';
 import { AboutComponent } from './components';
 import { CareersComponent } from './components';
@@ -37,23 +52,24 @@ import { OffersComponent } from './components';
 import { AccountComponent } from './components';
 import { MyAccountComponent } from './components';
 import { SnackComponent } from './components/snack/snack.component';
-//import { InfiniteCarouselComponent } from './components/infinite-carousel/infinite-carousel.component';
+import {Data} from './products/data';
+import {CartComponent } from './components/cart/cart.component';
 
 // pipes
 import {ShortenTextPipe } from './shorten-text.pipe';
-
-
+import { HttpClientInMemoryWebApiModule, InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { HttpClientInMemoryWebApiModule, InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CartComponent,
     HeaderComponent,
     FooterComponent,
     IndexComponent,
     LoginComponent,
     SignupComponent,
     CheckoutComponent,
-    CartComponent,
     FavoritesComponent,
     AboutComponent,
     CareersComponent,
@@ -70,26 +86,31 @@ import {ShortenTextPipe } from './shorten-text.pipe';
     InfiniteCarouselComponent,
     PromotionCardComponent,
     ProductSmallCardComponent,
+    // BoardAdminComponent
   ],
   imports: [
     BrowserModule,
+    UsersModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AllMaterialModules,
+   AllMaterialModules,
+    MatDialogModule,
     FontAwesomeModule,
     ProductsModule,
-    MaterialModule,
     FlexLayoutModule,
     HttpClientModule,
-    // InMemoryWebApiModule.forRoot({}, { delay: 1000 }),
+   HttpClientInMemoryWebApiModule,
+   InMemoryWebApiModule.forRoot(Data, { delay: 1000 }),
 
     FormsModule,
     ReactiveFormsModule,
-    A11yModule,
-    HttpClientModule,
+    A11yModule
   ],
-  providers: [AccountService, NotificationService],
+  providers: [CartService,
+    { provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent],
-  entryComponents: [SnackComponent],
+  entryComponents: [SnackComponent ]
 })
 export class AppModule {}

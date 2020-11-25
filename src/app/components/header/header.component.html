@@ -5,8 +5,14 @@
             <li class="border-menu-item"><a href="#" fxHide.sm fxHide.xs>Help</a></li>
             <li><a href="#" fxHide.md fxHide.sm fxHide.xs>Sell at takealot</a></li>
         </ul>
-        <ul fxLayout="row" fxLayoutAlign="space-between center">
-            <li class="border-menu-item"><a routerLink="/account/login" fxShow.gt-sm fxHide.xs>Log in</a></li>
+        <ul fxLayout="row" fxLayoutAlign="space-between center" >
+            
+              
+                  
+               
+
+           
+            <li class="border-menu-item"><a routerLink="/login" fxShow.gt-sm fxHide.xs >Log in</a></li>
             <li class="border-menu-item" fxHide.md fxHide.sm fxHide.xs><a routerLink="/account/register">Register</a>
             </li>
             <li class="border-menu-item"><a href="#" fxHide.sm fxHide.xs>Order</a></li>
@@ -18,7 +24,7 @@
                 <ul fxLayout="column" fxLayoutAlign="center start">
                     <li><a routerLink="/account">My Account</a></li>
                     <li><a href="#">Track Order</a></li>
-                    <li><a routerLink="/account/login">Log return</a></li>
+                    <li><a routerLink="/login">Log return</a></li>
                     <li><a href="#">Invoice</a></li>
                     <li><a href="#">Personal Details</a></li>
                     <li><a href="#">Digital Library </a></li>
@@ -33,19 +39,26 @@
 
             <li class="cart-chip">
                 <mat-chip-list>
+                   
                     <mat-chip>
-                        <mat-icon left>
-                            shopping_cart
-                        </mat-icon>
-                        {{CartItems.length}}
+                       
+                            <mat-icon left>
+                                
+                                <a [routerLink]="[ '/cart' ]">shopping_cart</a>
+                            </mat-icon>   
+                    
+                        
+                        <em>{{cartProductCount}}</em>
                     </mat-chip>
                 </mat-chip-list>
                 <div #cart class="menu-cart">
                     cart item here
+                  
                     <mat-divider></mat-divider>
                     <div fxLayoutAlign="end">
-                        <h3><strong>Total: R 10</strong></h3>
+                        <!-- <h3><strong>Total: R 10</strong></h3> -->
                     </div>
+                   
                     <mat-divider></mat-divider>
                     <div class="cart-btn-container">
                     </div>

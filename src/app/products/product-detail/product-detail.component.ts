@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProductService } from 'src/app/services/product-service';
 import { IProduct, IProductResolved } from 'src/app/shared/product';
+
 
 @Component({
   templateUrl: './product-detail.component.html',
@@ -8,18 +10,20 @@ import { IProduct, IProductResolved } from 'src/app/shared/product';
 })
 export class ProductDetailComponent implements OnInit {
   pageTitle = 'Product Detail';
-  product: IProduct;
+  products: IProduct[];
   errorMessage: string;
+   product: IProduct;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit(): void {
-    const resolvedData: IProductResolved =
-      // tslint:disable-next-line: no-string-literal
-      this.route.snapshot.data['resolvedData'];
-    this.errorMessage = resolvedData.error;
-    console.log(resolvedData.product)
-    this.onProductRetrieved(resolvedData.product);
+    this.productService.getProducts().subscribe(
+      (products) => {
+        this.products = products;
+      },
+      (err: string) => this.errorMessage = err
+    );
+    console.log(this.errorMessage);
   }
 
   onProductRetrieved(product: IProduct): void {

@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class OffersComponent implements OnInit {
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  get isIndexPage(): boolean {
+    return this.router.url === '/' ? true : false;
+  }
 
   devices = [
     { path: 'shopLocal', name: 'Shop Local' },
@@ -22,7 +24,5 @@ export class OffersComponent implements OnInit {
     { path: 'brandStores', name: 'Brand Stores' },
   ];
 
-  get isIndexPage(): boolean {
-    return this.router.url === '/' ? true : false;
-  }
+  ngOnInit(): void {}
 }

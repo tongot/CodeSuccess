@@ -24,7 +24,7 @@ export class NestedDropdownComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  //get a shortened word if word too long for menu
+  // get a shortened word if word too long for menu
   getLabel(name: string): string {
     if (name != null || undefined) {
       if (name.length > 18) {

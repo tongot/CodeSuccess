@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { InfiniteSliderItems } from 'src/app/Models/OtherModels/InfiniteSlider';
+import { InfiniteSliderItems } from 'src/app/models/otherModels/infiniteSlider';
 
 @Component({
   selector: 'app-infinite-carousel',
@@ -11,12 +11,12 @@ export class InfiniteCarouselComponent implements OnInit {
   @Input() slideItem: InfiniteSliderItems;
 
   constructor(private route: Router) {}
-
+  direction = 1;
   ngOnInit(): void {}
-  direction: number = 1;
+
   prev(s, c): void {
     c.style.transition = 'all 0.5s';
-    if (this.direction == 1) {
+    if (this.direction === 1) {
       for (let i = 0; i < this.slideItem.itemsOffView; i++) {
         c.appendChild(c.firstElementChild);
       }
@@ -37,7 +37,7 @@ export class InfiniteCarouselComponent implements OnInit {
   next(s, c): void {
     c.style.transition = 'all 0.5s';
 
-    if (this.direction == -1) {
+    if (this.direction === -1) {
       for (let i = 0; i < this.slideItem.itemsOffView; i++) {
         c.prepend(c.lastElementChild);
       }
@@ -55,7 +55,7 @@ export class InfiniteCarouselComponent implements OnInit {
     }, 2);
   }
   gotoPage(url): void {
-    console.log(url);
+    // console.log(url);
     this.route.navigate([url]);
   }
 }

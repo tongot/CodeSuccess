@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { BannerSliderItems } from 'src/app/Models/OtherModels/bannerSlider';
+import { BannerSliderItems } from 'src/app/models/otherModels/bannerSlider';
 
 @Component({
   selector: 'app-banner-carousel',

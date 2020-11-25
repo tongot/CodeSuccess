@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Renderer2 } from '@angular/core';
 import {
   InfiniteSliderItems,
   InfiniteSlider,
   IInfiniteSlider,
-} from '../../Models/OtherModels/InfiniteSlider';
+} from '../../models/otherModels/infiniteSlider';
 import {
   BannerSliderItem,
   BannerSliderItems,
   IBannerSliderItem,
-} from '../../Models/OtherModels/bannerSlider';
+} from '../../models/otherModels/bannerSlider';
 
 
-// import { ActivatedRoute } from '@angular/router';
-// import { IProduct } from 'src/app/shared/product';
-// import { ProductService } from 'src/app/services/product-service';
-// // import {ShortenTextPipe } from './shorten-text.pipe';
+import { ActivatedRoute } from '@angular/router';
+import { IProduct, IProductResolved } from 'src/app/shared/product';
+import { ProductService } from 'src/app/services/product-service';
+import { CartService } from 'src/app/services/cart.service';
+
 
 
 @Component({
@@ -23,6 +24,9 @@ import {
   styleUrls: ['./index.component.scss'],
 })
 export class IndexComponent implements OnInit {
+constructor(private productService: ProductService, private renderer: Renderer2,
+            private cartService: CartService
+            ) { }
   brands = [
     {
       link: '/account/register',
@@ -49,36 +53,77 @@ export class IndexComponent implements OnInit {
   private banner: IBannerSliderItem[] = [];
   slideItem = null;
   bannerSlide = null;
-  constructor() {}
+
+sectionTitle = 'Products';
+errorMessage = 'Cant get products';
+imageLength = 100;
+imageWidth = 90;
+ product: IProduct;
+rating: number;
+@Input() products: IProduct[] = [];
+  private singleProduct: any[];
+  private isAdded: any[];
+
+
+
+
+
+
+ // tslint:disable-next-line: typedef
 
   ngOnInit(): void {
     this.slideItem = this.getBrands();
     this.bannerSlide = this.getBannerItems();
+    this.productService.getProducts().subscribe(
+      (products: IProduct[]) => {
+        this.products = products;
+      },
+      (err: string) => this.errorMessage = err
+    );
+    console.log(this.errorMessage);
+    this.isAdded = new Array(this.products.length);
+    this.isAdded.fill(false, 0, this.products.length);
+    console.log('this.isAdded -> ', this.isAdded, this.products);
+
+    this.productService.getProducts().subscribe(data => {
+
+      if (data && data.length > 0) {
+
+      } else {
+        this.products.map((item, index) => {
+          this.isAdded[index] = false;
+        });
+      }
+
+    });
+    }
+     // Add item in cart on Button click
+  // ===============================
+
+  // tslint:disable-next-line: typedef
+  addToCart(event: { target: { classList: { contains: (arg0: string) => any; }; }; }, productId: number) {
+    // If Item is already added then display alert message
+    if (event.target.classList.contains('btn-success')) {
+      alert('This product is already added into cart.');
+      return false;
+    }
+
+    // Change button color to green
+    console.log('product added to cart');
+    this.products.map((item, index) => {
+      if (item.id === productId) {
+        this.isAdded[index] = true;
+      }
+    });
+
+    this.singleProduct = this.products.filter(product => {
+      return product.id === productId;
+    });
+
+    // this.cartItems.push(this.singleProduct[0]);
+
+    this.cartService.addProductToCart(this.singleProduct[0]);
   }
-// constructor(private productService: ProductService,
-//             private route: ActivatedRoute ) { }
-
-// sectionTitle = 'Products';
-// errorMessage = 'Cant get products';
-// imageLength = 100;
-// imageWidth = 90;
-// // product: IProductResolved;
-// rating: number;
-// // tslint:disable-next-line: variable-name
-// arrayFilter = '';
-
-// // filteredProducts: IProduct[] = [];
-// products: IProduct[] = [];
-
-
-//   ngOnInit(): void {
-//     this.productService.getProducts().subscribe(
-//       (products: IProduct[]) => {
-//         this.products = products;
-//       },
-//       (err: string) => this.errorMessage = err
-//     );
-//     console.log(this.errorMessage);
 
 
   getBrands(): InfiniteSliderItems {
@@ -93,4 +138,5 @@ export class IndexComponent implements OnInit {
     });
     return new BannerSliderItems(this.banner);
   }
+
 }

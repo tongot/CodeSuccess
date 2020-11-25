@@ -1,1 +1,21 @@
-<p>cart works!</p>
+
+ <div class="product-cart" *ngIf="cartItems && cartItems.length > 0">
+  <ul>
+    <li *ngFor="let item of cartItems">
+      <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+      {{cartItems.name}}
+      <span>{{cartItems.price  | currency:'R'}}</span>
+      <button mat-raised-button color= "warn" title ="Remove Item" (click)="removeItemFromCart(item.id)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+  </ul>
+  <div class="cart-total">
+    <p><button mat-raised-button color="primary"  (click)="emptyCart()">Empty Cart</button></p>
+     <a [routerLink]="[ '/checkout']">Checkout</a>
+    <p class="text-right">
+      <strong class="d-block">Total:</strong>
+      <span class="d-block">{{totalAmmount | currency:'R'}}</span>
+    </p>
+  </div>
+</div>

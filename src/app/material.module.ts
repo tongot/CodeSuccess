@@ -51,7 +51,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
 
-import { MatCarouselSlideComponent } from "@ngmodule/material-carousel";
+import { MatCarouselSlideComponent } from '@ngmodule/material-carousel';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
@@ -101,6 +101,8 @@ export const AllMaterialModules = [
   MatTableModule,
   MatCarouselModule.forRoot(),
   IvyCarouselModule,
+  MatFormFieldModule,
+  MatInputModule
 ];
 
 @NgModule({

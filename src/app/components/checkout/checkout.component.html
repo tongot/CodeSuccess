@@ -1,1 +1,14 @@
-<p>checkout works!</p>
+<mat-card>
+    <mat-card-content>
+    <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout">
+        <div class="form-row">
+          <label for="card-info">Credit Card Info</label>
+          <div id="card-info" #cardInfo></div>
+      
+          <mat-error id="card-errors" role="alert" *ngIf="error">{{ error }}</mat-error>
+        </div>
+      
+        <button type="submit">Pay {{total}} </button>
+      </form>
+    </mat-card-content>
+</mat-card>

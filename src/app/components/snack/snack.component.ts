@@ -16,10 +16,10 @@ export class SnackComponent implements OnInit {
   }
 
   getIcon(): void {
-    if (this.data.snackType == 'success') {
+    if (this.data.snackType === 'success') {
       this.snackIcon = 'check_circle';
       this.iconColor = 'success-icon';
-    } else if (this.data.snackType == 'error') {
+    } else if (this.data.snackType === 'error') {
       this.snackIcon = 'error';
       this.iconColor = 'error-icon';
     } else if (this.data.snackType == 'warning') {

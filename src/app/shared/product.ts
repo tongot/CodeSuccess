@@ -1,16 +1,17 @@
 // import
 
 export interface IProduct {
-  id: string;
+  id: number;
   name: string;
-  image: string;
+  image: string[];
   department: string;
   promotion: boolean;
-  description: string;
+  description: string [];
   price: number;
   discount: number;
   category: string;
   rating: number;
+  tags: string[];
 }
 
 export interface IProductResolved {
